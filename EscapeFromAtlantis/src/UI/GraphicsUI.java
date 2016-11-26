@@ -80,8 +80,7 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
     }
 
     public void moveTo(JLabel jLabel) {
-        System.out.println(positionOfVillager.getAlignmentX());
-        System.out.println(jLabel181.getAlignmentX());
+
         if (positionOfVillager != null) {
             positionOfVillager.setBounds(jLabel.getBounds());
         } else {
