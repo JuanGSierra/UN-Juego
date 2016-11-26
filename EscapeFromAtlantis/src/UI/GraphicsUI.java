@@ -439,11 +439,7 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
             changeTile = false;
         } else {
             // determina si puede mover o no, la distancia al aldeano
-            if () {
-
-            } else {
-
-            }
+            
             moveTo(jLabel170);
         }
     }
