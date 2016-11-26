@@ -853,6 +853,43 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
 
         jSeparator2 = new javax.swing.JSeparator();
         jPanel2 = new javax.swing.JPanel();
+        jLabel219 = new javax.swing.JLabel();
+        jLabel220 = new javax.swing.JLabel();
+        jLabel215 = new javax.swing.JLabel();
+        jLabel216 = new javax.swing.JLabel();
+        jLabel217 = new javax.swing.JLabel();
+        jLabel218 = new javax.swing.JLabel();
+        jLabel213 = new javax.swing.JLabel();
+        jLabel214 = new javax.swing.JLabel();
+        jLabel212 = new javax.swing.JLabel();
+        jLabel211 = new javax.swing.JLabel();
+        jLabel207 = new javax.swing.JLabel();
+        jLabel208 = new javax.swing.JLabel();
+        jLabel209 = new javax.swing.JLabel();
+        jLabel210 = new javax.swing.JLabel();
+        jLabel204 = new javax.swing.JLabel();
+        jLabel205 = new javax.swing.JLabel();
+        jLabel206 = new javax.swing.JLabel();
+        jLabel203 = new javax.swing.JLabel();
+        jLabel202 = new javax.swing.JLabel();
+        jLabel196 = new javax.swing.JLabel();
+        jLabel197 = new javax.swing.JLabel();
+        jLabel198 = new javax.swing.JLabel();
+        jLabel199 = new javax.swing.JLabel();
+        jLabel200 = new javax.swing.JLabel();
+        jLabel195 = new javax.swing.JLabel();
+        jLabel193 = new javax.swing.JLabel();
+        jLabel194 = new javax.swing.JLabel();
+        jLabel189 = new javax.swing.JLabel();
+        jLabel190 = new javax.swing.JLabel();
+        jLabel191 = new javax.swing.JLabel();
+        jLabel192 = new javax.swing.JLabel();
+        jLabel188 = new javax.swing.JLabel();
+        jLabel186 = new javax.swing.JLabel();
+        jLabel185 = new javax.swing.JLabel();
+        jLabel184 = new javax.swing.JLabel();
+        jLabel183 = new javax.swing.JLabel();
+        jLabel182 = new javax.swing.JLabel();
         jLabel181 = new javax.swing.JLabel();
         jLabel150 = new javax.swing.JLabel();
         jLabel152 = new javax.swing.JLabel();
@@ -1031,6 +1068,8 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
         jLabel178 = new javax.swing.JLabel();
         jLabel179 = new javax.swing.JLabel();
         jLabel180 = new javax.swing.JLabel();
+        jLabel187 = new javax.swing.JLabel();
+        jLabel201 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
@@ -1047,6 +1086,413 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder("-"));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel219.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel219.setForeground(new java.awt.Color(240, 240, 240));
+        jLabel219.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/yellow villager.png"))); // NOI18N
+        jLabel219.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel219.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel219MouseClicked(evt);
+            }
+        });
+        jPanel2.add(jLabel219, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 270, 10, 20));
+
+        jLabel220.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel220.setForeground(new java.awt.Color(240, 240, 240));
+        jLabel220.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/yellow villager.png"))); // NOI18N
+        jLabel220.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel220.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel220MouseClicked(evt);
+            }
+        });
+        jPanel2.add(jLabel220, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 290, 10, 20));
+
+        jLabel215.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel215.setForeground(new java.awt.Color(240, 240, 240));
+        jLabel215.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/yellow villager.png"))); // NOI18N
+        jLabel215.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel215.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel215MouseClicked(evt);
+            }
+        });
+        jPanel2.add(jLabel215, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 290, 10, 20));
+
+        jLabel216.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel216.setForeground(new java.awt.Color(240, 240, 240));
+        jLabel216.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/yellow villager.png"))); // NOI18N
+        jLabel216.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel216.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel216MouseClicked(evt);
+            }
+        });
+        jPanel2.add(jLabel216, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 290, 10, 20));
+
+        jLabel217.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel217.setForeground(new java.awt.Color(240, 240, 240));
+        jLabel217.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/yellow villager.png"))); // NOI18N
+        jLabel217.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel217.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel217MouseClicked(evt);
+            }
+        });
+        jPanel2.add(jLabel217, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 270, 10, 20));
+
+        jLabel218.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel218.setForeground(new java.awt.Color(240, 240, 240));
+        jLabel218.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/yellow villager.png"))); // NOI18N
+        jLabel218.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel218.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel218MouseClicked(evt);
+            }
+        });
+        jPanel2.add(jLabel218, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 270, 10, 20));
+
+        jLabel213.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel213.setForeground(new java.awt.Color(240, 240, 240));
+        jLabel213.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/yellow villager.png"))); // NOI18N
+        jLabel213.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel213.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel213MouseClicked(evt);
+            }
+        });
+        jPanel2.add(jLabel213, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 290, 10, 20));
+
+        jLabel214.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel214.setForeground(new java.awt.Color(240, 240, 240));
+        jLabel214.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/yellow villager.png"))); // NOI18N
+        jLabel214.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel214.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel214MouseClicked(evt);
+            }
+        });
+        jPanel2.add(jLabel214, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 290, 10, 20));
+
+        jLabel212.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel212.setForeground(new java.awt.Color(240, 240, 240));
+        jLabel212.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/yellow villager.png"))); // NOI18N
+        jLabel212.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel212.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel212MouseClicked(evt);
+            }
+        });
+        jPanel2.add(jLabel212, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 270, 10, 20));
+
+        jLabel211.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel211.setForeground(new java.awt.Color(240, 240, 240));
+        jLabel211.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/yellow villager.png"))); // NOI18N
+        jLabel211.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel211.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel211MouseClicked(evt);
+            }
+        });
+        jPanel2.add(jLabel211, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 270, 10, 20));
+
+        jLabel207.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel207.setForeground(new java.awt.Color(240, 240, 240));
+        jLabel207.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/green villager.png"))); // NOI18N
+        jLabel207.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel207.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel207MouseClicked(evt);
+            }
+        });
+        jPanel2.add(jLabel207, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 180, 10, 20));
+
+        jLabel208.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel208.setForeground(new java.awt.Color(240, 240, 240));
+        jLabel208.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/green villager.png"))); // NOI18N
+        jLabel208.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel208.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel208MouseClicked(evt);
+            }
+        });
+        jPanel2.add(jLabel208, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 180, 10, 20));
+
+        jLabel209.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel209.setForeground(new java.awt.Color(240, 240, 240));
+        jLabel209.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/green villager.png"))); // NOI18N
+        jLabel209.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel209.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel209MouseClicked(evt);
+            }
+        });
+        jPanel2.add(jLabel209, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 200, 10, 20));
+
+        jLabel210.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel210.setForeground(new java.awt.Color(240, 240, 240));
+        jLabel210.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/green villager.png"))); // NOI18N
+        jLabel210.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel210.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel210MouseClicked(evt);
+            }
+        });
+        jPanel2.add(jLabel210, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 200, 10, 20));
+
+        jLabel204.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel204.setForeground(new java.awt.Color(240, 240, 240));
+        jLabel204.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/green villager.png"))); // NOI18N
+        jLabel204.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel204.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel204MouseClicked(evt);
+            }
+        });
+        jPanel2.add(jLabel204, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 200, 10, 20));
+
+        jLabel205.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel205.setForeground(new java.awt.Color(240, 240, 240));
+        jLabel205.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/green villager.png"))); // NOI18N
+        jLabel205.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel205.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel205MouseClicked(evt);
+            }
+        });
+        jPanel2.add(jLabel205, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 200, 10, 20));
+
+        jLabel206.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel206.setForeground(new java.awt.Color(240, 240, 240));
+        jLabel206.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/green villager.png"))); // NOI18N
+        jLabel206.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel206.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel206MouseClicked(evt);
+            }
+        });
+        jPanel2.add(jLabel206, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 200, 10, 20));
+
+        jLabel203.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel203.setForeground(new java.awt.Color(240, 240, 240));
+        jLabel203.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/green villager.png"))); // NOI18N
+        jLabel203.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel203.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel203MouseClicked(evt);
+            }
+        });
+        jPanel2.add(jLabel203, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 180, 10, 20));
+
+        jLabel202.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel202.setForeground(new java.awt.Color(240, 240, 240));
+        jLabel202.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/green villager.png"))); // NOI18N
+        jLabel202.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel202.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel202MouseClicked(evt);
+            }
+        });
+        jPanel2.add(jLabel202, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 180, 10, 20));
+
+        jLabel196.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel196.setForeground(new java.awt.Color(240, 240, 240));
+        jLabel196.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/red villager.png"))); // NOI18N
+        jLabel196.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel196.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel196MouseClicked(evt);
+            }
+        });
+        jPanel2.add(jLabel196, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 300, 10, 20));
+
+        jLabel197.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel197.setForeground(new java.awt.Color(240, 240, 240));
+        jLabel197.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/red villager.png"))); // NOI18N
+        jLabel197.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel197.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel197MouseClicked(evt);
+            }
+        });
+        jPanel2.add(jLabel197, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 300, 10, 20));
+
+        jLabel198.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel198.setForeground(new java.awt.Color(240, 240, 240));
+        jLabel198.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/red villager.png"))); // NOI18N
+        jLabel198.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel198.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel198MouseClicked(evt);
+            }
+        });
+        jPanel2.add(jLabel198, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 300, 10, 20));
+
+        jLabel199.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel199.setForeground(new java.awt.Color(240, 240, 240));
+        jLabel199.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/red villager.png"))); // NOI18N
+        jLabel199.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel199.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel199MouseClicked(evt);
+            }
+        });
+        jPanel2.add(jLabel199, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 300, 10, 20));
+
+        jLabel200.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel200.setForeground(new java.awt.Color(240, 240, 240));
+        jLabel200.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/green villager.png"))); // NOI18N
+        jLabel200.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel200.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel200MouseClicked(evt);
+            }
+        });
+        jPanel2.add(jLabel200, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 180, 10, 20));
+
+        jLabel195.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel195.setForeground(new java.awt.Color(240, 240, 240));
+        jLabel195.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/red villager.png"))); // NOI18N
+        jLabel195.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel195.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel195MouseClicked(evt);
+            }
+        });
+        jPanel2.add(jLabel195, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 280, 10, 20));
+
+        jLabel193.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel193.setForeground(new java.awt.Color(240, 240, 240));
+        jLabel193.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/red villager.png"))); // NOI18N
+        jLabel193.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel193.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel193MouseClicked(evt);
+            }
+        });
+        jPanel2.add(jLabel193, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 280, 10, 20));
+
+        jLabel194.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel194.setForeground(new java.awt.Color(240, 240, 240));
+        jLabel194.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/red villager.png"))); // NOI18N
+        jLabel194.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel194.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel194MouseClicked(evt);
+            }
+        });
+        jPanel2.add(jLabel194, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 280, 10, 20));
+
+        jLabel189.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel189.setForeground(new java.awt.Color(240, 240, 240));
+        jLabel189.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/red villager.png"))); // NOI18N
+        jLabel189.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel189.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel189MouseClicked(evt);
+            }
+        });
+        jPanel2.add(jLabel189, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 280, 10, 20));
+
+        jLabel190.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel190.setForeground(new java.awt.Color(240, 240, 240));
+        jLabel190.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/red villager.png"))); // NOI18N
+        jLabel190.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel190.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel190MouseClicked(evt);
+            }
+        });
+        jPanel2.add(jLabel190, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 280, 10, 20));
+
+        jLabel191.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel191.setForeground(new java.awt.Color(240, 240, 240));
+        jLabel191.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/blue villager.png"))); // NOI18N
+        jLabel191.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel191.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel191MouseClicked(evt);
+            }
+        });
+        jPanel2.add(jLabel191, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 190, -1, 20));
+
+        jLabel192.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel192.setForeground(new java.awt.Color(240, 240, 240));
+        jLabel192.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/blue villager.png"))); // NOI18N
+        jLabel192.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel192.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel192MouseClicked(evt);
+            }
+        });
+        jPanel2.add(jLabel192, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 210, -1, 20));
+
+        jLabel188.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel188.setForeground(new java.awt.Color(240, 240, 240));
+        jLabel188.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/blue villager.png"))); // NOI18N
+        jLabel188.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel188.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel188MouseClicked(evt);
+            }
+        });
+        jPanel2.add(jLabel188, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 190, 10, 20));
+
+        jLabel186.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel186.setForeground(new java.awt.Color(240, 240, 240));
+        jLabel186.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/blue villager.png"))); // NOI18N
+        jLabel186.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel186.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel186MouseClicked(evt);
+            }
+        });
+        jPanel2.add(jLabel186, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 210, 10, 20));
+
+        jLabel185.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel185.setForeground(new java.awt.Color(240, 240, 240));
+        jLabel185.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/blue villager.png"))); // NOI18N
+        jLabel185.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel185.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel185MouseClicked(evt);
+            }
+        });
+        jPanel2.add(jLabel185, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 210, 10, 20));
+
+        jLabel184.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel184.setForeground(new java.awt.Color(240, 240, 240));
+        jLabel184.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/blue villager.png"))); // NOI18N
+        jLabel184.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel184.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel184MouseClicked(evt);
+            }
+        });
+        jPanel2.add(jLabel184, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 210, 10, 20));
+
+        jLabel183.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel183.setForeground(new java.awt.Color(240, 240, 240));
+        jLabel183.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/blue villager.png"))); // NOI18N
+        jLabel183.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel183.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel183MouseClicked(evt);
+            }
+        });
+        jPanel2.add(jLabel183, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 210, 10, 20));
+
+        jLabel182.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel182.setForeground(new java.awt.Color(240, 240, 240));
+        jLabel182.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/blue villager.png"))); // NOI18N
+        jLabel182.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel182.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel182MouseClicked(evt);
+            }
+        });
+        jPanel2.add(jLabel182, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 190, 10, 20));
+
         jLabel181.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel181.setForeground(new java.awt.Color(240, 240, 240));
         jLabel181.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/blue villager.png"))); // NOI18N
@@ -1056,7 +1502,7 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
                 jLabel181MouseClicked(evt);
             }
         });
-        jPanel2.add(jLabel181, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 190, 10, 20));
+        jPanel2.add(jLabel181, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 190, 10, 20));
 
         jLabel150.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Ship.png"))); // NOI18N
         jLabel150.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -1080,23 +1526,23 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
 
         jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Whale.png"))); // NOI18N
         jLabel11.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jPanel2.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 530, 30, -1));
+        jPanel2.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 550, 30, -1));
 
         jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Whale.png"))); // NOI18N
         jLabel13.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jPanel2.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 500, 30, -1));
+        jPanel2.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 520, 30, -1));
 
         jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Whale.png"))); // NOI18N
         jLabel12.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jPanel2.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 490, 30, -1));
+        jPanel2.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 510, 30, -1));
 
         jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Whale.png"))); // NOI18N
         jLabel14.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jPanel2.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 460, 30, -1));
+        jPanel2.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 480, 30, -1));
 
         jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Whale.png"))); // NOI18N
         jLabel15.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jPanel2.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 460, -1, -1));
+        jPanel2.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 480, -1, -1));
 
         jLabel22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Sea serpent.png"))); // NOI18N
         jLabel22.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -1120,27 +1566,27 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
 
         jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Shark.png"))); // NOI18N
         jLabel10.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jPanel2.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 270, 30, 20));
+        jPanel2.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 400, 30, 20));
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Shark.png"))); // NOI18N
         jLabel4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 280, 30, 20));
+        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 410, 30, 20));
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Shark.png"))); // NOI18N
         jLabel6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 270, 30, 20));
+        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 400, 30, 20));
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Shark.png"))); // NOI18N
         jLabel5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 250, 30, 20));
+        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 380, 30, 20));
 
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Shark.png"))); // NOI18N
         jLabel8.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 240, -1, 20));
+        jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 370, -1, 20));
 
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Shark.png"))); // NOI18N
         jLabel9.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jPanel2.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 290, 30, 20));
+        jPanel2.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 420, 30, 20));
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Mountain tile.png"))); // NOI18N
         jLabel7.setText("jLabel5");
@@ -1663,6 +2109,28 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
         jLabel180.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jPanel2.add(jLabel180, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 110, 30, -1));
 
+        jLabel187.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel187.setForeground(new java.awt.Color(240, 240, 240));
+        jLabel187.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/blue villager.png"))); // NOI18N
+        jLabel187.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel187.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel187MouseClicked(evt);
+            }
+        });
+        jPanel2.add(jLabel187, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 190, 10, 20));
+
+        jLabel201.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel201.setForeground(new java.awt.Color(240, 240, 240));
+        jLabel201.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/red villager.png"))); // NOI18N
+        jLabel201.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel201.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel201MouseClicked(evt);
+            }
+        });
+        jPanel2.add(jLabel201, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 300, 10, 20));
+
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/fondo con bordes.png"))); // NOI18N
         jLabel1.setLabelFor(jPanel2);
         jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, -1, -1));
@@ -1784,6 +2252,162 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
     private void jLabel181MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel181MouseClicked
         positionOfVillager = jLabel181;
     }//GEN-LAST:event_jLabel181MouseClicked
+
+    private void jLabel182MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel182MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel182MouseClicked
+
+    private void jLabel183MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel183MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel183MouseClicked
+
+    private void jLabel184MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel184MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel184MouseClicked
+
+    private void jLabel185MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel185MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel185MouseClicked
+
+    private void jLabel186MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel186MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel186MouseClicked
+
+    private void jLabel187MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel187MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel187MouseClicked
+
+    private void jLabel188MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel188MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel188MouseClicked
+
+    private void jLabel189MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel189MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel189MouseClicked
+
+    private void jLabel190MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel190MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel190MouseClicked
+
+    private void jLabel191MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel191MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel191MouseClicked
+
+    private void jLabel192MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel192MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel192MouseClicked
+
+    private void jLabel193MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel193MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel193MouseClicked
+
+    private void jLabel194MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel194MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel194MouseClicked
+
+    private void jLabel195MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel195MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel195MouseClicked
+
+    private void jLabel196MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel196MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel196MouseClicked
+
+    private void jLabel197MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel197MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel197MouseClicked
+
+    private void jLabel198MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel198MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel198MouseClicked
+
+    private void jLabel199MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel199MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel199MouseClicked
+
+    private void jLabel200MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel200MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel200MouseClicked
+
+    private void jLabel201MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel201MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel201MouseClicked
+
+    private void jLabel202MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel202MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel202MouseClicked
+
+    private void jLabel203MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel203MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel203MouseClicked
+
+    private void jLabel204MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel204MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel204MouseClicked
+
+    private void jLabel205MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel205MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel205MouseClicked
+
+    private void jLabel206MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel206MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel206MouseClicked
+
+    private void jLabel207MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel207MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel207MouseClicked
+
+    private void jLabel208MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel208MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel208MouseClicked
+
+    private void jLabel209MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel209MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel209MouseClicked
+
+    private void jLabel210MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel210MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel210MouseClicked
+
+    private void jLabel211MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel211MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel211MouseClicked
+
+    private void jLabel212MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel212MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel212MouseClicked
+
+    private void jLabel213MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel213MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel213MouseClicked
+
+    private void jLabel214MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel214MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel214MouseClicked
+
+    private void jLabel215MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel215MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel215MouseClicked
+
+    private void jLabel216MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel216MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel216MouseClicked
+
+    private void jLabel217MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel217MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel217MouseClicked
+
+    private void jLabel218MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel218MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel218MouseClicked
+
+    private void jLabel219MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel219MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel219MouseClicked
+
+    private void jLabel220MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel220MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel220MouseClicked
 
     /**
      * @param args the command line arguments
@@ -1912,10 +2536,49 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel180;
     private javax.swing.JLabel jLabel181;
+    private javax.swing.JLabel jLabel182;
+    private javax.swing.JLabel jLabel183;
+    private javax.swing.JLabel jLabel184;
+    private javax.swing.JLabel jLabel185;
+    private javax.swing.JLabel jLabel186;
+    private javax.swing.JLabel jLabel187;
+    private javax.swing.JLabel jLabel188;
+    private javax.swing.JLabel jLabel189;
     private javax.swing.JLabel jLabel19;
+    private javax.swing.JLabel jLabel190;
+    private javax.swing.JLabel jLabel191;
+    private javax.swing.JLabel jLabel192;
+    private javax.swing.JLabel jLabel193;
+    private javax.swing.JLabel jLabel194;
+    private javax.swing.JLabel jLabel195;
+    private javax.swing.JLabel jLabel196;
+    private javax.swing.JLabel jLabel197;
+    private javax.swing.JLabel jLabel198;
+    private javax.swing.JLabel jLabel199;
     private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel200;
+    private javax.swing.JLabel jLabel201;
+    private javax.swing.JLabel jLabel202;
+    private javax.swing.JLabel jLabel203;
+    private javax.swing.JLabel jLabel204;
+    private javax.swing.JLabel jLabel205;
+    private javax.swing.JLabel jLabel206;
+    private javax.swing.JLabel jLabel207;
+    private javax.swing.JLabel jLabel208;
+    private javax.swing.JLabel jLabel209;
     private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel210;
+    private javax.swing.JLabel jLabel211;
+    private javax.swing.JLabel jLabel212;
+    private javax.swing.JLabel jLabel213;
+    private javax.swing.JLabel jLabel214;
+    private javax.swing.JLabel jLabel215;
+    private javax.swing.JLabel jLabel216;
+    private javax.swing.JLabel jLabel217;
+    private javax.swing.JLabel jLabel218;
+    private javax.swing.JLabel jLabel219;
     private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel220;
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel25;
