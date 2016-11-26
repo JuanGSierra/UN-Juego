@@ -21,5 +21,8 @@ public class SafeVillagers implements Serializable{
    
     public void addSafeVillager(Villager V){
         Villagers.add(V);
-    }       
+    }
+    
+   
+    
 }
