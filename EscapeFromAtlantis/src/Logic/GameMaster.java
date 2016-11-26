@@ -25,10 +25,10 @@ public class GameMaster implements Serializable {
     private static final int MAX_PLAYERS = 4;
     private static final int MIN_PLAYERS = 2;
 
-    private int numberOfMovements;
-    private int actualTurn;
+    private int numberOfMovements; // numero de movimientos del jugador actual
+    private int actualTurn; // id del turno del jugador actual
     private int indexOfPlayer;
-    private boolean throwDice;
+    private boolean throwDice; // atributo que determina si toca tirar el dado o no
     private boolean volcano;
 
     //Constructor GameMaster
@@ -36,7 +36,7 @@ public class GameMaster implements Serializable {
 
         numberOfMovements = 3;
         actualTurn = 1;
-        throwDice = true;
+        throwDice = false;
         volcano = false;
 
         players = new ArrayList<>();
@@ -99,7 +99,7 @@ public class GameMaster implements Serializable {
             case 1:
                 actualTurn++;
                 numberOfMovements = 3;
-                throwDice = true;
+                throwDice = false;
                 break;
             case 2:
                 if (Player.getNumberOfPlayers() == 2) {
@@ -108,7 +108,7 @@ public class GameMaster implements Serializable {
                     actualTurn++;
 
                 }
-                throwDice = true;
+                throwDice = false;
                 numberOfMovements = 3;
                 break;
             case 3:
@@ -117,13 +117,13 @@ public class GameMaster implements Serializable {
                 } else {
                     actualTurn++;
                 }
-                throwDice = true;
+                throwDice = false;
                 numberOfMovements = 3;
                 break;
             case 4:
                 actualTurn = 1;
                 numberOfMovements = 3;
-                throwDice = true;
+                throwDice = false;
                 break;
         }
 

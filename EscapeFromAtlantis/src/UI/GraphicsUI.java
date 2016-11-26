@@ -83,6 +83,7 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
 
         if (positionOfVillager != null) {
             positionOfVillager.setBounds(jLabel.getBounds());
+
         } else {
             JOptionPane.showMessageDialog(this, "Escoge un Aldeano que mover "
                     + "primero!");
@@ -416,7 +417,7 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
             jLabel169.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Water tile.png")));
             changeTile = false;
         } else {
-
+            moveTo(jLabel169);
         }
 
     }
@@ -437,7 +438,13 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
             jLabel170.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Water tile.png")));
             changeTile = false;
         } else {
+            // determina si puede mover o no, la distancia al aldeano
+            if () {
 
+            } else {
+
+            }
+            moveTo(jLabel170);
         }
     }
 
@@ -2249,164 +2256,167 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
 
+    // Metodos de los villagers, cuando se seleccionan positionOfVillager cambia
+    // al villager seleccionado para así moverse.
+
     private void jLabel181MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel181MouseClicked
         positionOfVillager = jLabel181;
     }//GEN-LAST:event_jLabel181MouseClicked
 
     private void jLabel182MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel182MouseClicked
-        // TODO add your handling code here:
+        positionOfVillager = jLabel182;
     }//GEN-LAST:event_jLabel182MouseClicked
 
     private void jLabel183MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel183MouseClicked
-        // TODO add your handling code here:
+        positionOfVillager = jLabel183;
     }//GEN-LAST:event_jLabel183MouseClicked
 
     private void jLabel184MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel184MouseClicked
-        // TODO add your handling code here:
+        positionOfVillager = jLabel184;
     }//GEN-LAST:event_jLabel184MouseClicked
 
     private void jLabel185MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel185MouseClicked
-        // TODO add your handling code here:
+        positionOfVillager = jLabel185;
     }//GEN-LAST:event_jLabel185MouseClicked
 
     private void jLabel186MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel186MouseClicked
-        // TODO add your handling code here:
+        positionOfVillager = jLabel186;
     }//GEN-LAST:event_jLabel186MouseClicked
 
     private void jLabel187MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel187MouseClicked
-        // TODO add your handling code here:
+        positionOfVillager = jLabel187;
     }//GEN-LAST:event_jLabel187MouseClicked
 
     private void jLabel188MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel188MouseClicked
-        // TODO add your handling code here:
+        positionOfVillager = jLabel188;
     }//GEN-LAST:event_jLabel188MouseClicked
 
     private void jLabel189MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel189MouseClicked
-        // TODO add your handling code here:
+        positionOfVillager = jLabel189;
     }//GEN-LAST:event_jLabel189MouseClicked
 
     private void jLabel190MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel190MouseClicked
-        // TODO add your handling code here:
+        positionOfVillager = jLabel190;
     }//GEN-LAST:event_jLabel190MouseClicked
 
     private void jLabel191MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel191MouseClicked
-        // TODO add your handling code here:
+        positionOfVillager = jLabel191;
     }//GEN-LAST:event_jLabel191MouseClicked
 
     private void jLabel192MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel192MouseClicked
-        // TODO add your handling code here:
+        positionOfVillager = jLabel192;
     }//GEN-LAST:event_jLabel192MouseClicked
 
     private void jLabel193MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel193MouseClicked
-        // TODO add your handling code here:
+        positionOfVillager = jLabel193;
     }//GEN-LAST:event_jLabel193MouseClicked
 
     private void jLabel194MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel194MouseClicked
-        // TODO add your handling code here:
+        positionOfVillager = jLabel194;
     }//GEN-LAST:event_jLabel194MouseClicked
 
     private void jLabel195MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel195MouseClicked
-        // TODO add your handling code here:
+        positionOfVillager = jLabel195;
     }//GEN-LAST:event_jLabel195MouseClicked
 
     private void jLabel196MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel196MouseClicked
-        // TODO add your handling code here:
+        positionOfVillager = jLabel196;
     }//GEN-LAST:event_jLabel196MouseClicked
 
     private void jLabel197MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel197MouseClicked
-        // TODO add your handling code here:
+        positionOfVillager = jLabel197;
     }//GEN-LAST:event_jLabel197MouseClicked
 
     private void jLabel198MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel198MouseClicked
-        // TODO add your handling code here:
+        positionOfVillager = jLabel198;
     }//GEN-LAST:event_jLabel198MouseClicked
 
     private void jLabel199MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel199MouseClicked
-        // TODO add your handling code here:
+        positionOfVillager = jLabel199;
     }//GEN-LAST:event_jLabel199MouseClicked
 
     private void jLabel200MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel200MouseClicked
-        // TODO add your handling code here:
+        positionOfVillager = jLabel200;
     }//GEN-LAST:event_jLabel200MouseClicked
 
     private void jLabel201MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel201MouseClicked
-        // TODO add your handling code here:
+        positionOfVillager = jLabel201;
     }//GEN-LAST:event_jLabel201MouseClicked
 
     private void jLabel202MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel202MouseClicked
-        // TODO add your handling code here:
+        positionOfVillager = jLabel202;
     }//GEN-LAST:event_jLabel202MouseClicked
 
     private void jLabel203MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel203MouseClicked
-        // TODO add your handling code here:
+        positionOfVillager = jLabel203;
     }//GEN-LAST:event_jLabel203MouseClicked
 
     private void jLabel204MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel204MouseClicked
-        // TODO add your handling code here:
+        positionOfVillager = jLabel204;
     }//GEN-LAST:event_jLabel204MouseClicked
 
     private void jLabel205MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel205MouseClicked
-        // TODO add your handling code here:
+        positionOfVillager = jLabel205;
     }//GEN-LAST:event_jLabel205MouseClicked
 
     private void jLabel206MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel206MouseClicked
-        // TODO add your handling code here:
+        positionOfVillager = jLabel206;
     }//GEN-LAST:event_jLabel206MouseClicked
 
     private void jLabel207MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel207MouseClicked
-        // TODO add your handling code here:
+        positionOfVillager = jLabel207;
     }//GEN-LAST:event_jLabel207MouseClicked
 
     private void jLabel208MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel208MouseClicked
-        // TODO add your handling code here:
+        positionOfVillager = jLabel208;
     }//GEN-LAST:event_jLabel208MouseClicked
 
     private void jLabel209MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel209MouseClicked
-        // TODO add your handling code here:
+        positionOfVillager = jLabel209;
     }//GEN-LAST:event_jLabel209MouseClicked
 
     private void jLabel210MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel210MouseClicked
-        // TODO add your handling code here:
+        positionOfVillager = jLabel210;
     }//GEN-LAST:event_jLabel210MouseClicked
 
     private void jLabel211MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel211MouseClicked
-        // TODO add your handling code here:
+        positionOfVillager = jLabel211;
     }//GEN-LAST:event_jLabel211MouseClicked
 
     private void jLabel212MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel212MouseClicked
-        // TODO add your handling code here:
+        positionOfVillager = jLabel212;
     }//GEN-LAST:event_jLabel212MouseClicked
 
     private void jLabel213MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel213MouseClicked
-        // TODO add your handling code here:
+        positionOfVillager = jLabel213;
     }//GEN-LAST:event_jLabel213MouseClicked
 
     private void jLabel214MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel214MouseClicked
-        // TODO add your handling code here:
+        positionOfVillager = jLabel214;
     }//GEN-LAST:event_jLabel214MouseClicked
 
     private void jLabel215MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel215MouseClicked
-        // TODO add your handling code here:
+        positionOfVillager = jLabel215;
     }//GEN-LAST:event_jLabel215MouseClicked
 
     private void jLabel216MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel216MouseClicked
-        // TODO add your handling code here:
+        positionOfVillager = jLabel216;
     }//GEN-LAST:event_jLabel216MouseClicked
 
     private void jLabel217MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel217MouseClicked
-        // TODO add your handling code here:
+        positionOfVillager = jLabel217;
     }//GEN-LAST:event_jLabel217MouseClicked
 
     private void jLabel218MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel218MouseClicked
-        // TODO add your handling code here:
+        positionOfVillager = jLabel218;
     }//GEN-LAST:event_jLabel218MouseClicked
 
     private void jLabel219MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel219MouseClicked
-        // TODO add your handling code here:
+        positionOfVillager = jLabel219;
     }//GEN-LAST:event_jLabel219MouseClicked
 
     private void jLabel220MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel220MouseClicked
-        // TODO add your handling code here:
+        positionOfVillager = jLabel220;
     }//GEN-LAST:event_jLabel220MouseClicked
 
     /**
