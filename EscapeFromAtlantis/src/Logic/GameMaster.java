@@ -47,7 +47,7 @@ public class GameMaster implements Serializable {
     }
 
     public void initializePlayer(String name) {
-        players.add(new Player(name));
+        players.add(new Player());
     }
 
     /**

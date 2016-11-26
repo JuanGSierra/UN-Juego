@@ -12,13 +12,15 @@ import java.util.Random;
  *
  * @author macas
  */
-public class Villager implements Serializable {
+public class Villager  {
 
     private int value;
     private boolean inWater;
+    private int idPlayer;
 
-    public Villager(int value) {
+    public Villager(int value, int idPlayer) {
         this.value = value;
+        this.idPlayer = idPlayer;
         inWater = false;
     }
 
