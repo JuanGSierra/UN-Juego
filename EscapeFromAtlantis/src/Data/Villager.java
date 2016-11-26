@@ -7,12 +7,13 @@ package Data;
 
 import java.io.Serializable;
 import java.util.Random;
+import javax.swing.JLabel;
 
 /**
  *
  * @author macas
  */
-public class Villager  {
+public class Villager extends JLabel {
 
     private int value;
     private boolean inWater;
