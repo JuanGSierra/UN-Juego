@@ -32,9 +32,11 @@ public class AnimalsDice implements Serializable{
 
     }
 
-    public String throwDice() {
+    public String throwDice(int n) {
         Random r = new Random();
-
+        for (int i = 0; i < ((n*100 )- 30)/40; i++) {
+            int x = r.nextInt();
+        }
         switch (r.nextInt(5)) {
             case 0:
                 System.out.println(1);

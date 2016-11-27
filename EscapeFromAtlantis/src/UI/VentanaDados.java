@@ -4,7 +4,9 @@
  * and open the template in the editor.
  */
 package UI;
+
 import Data.*;
+import javax.swing.ImageIcon;
 
 /**
  *
@@ -13,12 +15,19 @@ import Data.*;
 public class VentanaDados extends javax.swing.JFrame {
 
     private AnimalsDice dado;
+    private boolean flag;
+
     /**
      * Creates new form VentanaDados
      */
     public VentanaDados() {
         initComponents();
-        dado= new AnimalsDice();
+        ImageIcon gifdado = new ImageIcon("/Imagenes/dados.gif");
+        gifdado.setImageObserver(jLabel1);
+        jLabel1.setIcon(gifdado);
+        
+        flag = true;
+        dado = new AnimalsDice();
     }
 
     /**
@@ -122,32 +131,37 @@ public class VentanaDados extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        String result = dado.throwDice();
-        switch(result){
-            case "Shark":
-                jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Shark.png")));
-                jLabel4.setText("Tiburon");
-                break;
-            case "SeaSerpent":
-                jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Sea serpent.png")));
-                jLabel4.setText("Serpiente Marina");
-                break;
-            case "Whale":
-                jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Whale.png")));
-                jLabel4.setText("Ballena");
-                break;
-        }
-        if(jLabel4.getText().equalsIgnoreCase("Tiburon")){
-            returnShark();
-        } else if(jLabel4.getText().equalsIgnoreCase("Ballena")){
-            returnWhale();
-        }else if(jLabel4.getText().equalsIgnoreCase("Serpiente Marina")){
-            returnSeaSerpent();
+        if (flag) {
+            flag = false;
+            String result = dado.throwDice(9);
+            switch (result) {
+                case "Shark":
+                    jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/dadotiburon.png")));
+                    jLabel4.setText("Tiburon");
+                    break;
+                case "SeaSerpent":
+                    jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/dadoserpiente.png")));
+                    jLabel4.setText("Serpiente Marina");
+                    break;
+                case "Whale":
+                    jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/dadoballena.png")));
+                    jLabel4.setText("Ballena");
+                    break;
+            }
+        } else {
+
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
+        if (jLabel4.getText().equalsIgnoreCase("Tiburon")) {
+            returnShark();
+        } else if (jLabel4.getText().equalsIgnoreCase("Ballena")) {
+            returnWhale();
+        } else if (jLabel4.getText().equalsIgnoreCase("Serpiente Marina")) {
+            returnSeaSerpent();
+        }
         this.setVisible(false);
     }//GEN-LAST:event_jButton2ActionPerformed
 
@@ -185,16 +199,18 @@ public class VentanaDados extends javax.swing.JFrame {
             }
         });
     }
-    public static Shark returnShark(){
+
+    public static Shark returnShark() {
         Shark shark = new Shark(1);
         return shark;
     }
-    public static Whale returnWhale(){
+
+    public static Whale returnWhale() {
         Whale whale = new Whale(1);
         return whale;
     }
-    
-    public static SeaSerpent returnSeaSerpent(){
+
+    public static SeaSerpent returnSeaSerpent() {
         SeaSerpent seaSerpent = new SeaSerpent(1);
         return seaSerpent;
     }

@@ -3089,37 +3089,123 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
         
         
         
+        labels[3][9]=jLabel41;// bosque
+        labels[3][11]=jLabel38;
+        labels[3][13]=jLabel17;
+        labels[3][15]=jLabel24;
+        
+        labels[4][8]=jLabel36;
+        labels[4][16]=jLabel40;
+        
+        labels[5][7]=jLabel35;
+        labels[5][17]=jLabel39;
+        
+        labels[7][7]=jLabel33;
+        labels[7][17]=jLabel26;
+        
+        labels[8][8]=jLabel32;
+        labels[8][16]=jLabel27;
+        
+        labels[9][9]=jLabel31;
+        labels[9][11]=jLabel30;
+        labels[9][13]=jLabel29;
+        labels[9][15]=jLabel28;
+        
+        
+        
+        labels[3][17]=jLabel44; // arena
+        
+        labels[4][6]=jLabel44;
+        labels[4][18]=jLabel44;
+        
+        labels[5][5]=jLabel44;
+        labels[5][19]=jLabel44;
+        
+        labels[6][4]=jLabel44;
+        labels[6][6]=jLabel44;
+        labels[6][8]=jLabel44;
+        labels[6][16]=jLabel44;
+        labels[6][18]=jLabel44;
+        labels[6][20]=jLabel44;
+        
+        labels[7][5]=jLabel44;
+        labels[7][19]=jLabel44;
+        
+        labels[8][6]=jLabel44;
+        labels[8][18]=jLabel44;
+        
+        labels[9][7]=jLabel44;
+        
+        
+        
+        
+        labels[0][6]=jLabel44;// agua
+        labels[0][8]=jLabel44;
+        labels[0][10]=jLabel44;
+        labels[0][12]=jLabel44;
+        labels[0][14]=jLabel44;
+        labels[0][16]=jLabel44;
+        labels[0][18]=jLabel44;
+        
+        labels[1][3]=jLabel44;
+        labels[1][5]=jLabel44;
+        labels[1][7]=jLabel44;
+        labels[1][9]=jLabel44;
+        labels[1][11]=jLabel44;
+        labels[1][13]=jLabel44;
+        labels[1][15]=jLabel44;
+        labels[1][17]=jLabel44;
+        labels[1][19]=jLabel44;
+        labels[1][21]=jLabel44;
+        
+        labels[2][2]=jLabel44;
+        labels[2][4]=jLabel44;
+        labels[][6]=jLabel44;
+        labels[0][8]=jLabel44;
+        labels[0][10]=jLabel44;
+        labels[0][12]=jLabel44;
+        labels[0][14]=jLabel44;
+        labels[0][16]=jLabel44;
+        labels[0][18]=jLabel44;
+        labels[0][20]=jLabel44;
+        labels[0][22]=jLabel44;
+        
         labels[0][2]=jLabel44;
         labels[0][2]=jLabel44;
         labels[0][2]=jLabel44;
         labels[0][2]=jLabel44;
         labels[0][2]=jLabel44;
+        
+        labels[0][2]=jLabel44;
+        labels[0][2]=jLabel44;
+        labels[0][2]=jLabel44;
+        labels[0][2]=jLabel44;
+        
+        labels[0][2]=jLabel44;
+        labels[0][2]=jLabel44;
+        labels[0][2]=jLabel44;
+        labels[0][2]=jLabel44;
+        
+        labels[0][2]=jLabel44;
+        labels[0][2]=jLabel44;
+        labels[0][2]=jLabel44;
+        
+        labels[0][2]=jLabel44;
+        labels[0][2]=jLabel44;
+        labels[0][2]=jLabel44;
+        labels[0][2]=jLabel44;
+        
+        labels[0][2]=jLabel44;
+        labels[0][2]=jLabel44;
+        labels[0][2]=jLabel44;
+        labels[0][2]=jLabel44;
+        
         labels[0][2]=jLabel44;
         labels[0][2]=jLabel44;
         labels[0][2]=jLabel44;
         labels[0][2]=jLabel44;
         labels[0][2]=jLabel44;
-        labels[0][2]=jLabel44;
-        labels[0][2]=jLabel44;
-        labels[0][2]=jLabel44;
-        labels[0][2]=jLabel44;
-        labels[0][2]=jLabel44;
-        labels[0][2]=jLabel44;
-        labels[0][2]=jLabel44;
-        labels[0][2]=jLabel44;
-        labels[0][2]=jLabel44;
-        labels[0][2]=jLabel44;
-        labels[0][2]=jLabel44;
-        labels[0][2]=jLabel44;
-        labels[0][2]=jLabel44;
-        labels[0][2]=jLabel44;
-        labels[0][2]=jLabel44;
-        labels[0][2]=jLabel44;
-        labels[0][2]=jLabel44;
-        labels[0][2]=jLabel44;
-        labels[0][2]=jLabel44;
-        labels[0][2]=jLabel44;
-        labels[0][2]=jLabel44;
+        
         labels[0][2]=jLabel44;
         labels[0][2]=jLabel44;
         labels[0][2]=jLabel44;
@@ -3132,32 +3218,24 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
         labels[0][2]=jLabel44;
         labels[0][2]=jLabel44;
         
+        labels[0][2]=jLabel44;
+        labels[0][2]=jLabel44;
+        labels[0][2]=jLabel44;
+        labels[0][2]=jLabel44;
+        labels[0][2]=jLabel44;
+        labels[0][2]=jLabel44;
+        labels[0][2]=jLabel44;
+        labels[0][2]=jLabel44;
+        labels[0][2]=jLabel44;
+        labels[0][2]=jLabel44;
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+        labels[0][2]=jLabel44;
+        labels[0][2]=jLabel44;
+        labels[0][2]=jLabel44;
+        labels[0][2]=jLabel44;
+        labels[0][2]=jLabel44;
+        labels[0][2]=jLabel44;
+        labels[0][2]=jLabel44;
         
     }
 }
