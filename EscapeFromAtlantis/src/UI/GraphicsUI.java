@@ -1080,6 +1080,11 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
         jButton4 = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel221 = new javax.swing.JLabel();
+        jLabel222 = new javax.swing.JLabel();
+        jLabel223 = new javax.swing.JLabel();
+        jLabel224 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(0, 0, 0));
@@ -2175,7 +2180,7 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(37, 37, 37)
                 .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(40, Short.MAX_VALUE))
+                .addContainerGap(28, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2199,6 +2204,20 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
             }
         });
 
+        jLabel2.setText("Jugadores");
+
+        jLabel221.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/red villager.png"))); // NOI18N
+        jLabel221.setText("jLabel221");
+
+        jLabel222.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/blue villager.png"))); // NOI18N
+        jLabel222.setText("jLabel222");
+
+        jLabel223.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/yellow villager.png"))); // NOI18N
+        jLabel223.setText("jLabel223");
+
+        jLabel224.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/green villager.png"))); // NOI18N
+        jLabel224.setText("jLabel224");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -2208,15 +2227,26 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
                     .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(21, 21, 21))))
+                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel2))
+                        .addGap(21, 21, 21))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel221)
+                                .addContainerGap())
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel223)
+                                    .addComponent(jLabel222)
+                                    .addComponent(jLabel224))
+                                .addGap(0, 0, Short.MAX_VALUE))))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2228,7 +2258,17 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(331, 331, 331)
+                        .addGap(26, 26, 26)
+                        .addComponent(jLabel2)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel221)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel222)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jLabel223)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel224)
+                        .addGap(170, 170, 170)
                         .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -2561,6 +2601,7 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
     private javax.swing.JLabel jLabel197;
     private javax.swing.JLabel jLabel198;
     private javax.swing.JLabel jLabel199;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel200;
     private javax.swing.JLabel jLabel201;
@@ -2585,6 +2626,10 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
     private javax.swing.JLabel jLabel219;
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel220;
+    private javax.swing.JLabel jLabel221;
+    private javax.swing.JLabel jLabel222;
+    private javax.swing.JLabel jLabel223;
+    private javax.swing.JLabel jLabel224;
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel25;
