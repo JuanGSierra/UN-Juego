@@ -47,11 +47,12 @@ public class GameMaster implements Serializable {
         mapa = new Board();
         posicionVillagerInicial = 0;
         newValue = 1;
-        casillas = new Casilla[13][25];
-        llenarcasillas();
+        
 
         this.consola = consola;//
         mapManager = new MapManager(consola);
+        casillas = new Casilla[13][25];
+        llenarcasillas();
         comprobations = new Comprobations(this);
 
     }
