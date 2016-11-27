@@ -17,6 +17,8 @@ public abstract class Tile implements Serializable{
     private final int MAXPLAYERQUANTITY = 3;
     private String effect;
     private int position;
+    private Villager[] aldeanos;
+    static int aldeanosActuales;
 
     public boolean isInBoard() {
         return inBoard;
@@ -42,10 +44,19 @@ public abstract class Tile implements Serializable{
         this.position = position;
         this.inBoard = inBoard;
         this.effect = effect;
+        aldeanos= new Villager[3];
     }
 
     public void removeTile() {
         this.inBoard = false;
+    }
+    
+    public void agregarAldeano(Villager v){
+        if(aldeanosActuales==(MAXPLAYERQUANTITY-1)){
+            throw new ArrayIndexOutOfBoundsException();
+        }
+        aldeanos[aldeanosActuales]= v;
+        aldeanosActuales++;
     }
 
 }
