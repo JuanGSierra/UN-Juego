@@ -19,6 +19,7 @@ import Data.*;
 import java.util.ArrayList;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
+import javax.swing.plaf.nimbus.NimbusLookAndFeel;
 
 /**
  *
@@ -36,10 +37,26 @@ public class Menu extends javax.swing.JFrame {
      */
     public Menu(GraphicsUI pantallaDeJuego) {
         initComponents();
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(new NimbusLookAndFeel());
+                    break;
+                }
+            }
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(GraphicsUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
         this.pantallaDeJuego = pantallaDeJuego;
         this.gameMaster = pantallaDeJuego.getGameMaster();
         this.nuevaPartida = new NuevaPartida(this);
         sVillager = new SafeVillagers();
+        
     }
 
     public GameMaster getGameMaster() {
