@@ -23,6 +23,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JLabel;
@@ -38,6 +39,7 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
     private GameMaster gameMaster;
     private Menu menu;
 
+    private int inicioDelJuego;
     // atributo que me dira si tengo que quitar tiles o no
     private boolean changeTile;
 
@@ -51,8 +53,6 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
     // 1 - Mover Villagers
     // 2 - Tirar Dados
     // 3 - Levantar la Tile
-    private String accionActual;
-
     /**
      * Creates new form GraphicsUI
      */
@@ -64,7 +64,7 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
         //initComponentsVillagers();
 
         turnoActual = "";
-        accionActual = "";
+        inicioDelJuego = 0;
 
         this.gameMaster = new GameMaster(this);
         menu = new Menu(this);
@@ -75,6 +75,13 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
 
     }
 
+    /**
+     * Pone los datos del jugador del turno actual
+     */
+    public void datosDelTurno() {
+        jLabel221.setText(turnoActual);
+    }
+
     public String getTurnoActual() {
         return turnoActual;
     }
@@ -83,20 +90,8 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
         this.turnoActual = turnoActual;
     }
 
-    public String getAccionActual() {
-        return accionActual;
-    }
-
-    public void setAccionActual(String accionActual) {
-        this.accionActual = accionActual;
-    }
-
     public GameMaster getGameMaster() {
         return gameMaster;
-    }
-
-    public void initializePlayer() {
-        gameMaster.initializePlayer("");
     }
 
     public void menu() {
@@ -129,6 +124,10 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
 
     public void selectBoat() {
 
+    }
+
+    public int getInicioDelJuego() {
+        return inicioDelJuego;
     }
 
     /**
@@ -444,7 +443,12 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
         if (changeTile) {
             jLabel169.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Water tile.png")));
             changeTile = false;
-        } else {
+        } else if (inicioDelJuego < (gameMaster.getPlayers().size() * 10)) {
+            gameMaster.setFirstPositionVillagers(jLabel169);
+
+            inicioDelJuego++;
+
+        } else { // falta condicion de movimiento
             moveTo(jLabel169);
         }
 
@@ -455,9 +459,13 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
             jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Water tile.png")));
             changeTile = false;
 
-        } else {
-            moveTo(jLabel7);
+        } else if (inicioDelJuego < (gameMaster.getPlayers().size() * 10)) {
+            gameMaster.setFirstPositionVillagers(jLabel7);
 
+            inicioDelJuego++;
+
+        } else { // falta condicion de movimiento
+            moveTo(jLabel7);
         }
     }
 
@@ -465,9 +473,12 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
         if (changeTile) {
             jLabel170.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Water tile.png")));
             changeTile = false;
-        } else {
-            // determina si puede mover o no, la distancia al aldeano
+        } else if (inicioDelJuego < (gameMaster.getPlayers().size() * 10)) {
+            gameMaster.setFirstPositionVillagers(jLabel170);
 
+            inicioDelJuego++;
+
+        } else { // falta condicion de movimiento
             moveTo(jLabel170);
         }
     }
@@ -476,8 +487,13 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
         if (changeTile) {
             jLabel171.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Water tile.png")));
             changeTile = false;
-        } else {
+        } else if (inicioDelJuego < (gameMaster.getPlayers().size() * 10)) {
+            gameMaster.setFirstPositionVillagers(jLabel171);
 
+            inicioDelJuego++;
+
+        } else { // falta condicion de movimiento
+            moveTo(jLabel171);
         }
     }
 
@@ -485,8 +501,13 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
         if (changeTile) {
             jLabel168.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Water tile.png")));
             changeTile = false;
-        } else {
+        } else if (inicioDelJuego < (gameMaster.getPlayers().size() * 10)) {
+            gameMaster.setFirstPositionVillagers(jLabel168);
 
+            inicioDelJuego++;
+
+        } else { // falta condicion de movimiento
+            moveTo(jLabel168);
         }
     }
 
@@ -494,8 +515,13 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
         if (changeTile) {
             jLabel163.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Water tile.png")));
             changeTile = false;
-        } else {
+        } else if (inicioDelJuego < (gameMaster.getPlayers().size() * 10)) {
+            gameMaster.setFirstPositionVillagers(jLabel163);
 
+            inicioDelJuego++;
+
+        } else { // falta condicion de movimiento
+            moveTo(jLabel163);
         }
     }
 
@@ -503,8 +529,13 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
         if (changeTile) {
             jLabel172.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Water tile.png")));
             changeTile = false;
-        } else {
+        } else if (inicioDelJuego < (gameMaster.getPlayers().size() * 10)) {
+            gameMaster.setFirstPositionVillagers(jLabel172);
 
+            inicioDelJuego++;
+
+        } else { // falta condicion de movimiento
+            moveTo(jLabel172);
         }
     }
 
@@ -512,8 +543,13 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
         if (changeTile) {
             jLabel173.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Water tile.png")));
             changeTile = false;
-        } else {
+        } else if (inicioDelJuego < (gameMaster.getPlayers().size() * 10)) {
+            gameMaster.setFirstPositionVillagers(jLabel173);
 
+            inicioDelJuego++;
+
+        } else { // falta condicion de movimiento
+            moveTo(jLabel173);
         }
     }
 
@@ -521,8 +557,13 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
         if (changeTile) {
             jLabel162.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Water tile.png")));
             changeTile = false;
-        } else {
+        } else if (inicioDelJuego < (gameMaster.getPlayers().size() * 10)) {
+            gameMaster.setFirstPositionVillagers(jLabel162);
 
+            inicioDelJuego++;
+
+        } else { // falta condicion de movimiento
+            moveTo(jLabel162);
         }
     }
 
@@ -530,8 +571,13 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
         if (changeTile) {
             jLabel164.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Water tile.png")));
             changeTile = false;
-        } else {
+        } else if (inicioDelJuego < (gameMaster.getPlayers().size() * 10)) {
+            gameMaster.setFirstPositionVillagers(jLabel164);
 
+            inicioDelJuego++;
+
+        } else { // falta condicion de movimiento
+            moveTo(jLabel164);
         }
     }
 
@@ -539,8 +585,13 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
         if (changeTile) {
             jLabel160.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Water tile.png")));
             changeTile = false;
-        } else {
+        } else if (inicioDelJuego < (gameMaster.getPlayers().size() * 10)) {
+            gameMaster.setFirstPositionVillagers(jLabel160);
 
+            inicioDelJuego++;
+
+        } else { // falta condicion de movimiento
+            moveTo(jLabel160);
         }
     }
 
@@ -548,8 +599,13 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
         if (changeTile) {
             jLabel161.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Water tile.png")));
             changeTile = false;
-        } else {
+        } else if (inicioDelJuego < (gameMaster.getPlayers().size() * 10)) {
+            gameMaster.setFirstPositionVillagers(jLabel161);
 
+            inicioDelJuego++;
+
+        } else { // falta condicion de movimiento
+            moveTo(jLabel161);
         }
     }
 
@@ -557,8 +613,13 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
         if (changeTile) {
             jLabel167.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Water tile.png")));
             changeTile = false;
-        } else {
+        } else if (inicioDelJuego < (gameMaster.getPlayers().size() * 10)) {
+            gameMaster.setFirstPositionVillagers(jLabel167);
 
+            inicioDelJuego++;
+
+        } else { // falta condicion de movimiento
+            moveTo(jLabel167);
         }
     }
 
@@ -566,8 +627,13 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
         if (changeTile) {
             jLabel117.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Water tile.png")));
             changeTile = false;
-        } else {
+        } else if (inicioDelJuego < (gameMaster.getPlayers().size() * 10)) {
+            gameMaster.setFirstPositionVillagers(jLabel117);
 
+            inicioDelJuego++;
+
+        } else { // falta condicion de movimiento
+            moveTo(jLabel117);
         }
     }
 
@@ -575,8 +641,13 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
         if (changeTile) {
             jLabel165.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Water tile.png")));
             changeTile = false;
-        } else {
+        } else if (inicioDelJuego < (gameMaster.getPlayers().size() * 10)) {
+            gameMaster.setFirstPositionVillagers(jLabel165);
 
+            inicioDelJuego++;
+
+        } else { // falta condicion de movimiento
+            moveTo(jLabel165);
         }
     }
 
@@ -584,8 +655,13 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
         if (changeTile) {
             jLabel166.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Water tile.png")));
             changeTile = false;
-        } else {
+        } else if (inicioDelJuego < (gameMaster.getPlayers().size() * 10)) {
+            gameMaster.setFirstPositionVillagers(jLabel166);
 
+            inicioDelJuego++;
+
+        } else { // falta condicion de movimiento
+            moveTo(jLabel166);
         }
     }
 
@@ -594,8 +670,13 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
         if (changeTile) {
             jLabel41.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Water tile.png")));
             changeTile = false;
-        } else {
+        } else if (inicioDelJuego < (gameMaster.getPlayers().size() * 10)) {
+            gameMaster.setFirstPositionVillagers(jLabel41);
 
+            inicioDelJuego++;
+
+        } else { // falta condicion de movimiento
+            moveTo(jLabel41);
         }
     }
 
@@ -603,8 +684,13 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
         if (changeTile) {
             jLabel38.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Water tile.png")));
             changeTile = false;
-        } else {
+        } else if (inicioDelJuego < (gameMaster.getPlayers().size() * 10)) {
+            gameMaster.setFirstPositionVillagers(jLabel38);
 
+            inicioDelJuego++;
+
+        } else { // falta condicion de movimiento
+            moveTo(jLabel38);
         }
     }
 
@@ -612,8 +698,13 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
         if (changeTile) {
             jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Water tile.png")));
             changeTile = false;
-        } else {
+        } else if (inicioDelJuego < (gameMaster.getPlayers().size() * 10)) {
+            gameMaster.setFirstPositionVillagers(jLabel17);
 
+            inicioDelJuego++;
+
+        } else { // falta condicion de movimiento
+            moveTo(jLabel17);
         }
     }
 
@@ -621,8 +712,13 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
         if (changeTile) {
             jLabel24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Water tile.png")));
             changeTile = false;
-        } else {
+        } else if (inicioDelJuego < (gameMaster.getPlayers().size() * 10)) {
+            gameMaster.setFirstPositionVillagers(jLabel24);
 
+            inicioDelJuego++;
+
+        } else { // falta condicion de movimiento
+            moveTo(jLabel24);
         }
     }
 
@@ -630,8 +726,13 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
         if (changeTile) {
             jLabel36.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Water tile.png")));
             changeTile = false;
-        } else {
+        } else if (inicioDelJuego < (gameMaster.getPlayers().size() * 10)) {
+            gameMaster.setFirstPositionVillagers(jLabel36);
 
+            inicioDelJuego++;
+
+        } else { // falta condicion de movimiento
+            moveTo(jLabel36);
         }
     }
 
@@ -639,8 +740,13 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
         if (changeTile) {
             jLabel40.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Water tile.png")));
             changeTile = false;
-        } else {
+        } else if (inicioDelJuego < (gameMaster.getPlayers().size() * 10)) {
+            gameMaster.setFirstPositionVillagers(jLabel40);
 
+            inicioDelJuego++;
+
+        } else { // falta condicion de movimiento
+            moveTo(jLabel40);
         }
     }
 
@@ -648,8 +754,13 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
         if (changeTile) {
             jLabel35.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Water tile.png")));
             changeTile = false;
-        } else {
+        } else if (inicioDelJuego < (gameMaster.getPlayers().size() * 10)) {
+            gameMaster.setFirstPositionVillagers(jLabel35);
 
+            inicioDelJuego++;
+
+        } else { // falta condicion de movimiento
+            moveTo(jLabel35);
         }
     }
 
@@ -657,8 +768,13 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
         if (changeTile) {
             jLabel39.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Water tile.png")));
             changeTile = false;
-        } else {
+        } else if (inicioDelJuego < (gameMaster.getPlayers().size() * 10)) {
+            gameMaster.setFirstPositionVillagers(jLabel39);
 
+            inicioDelJuego++;
+
+        } else { // falta condicion de movimiento
+            moveTo(jLabel39);
         }
     }
 
@@ -666,8 +782,13 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
         if (changeTile) {
             jLabel33.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Water tile.png")));
             changeTile = false;
-        } else {
+        } else if (inicioDelJuego < (gameMaster.getPlayers().size() * 10)) {
+            gameMaster.setFirstPositionVillagers(jLabel33);
 
+            inicioDelJuego++;
+
+        } else { // falta condicion de movimiento
+            moveTo(jLabel33);
         }
     }
 
@@ -675,8 +796,13 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
         if (changeTile) {
             jLabel26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Water tile.png")));
             changeTile = false;
-        } else {
+        } else if (inicioDelJuego < (gameMaster.getPlayers().size() * 10)) {
+            gameMaster.setFirstPositionVillagers(jLabel26);
 
+            inicioDelJuego++;
+
+        } else { // falta condicion de movimiento
+            moveTo(jLabel26);
         }
     }
 
@@ -684,8 +810,13 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
         if (changeTile) {
             jLabel32.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Water tile.png")));
             changeTile = false;
-        } else {
+        } else if (inicioDelJuego < (gameMaster.getPlayers().size() * 10)) {
+            gameMaster.setFirstPositionVillagers(jLabel32);
 
+            inicioDelJuego++;
+
+        } else { // falta condicion de movimiento
+            moveTo(jLabel32);
         }
     }
 
@@ -693,8 +824,13 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
         if (changeTile) {
             jLabel27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Water tile.png")));
             changeTile = false;
-        } else {
+        } else if (inicioDelJuego < (gameMaster.getPlayers().size() * 10)) {
+            gameMaster.setFirstPositionVillagers(jLabel27);
 
+            inicioDelJuego++;
+
+        } else { // falta condicion de movimiento
+            moveTo(jLabel27);
         }
     }
 
@@ -702,8 +838,13 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
         if (changeTile) {
             jLabel31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Water tile.png")));
             changeTile = false;
-        } else {
+        } else if (inicioDelJuego < (gameMaster.getPlayers().size() * 10)) {
+            gameMaster.setFirstPositionVillagers(jLabel31);
 
+            inicioDelJuego++;
+
+        } else { // falta condicion de movimiento
+            moveTo(jLabel31);
         }
     }
 
@@ -711,8 +852,13 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
         if (changeTile) {
             jLabel30.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Water tile.png")));
             changeTile = false;
-        } else {
+        } else if (inicioDelJuego < (gameMaster.getPlayers().size() * 10)) {
+            gameMaster.setFirstPositionVillagers(jLabel30);
 
+            inicioDelJuego++;
+
+        } else { // falta condicion de movimiento
+            moveTo(jLabel30);
         }
     }
 
@@ -720,8 +866,13 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
         if (changeTile) {
             jLabel29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Water tile.png")));
             changeTile = false;
-        } else {
+        } else if (inicioDelJuego < (gameMaster.getPlayers().size() * 10)) {
+            gameMaster.setFirstPositionVillagers(jLabel29);
 
+            inicioDelJuego++;
+
+        } else { // falta condicion de movimiento
+            moveTo(jLabel29);
         }
     }
 
@@ -729,8 +880,13 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
         if (changeTile) {
             jLabel28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Water tile.png")));
             changeTile = false;
-        } else {
+        } else if (inicioDelJuego < (gameMaster.getPlayers().size() * 10)) {
+            gameMaster.setFirstPositionVillagers(jLabel28);
 
+            inicioDelJuego++;
+
+        } else { // falta condicion de movimiento
+            moveTo(jLabel28);
         }
     }
 
@@ -739,8 +895,13 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
         if (changeTile) {
             jLabel34.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Water tile.png")));
             changeTile = false;
-        } else {
+        } else if (inicioDelJuego < (gameMaster.getPlayers().size() * 10)) {
+            gameMaster.setFirstPositionVillagers(jLabel34);
 
+            inicioDelJuego++;
+
+        } else { // falta condicion de movimiento
+            moveTo(jLabel34);
         }
     }
 
@@ -748,8 +909,13 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
         if (changeTile) {
             jLabel79.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Water tile.png")));
             changeTile = false;
-        } else {
+        } else if (inicioDelJuego < (gameMaster.getPlayers().size() * 10)) {
+            gameMaster.setFirstPositionVillagers(jLabel79);
 
+            inicioDelJuego++;
+
+        } else { // falta condicion de movimiento
+            moveTo(jLabel79);
         }
     }
 
@@ -757,8 +923,13 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
         if (changeTile) {
             jLabel85.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Water tile.png")));
             changeTile = false;
-        } else {
+        } else if (inicioDelJuego < (gameMaster.getPlayers().size() * 10)) {
+            gameMaster.setFirstPositionVillagers(jLabel85);
 
+            inicioDelJuego++;
+
+        } else { // falta condicion de movimiento
+            moveTo(jLabel85);
         }
     }
 
@@ -766,8 +937,13 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
         if (changeTile) {
             jLabel80.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Water tile.png")));
             changeTile = false;
-        } else {
+        } else if (inicioDelJuego < (gameMaster.getPlayers().size() * 10)) {
+            gameMaster.setFirstPositionVillagers(jLabel80);
 
+            inicioDelJuego++;
+
+        } else { // falta condicion de movimiento
+            moveTo(jLabel80);
         }
     }
 
@@ -775,8 +951,13 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
         if (changeTile) {
             jLabel86.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Water tile.png")));
             changeTile = false;
-        } else {
+        } else if (inicioDelJuego < (gameMaster.getPlayers().size() * 10)) {
+            gameMaster.setFirstPositionVillagers(jLabel86);
 
+            inicioDelJuego++;
+
+        } else { // falta condicion de movimiento
+            moveTo(jLabel86);
         }
     }
 
@@ -784,8 +965,13 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
         if (changeTile) {
             jLabel81.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Water tile.png")));
             changeTile = false;
-        } else {
+        } else if (inicioDelJuego < (gameMaster.getPlayers().size() * 10)) {
+            gameMaster.setFirstPositionVillagers(jLabel81);
 
+            inicioDelJuego++;
+
+        } else { // falta condicion de movimiento
+            moveTo(jLabel81);
         }
     }
 
@@ -793,8 +979,13 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
         if (changeTile) {
             jLabel78.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Water tile.png")));
             changeTile = false;
-        } else {
+        } else if (inicioDelJuego < (gameMaster.getPlayers().size() * 10)) {
+            gameMaster.setFirstPositionVillagers(jLabel78);
 
+            inicioDelJuego++;
+
+        } else { // falta condicion de movimiento
+            moveTo(jLabel78);
         }
     }
 
@@ -802,8 +993,13 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
         if (changeTile) {
             jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Water tile.png")));
             changeTile = false;
-        } else {
+        } else if (inicioDelJuego < (gameMaster.getPlayers().size() * 10)) {
+            gameMaster.setFirstPositionVillagers(jLabel16);
 
+            inicioDelJuego++;
+
+        } else { // falta condicion de movimiento
+            moveTo(jLabel16);
         }
     }
 
@@ -811,8 +1007,13 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
         if (changeTile) {
             jLabel23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Water tile.png")));
             changeTile = false;
-        } else {
+        } else if (inicioDelJuego < (gameMaster.getPlayers().size() * 10)) {
+            gameMaster.setFirstPositionVillagers(jLabel23);
 
+            inicioDelJuego++;
+
+        } else { // falta condicion de movimiento
+            moveTo(jLabel23);
         }
     }
 
@@ -820,8 +1021,13 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
         if (changeTile) {
             jLabel84.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Water tile.png")));
             changeTile = false;
-        } else {
+        } else if (inicioDelJuego < (gameMaster.getPlayers().size() * 10)) {
+            gameMaster.setFirstPositionVillagers(jLabel84);
 
+            inicioDelJuego++;
+
+        } else { // falta condicion de movimiento
+            moveTo(jLabel84);
         }
     }
 
@@ -829,8 +1035,13 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
         if (changeTile) {
             jLabel88.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Water tile.png")));
             changeTile = false;
-        } else {
+        } else if (inicioDelJuego < (gameMaster.getPlayers().size() * 10)) {
+            gameMaster.setFirstPositionVillagers(jLabel88);
 
+            inicioDelJuego++;
+
+        } else { // falta condicion de movimiento
+            moveTo(jLabel88);
         }
     }
 
@@ -838,8 +1049,13 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
         if (changeTile) {
             jLabel82.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Water tile.png")));
             changeTile = false;
-        } else {
+        } else if (inicioDelJuego < (gameMaster.getPlayers().size() * 10)) {
+            gameMaster.setFirstPositionVillagers(jLabel82);
 
+            inicioDelJuego++;
+
+        } else { // falta condicion de movimiento
+            moveTo(jLabel82);
         }
     }
 
@@ -847,8 +1063,13 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
         if (changeTile) {
             jLabel89.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Water tile.png")));
             changeTile = false;
-        } else {
+        } else if (inicioDelJuego < (gameMaster.getPlayers().size() * 10)) {
+            gameMaster.setFirstPositionVillagers(jLabel89);
 
+            inicioDelJuego++;
+
+        } else { // falta condicion de movimiento
+            moveTo(jLabel89);
         }
     }
 
@@ -856,8 +1077,13 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
         if (changeTile) {
             jLabel83.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Water tile.png")));
             changeTile = false;
-        } else {
+        } else if (inicioDelJuego < (gameMaster.getPlayers().size() * 10)) {
+            gameMaster.setFirstPositionVillagers(jLabel83);
 
+            inicioDelJuego++;
+
+        } else { // falta condicion de movimiento
+            moveTo(jLabel83);
         }
     }
 
@@ -865,8 +1091,13 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
         if (changeTile) {
             jLabel25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Water tile.png")));
             changeTile = false;
-        } else {
+        } else if (inicioDelJuego < (gameMaster.getPlayers().size() * 10)) {
+            gameMaster.setFirstPositionVillagers(jLabel25);
 
+            inicioDelJuego++;
+
+        } else { // falta condicion de movimiento
+            moveTo(jLabel25);
         }
     }
 
@@ -874,8 +1105,13 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
         if (changeTile) {
             jLabel87.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Water tile.png")));
             changeTile = false;
-        } else {
+        } else if (inicioDelJuego < (gameMaster.getPlayers().size() * 10)) {
+            gameMaster.setFirstPositionVillagers(jLabel87);
 
+            inicioDelJuego++;
+
+        } else { // falta condicion de movimiento
+            moveTo(jLabel87);
         }
     }
 
@@ -1110,8 +1346,6 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
         jButton2 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jLabel221 = new javax.swing.JLabel();
-        jLabel222 = new javax.swing.JLabel();
-        jLabel223 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(0, 0, 0));
@@ -2235,10 +2469,6 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
 
         jLabel221.setText("jLabel221");
 
-        jLabel222.setText("Acción Actual:");
-
-        jLabel223.setText("jLabel223");
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -2261,11 +2491,7 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel2)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jLabel221, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel222)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel223, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))))
+                                .addComponent(jLabel221, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2280,11 +2506,7 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel2)
                             .addComponent(jLabel221))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel222)
-                            .addComponent(jLabel223))
-                        .addGap(297, 297, 297)
+                        .addGap(317, 317, 317)
                         .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -2643,8 +2865,6 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel220;
     private javax.swing.JLabel jLabel221;
-    private javax.swing.JLabel jLabel222;
-    private javax.swing.JLabel jLabel223;
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel25;
@@ -2754,5 +2974,69 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    ArrayList<JLabel> getArray1() {
+        ArrayList<JLabel> jlabel = new ArrayList();
+        jlabel.add(jLabel191);
+        jlabel.add(jLabel188);
+        jlabel.add(jLabel187);
+        jlabel.add(jLabel181);
+        jlabel.add(jLabel182);
+        jlabel.add(jLabel183);
+        jlabel.add(jLabel184);
+        jlabel.add(jLabel185);
+        jlabel.add(jLabel186);
+        jlabel.add(jLabel192);
+
+        return jlabel;
+    }
+
+    ArrayList<JLabel> getArray2() {
+        ArrayList<JLabel> jlabel = new ArrayList();
+        jlabel.add(jLabel193);
+        jlabel.add(jLabel194);
+        jlabel.add(jLabel195);
+        jlabel.add(jLabel189);
+        jlabel.add(jLabel190);
+        jlabel.add(jLabel196);
+        jlabel.add(jLabel197);
+        jlabel.add(jLabel198);
+        jlabel.add(jLabel199);
+        jlabel.add(jLabel201);
+
+        return jlabel;
+    }
+
+    ArrayList<JLabel> getArray3() {
+        ArrayList<JLabel> jlabel = new ArrayList();
+        jlabel.add(jLabel200);
+        jlabel.add(jLabel202);
+        jlabel.add(jLabel203);
+        jlabel.add(jLabel207);
+        jlabel.add(jLabel208);
+        jlabel.add(jLabel206);
+        jlabel.add(jLabel205);
+        jlabel.add(jLabel204);
+        jlabel.add(jLabel210);
+        jlabel.add(jLabel209);
+
+        return jlabel;
+    }
+
+    ArrayList<JLabel> getArray4() {
+        ArrayList<JLabel> jlabel = new ArrayList();
+        jlabel.add(jLabel211);
+        jlabel.add(jLabel212);
+        jlabel.add(jLabel217);
+        jlabel.add(jLabel218);
+        jlabel.add(jLabel219);
+        jlabel.add(jLabel213);
+        jlabel.add(jLabel214);
+        jlabel.add(jLabel216);
+        jlabel.add(jLabel215);
+        jlabel.add(jLabel220);
+
+        return jlabel;
     }
 }

@@ -13,16 +13,28 @@ import javax.swing.JLabel;
  *
  * @author macas
  */
-public class Villager extends JLabel {
+public class Villager {
 
     private int value;
     private boolean inWater;
     private int idPlayer;
 
-    public Villager(int value, int idPlayer) {
+    // Posicion del villager dentro del mapa
+    private JLabel jlabel;
+
+    public Villager(int value, int idPlayer, JLabel jlabel) {
         this.value = value;
         this.idPlayer = idPlayer;
         inWater = false;
+        this.jlabel = jlabel;
+    }
+
+    public JLabel getJlabel() {
+        return jlabel;
+    }
+
+    public void setJlabel(JLabel jlabel) {
+        this.jlabel = jlabel;
     }
 
     public int getValue() {

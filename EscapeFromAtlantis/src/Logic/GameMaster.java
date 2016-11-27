@@ -9,6 +9,8 @@ import UI.*;
 import Data.*;
 import java.io.Serializable;
 import java.util.ArrayList;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -27,10 +29,10 @@ public class GameMaster implements Serializable {
 
     private int numberOfMovements; // numero de movimientos del jugador actual
     private int actualTurn; // id del turno del jugador actual
-    private int indexOfPlayer;
+    private int indexOfPlayer; // numero del jugador del turno actual 
     private boolean throwDice; // atributo que determina si toca tirar el dado o no
     private boolean volcano;
-    
+    private int posicionVillagerInicial;
 
     //Constructor GameMaster
     public GameMaster(GraphicsUI consola) {
@@ -40,14 +42,15 @@ public class GameMaster implements Serializable {
         throwDice = false;
         volcano = false;
         players = new ArrayList<>();
-        
+        posicionVillagerInicial = 0;
+
         this.consola = consola;//
         mapManager = new MapManager(consola);
 
     }
 
-    public void initializePlayer(String name) {
-        players.add(new Player(name));
+    public void initializePlayer(String name, ArrayList<JLabel> jlabel) {
+        players.add(new Player(name, jlabel));
     }
 
     public ArrayList<Player> getPlayers() {
@@ -64,6 +67,7 @@ public class GameMaster implements Serializable {
                 indexOfPlayer = i;
                 consola.setTurnoActual("(" + players.get(i).getId() + ")."
                         + players.get(i).getName());
+                consola.datosDelTurno();
                 break;
             }
 
@@ -131,10 +135,63 @@ public class GameMaster implements Serializable {
                 numberOfMovements = 3;
                 throwDice = false;
                 break;
+
         }
 
-        play();
+    }
 
+    public void inicioDelJuego() {
+        play();
+    }
+
+    public void setFirstPositionVillagers(JLabel jLabel) {
+
+        switch (actualTurn) {
+            case 1:
+                
+                players.get(actualTurn-1).getVillagers()[posicionVillagerInicial].
+                        getJlabel().setBounds(jLabel.getBounds());
+                posicionVillagerInicial++;
+                if (posicionVillagerInicial > 9) {
+                    posicionVillagerInicial = 0;
+                    nextTurn();
+                }
+                break;
+            case 2:
+                
+                players.get(actualTurn-1).getVillagers()[posicionVillagerInicial].
+                        getJlabel().setBounds(jLabel.getBounds());
+                posicionVillagerInicial++;
+                if (posicionVillagerInicial > 9) {
+                    posicionVillagerInicial = 0;
+                    nextTurn();
+                }
+                break;
+            case 3:
+                players.get(actualTurn-1).getVillagers()[posicionVillagerInicial].
+                        getJlabel().setBounds(jLabel.getBounds());
+                posicionVillagerInicial++;
+                if (posicionVillagerInicial > 9) {
+                    posicionVillagerInicial = 0;
+                    nextTurn();
+                }
+                break;
+            case 4:
+                players.get(actualTurn-1).getVillagers()[posicionVillagerInicial].
+                        getJlabel().setBounds(jLabel.getBounds());
+                posicionVillagerInicial++;
+                if (posicionVillagerInicial > 9) {
+                    posicionVillagerInicial = 0;
+                    nextTurn();
+                }
+                break;
+        }
+
+        if (consola.getInicioDelJuego() >= (getPlayers().size() * 10)) {
+
+            JOptionPane.showMessageDialog(consola, "Que empiece el juego!");
+
+        }
     }
 
 }

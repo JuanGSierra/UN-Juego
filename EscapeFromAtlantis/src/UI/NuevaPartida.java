@@ -414,12 +414,13 @@ public class NuevaPartida extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
 
         try {
-            menu.setPlayer(jTextField1.getText());
-            menu.setPlayer(jTextField2.getText());
+            menu.setPlayer(jTextField1.getText(), menu.getPantallaDeJuego().getArray1());
+            menu.setPlayer(jTextField2.getText(), menu.getPantallaDeJuego().getArray2());
             this.setVisible(false);
             menu.getPantallaDeJuego().setVisible(true);
-            menu.getPantallaDeJuego().getGameMaster().play();
-
+            menu.getPantallaDeJuego().getGameMaster().inicioDelJuego();
+            JOptionPane.showMessageDialog(menu.getPantallaDeJuego(),
+                    "Coloque sus aldeanos en las baldosas de la isla");
         } catch (Exception e) {
             JOptionPane.showMessageDialog(this, "Ingrese nombres validos para los"
                     + " jugadores");
@@ -434,12 +435,14 @@ public class NuevaPartida extends javax.swing.JFrame {
      */
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         try {
-            menu.setPlayer(jTextField3.getText());
-            menu.setPlayer(jTextField4.getText());
-            menu.setPlayer(jTextField5.getText());
+            menu.setPlayer(jTextField3.getText(), menu.getPantallaDeJuego().getArray1());
+            menu.setPlayer(jTextField4.getText(), menu.getPantallaDeJuego().getArray2());
+            menu.setPlayer(jTextField5.getText(), menu.getPantallaDeJuego().getArray3());
             this.setVisible(false);
             menu.getPantallaDeJuego().setVisible(true);
-            menu.getGameMaster().play();
+            menu.getPantallaDeJuego().getGameMaster().inicioDelJuego();
+            JOptionPane.showMessageDialog(menu.getPantallaDeJuego(),
+                    "Coloque sus aldeanos en las baldosas de la isla");
         } catch (Exception e) {
             JOptionPane.showMessageDialog(this, "Ingrese nombres validos para los"
                     + " jugadores");
@@ -458,12 +461,15 @@ public class NuevaPartida extends javax.swing.JFrame {
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         try {
-            menu.setPlayer(jTextField6.getText());
-            menu.setPlayer(jTextField7.getText());
-            menu.setPlayer(jTextField8.getText());
-            menu.setPlayer(jTextField9.getText());
+            menu.setPlayer(jTextField6.getText(), menu.getPantallaDeJuego().getArray1());
+            menu.setPlayer(jTextField7.getText(), menu.getPantallaDeJuego().getArray2());
+            menu.setPlayer(jTextField8.getText(), menu.getPantallaDeJuego().getArray3());
+            menu.setPlayer(jTextField9.getText(), menu.getPantallaDeJuego().getArray4());
             this.setVisible(false);
             menu.getPantallaDeJuego().setVisible(true);
+            menu.getPantallaDeJuego().getGameMaster().inicioDelJuego();
+            JOptionPane.showMessageDialog(menu.getPantallaDeJuego(),
+                    "Coloque sus aldeanos en las baldosas de la isla");
         } catch (Exception e) {
             JOptionPane.showMessageDialog(this, "Ingrese nombres validos para los"
                     + " jugadores");

@@ -16,6 +16,8 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import Data.*;
+import java.util.ArrayList;
+import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 
 /**
@@ -44,17 +46,14 @@ public class Menu extends javax.swing.JFrame {
         return gameMaster;
     }
 
-    
-    
-    public void setPlayer(String name) {
-        gameMaster.initializePlayer(name);
+    public void setPlayer(String name, ArrayList<JLabel> jlabel) {
+        gameMaster.initializePlayer(name, jlabel);
     }
 
     public GraphicsUI getPantallaDeJuego() {
         return pantallaDeJuego;
     }
-    
-    
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -245,7 +244,7 @@ public class Menu extends javax.swing.JFrame {
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         // TODO add your handling code here:
-        String a=sVillager.readScorePlayers(gameMaster.getPlayers());
+        String a = sVillager.readScorePlayers(gameMaster.getPlayers());
         JOptionPane.showMessageDialog(null, a);
     }//GEN-LAST:event_jButton6ActionPerformed
 
