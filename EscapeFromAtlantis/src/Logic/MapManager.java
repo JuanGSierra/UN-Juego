@@ -14,7 +14,6 @@ import UI.*;
  */
 public class MapManager {
 
-    private Movement movement;
     private GraphicsUI graphicsUI;
 
     public Tile changeTile(Tile tile) {
@@ -23,7 +22,6 @@ public class MapManager {
 
     public MapManager(GraphicsUI map) {
         this.graphicsUI = map;
-        movement = new Movement(graphicsUI.getGameMaster());
 
     }
 
