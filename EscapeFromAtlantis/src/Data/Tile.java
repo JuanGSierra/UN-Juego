@@ -52,7 +52,7 @@ public abstract class Tile implements Serializable{
     }
     
     public void agregarAldeano(Villager v){
-        if(aldeanosActuales==(MAXPLAYERQUANTITY-1)){
+        if(aldeanosActuales==(MAXPLAYERQUANTITY)){
             throw new ArrayIndexOutOfBoundsException();
         }
         aldeanos[aldeanosActuales]= v;
