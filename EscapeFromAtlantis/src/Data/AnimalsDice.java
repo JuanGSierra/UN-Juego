@@ -24,10 +24,10 @@ public class AnimalsDice implements Serializable{
 
     public AnimalsDice() {
         face1 = "Shark";
-        face2 = "GiantSquid";
-        face3 = "SeaSerpent";
+        face2 = "SeaSerpent";
+        face3 = "Whale";
         face4 = "Whale";
-        face5 = "GiantSquid";
+        face5 = "SeaSerpent";
         face6 = "Shark";
 
     }
