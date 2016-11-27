@@ -6,6 +6,7 @@
 package Logic;
 
 import Data.Player;
+import javax.swing.JLabel;
 
 /**
  *
@@ -40,8 +41,8 @@ public class Comprobations {
      * @return
      */
 
-    public static boolean isPermitted() {
-        
+    public static boolean isPermitted(JLabel destino, JLabel villager) {
+        return true;
     }
 
 }

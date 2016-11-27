@@ -54,7 +54,9 @@ public class Movement {
 
     public void moverVillager(JLabel destino, JLabel villager) {
 
-        if (Comprobations.canMove(gameMaster.returnPlayerInTurn())){
+        if (Comprobations.canMove(gameMaster.returnPlayerInTurn())) {
+
+            Comprobations.isPermitted(destino, villager);
 
         } else {
 

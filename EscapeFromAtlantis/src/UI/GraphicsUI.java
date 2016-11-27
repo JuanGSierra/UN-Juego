@@ -63,7 +63,7 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
      */
     public GraphicsUI() {
         initComponents();
-        asociarLabelsEnMatriz();
+        
         initComponentsForest();
         initComponentsMountain();
         initComponentsSand();
@@ -79,6 +79,7 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
         menu.setVisible(true);
         this.setVisible(false);
         changeTile = false;
+        asociarLabelsEnMatriz();
 
     }
 
