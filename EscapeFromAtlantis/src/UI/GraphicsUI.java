@@ -7,6 +7,7 @@ package UI;
 
 import Data.Animal;
 import Data.Boat;
+import Data.ForestTile;
 import Data.Player;
 import Data.Tile;
 import Logic.GameMaster;
@@ -35,6 +36,7 @@ import javax.swing.JOptionPane;
  */
 public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
 
+    private JLabel labels[][]= new JLabel[13][25];
     String separador = System.getProperty("file.separator");
     private GameMaster gameMaster;
     private Menu menu;
@@ -58,6 +60,7 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
      */
     public GraphicsUI() {
         initComponents();
+        asociarLabelsEnMatriz();
         initComponentsForest();
         initComponentsMountain();
         initComponentsSand();
@@ -3038,5 +3041,119 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
         jlabel.add(jLabel220);
 
         return jlabel;
+    }
+
+    private void asociarLabelsEnMatriz() {
+        labels[0][2]=jLabel44;// finish
+        labels[1][1]=jLabel43;
+        labels[2][0]=jLabel42;
+        
+        labels[0][22]=jLabel45;
+        labels[1][23]=jLabel46;
+        labels[2][24]=jLabel47;
+        
+        labels[10][0]=jLabel48;
+        labels[11][1]=jLabel49;
+        labels[12][2]=jLabel50;
+        
+        labels[10][24]=jLabel37;
+        labels[11][23]=jLabel52;
+        labels[12][22]=jLabel53;
+        
+        
+        
+        labels[4][10]=jLabel169;// mountain
+        labels[4][12]=jLabel170;
+        labels[4][14]=jLabel171;
+        
+        labels[5][9]=jLabel168;
+        labels[5][11]=jLabel7;
+        labels[5][13]=jLabel163;
+        labels[5][15]=jLabel172;
+        
+        labels[6][10]=jLabel173;
+        labels[6][14]=jLabel162;
+        
+        labels[7][9]=jLabel164;
+        labels[7][11]=jLabel160;
+        labels[7][13]=jLabel161;
+        labels[7][15]=jLabel167;
+        
+        labels[8][10]=jLabel117;
+        labels[8][12]=jLabel165;
+        labels[8][14]=jLabel166;
+        
+        
+        
+        labels[0][2]=jLabel44;
+        labels[0][2]=jLabel44;
+        labels[0][2]=jLabel44;
+        labels[0][2]=jLabel44;
+        labels[0][2]=jLabel44;
+        labels[0][2]=jLabel44;
+        labels[0][2]=jLabel44;
+        labels[0][2]=jLabel44;
+        labels[0][2]=jLabel44;
+        labels[0][2]=jLabel44;
+        labels[0][2]=jLabel44;
+        labels[0][2]=jLabel44;
+        labels[0][2]=jLabel44;
+        labels[0][2]=jLabel44;
+        labels[0][2]=jLabel44;
+        labels[0][2]=jLabel44;
+        labels[0][2]=jLabel44;
+        labels[0][2]=jLabel44;
+        labels[0][2]=jLabel44;
+        labels[0][2]=jLabel44;
+        labels[0][2]=jLabel44;
+        labels[0][2]=jLabel44;
+        labels[0][2]=jLabel44;
+        labels[0][2]=jLabel44;
+        labels[0][2]=jLabel44;
+        labels[0][2]=jLabel44;
+        labels[0][2]=jLabel44;
+        labels[0][2]=jLabel44;
+        labels[0][2]=jLabel44;
+        labels[0][2]=jLabel44;
+        labels[0][2]=jLabel44;
+        labels[0][2]=jLabel44;
+        labels[0][2]=jLabel44;
+        labels[0][2]=jLabel44;
+        labels[0][2]=jLabel44;
+        labels[0][2]=jLabel44;
+        labels[0][2]=jLabel44;
+        labels[0][2]=jLabel44;
+        labels[0][2]=jLabel44;
+        labels[0][2]=jLabel44;
+        labels[0][2]=jLabel44;
+        labels[0][2]=jLabel44;
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     }
 }
