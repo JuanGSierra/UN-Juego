@@ -220,4 +220,14 @@ public class GameMaster implements Serializable {
         }
     }
 
+    public Casilla[][] getCasillas() {
+        return casillas;
+    }
+
+    public void setCasillas(Casilla[][] casillas) {
+        this.casillas = casillas;
+    }
+    
+    
+
 }
