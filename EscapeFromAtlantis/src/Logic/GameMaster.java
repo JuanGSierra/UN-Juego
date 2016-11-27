@@ -23,11 +23,11 @@ public class GameMaster implements Serializable {
     private MapManager mapManager;
     private ArrayList<Player> players;
     private Movement movement;
+    private Comprobations comprobations;
 
     private static final int MAX_PLAYERS = 4;
     private static final int MIN_PLAYERS = 2;
 
-    private int numberOfMovements; // numero de movimientos del jugador actual
     private int actualTurn; // id del turno del jugador actual
     private int indexOfPlayer; // numero del jugador del turno actual 
     private boolean throwDice; // atributo que determina si toca tirar el dado o no
@@ -38,7 +38,6 @@ public class GameMaster implements Serializable {
     //Constructor GameMaster
     public GameMaster(GraphicsUI consola) {
 
-        numberOfMovements = 3;
         actualTurn = 1;
         throwDice = false;
         volcano = false;
@@ -48,7 +47,13 @@ public class GameMaster implements Serializable {
 
         this.consola = consola;//
         mapManager = new MapManager(consola);
+        comprobations = new Comprobations(this);
 
+    }
+
+    public Player returnPlayerInTurn() {
+
+        return players.get(actualTurn);
     }
 
     public void initializePlayer(String name, ArrayList<JLabel> jlabel) {
@@ -110,8 +115,8 @@ public class GameMaster implements Serializable {
         switch (actualTurn) {
             case 1:
                 actualTurn++;
-                numberOfMovements = 3;
-                throwDice = false;
+                players.get(actualTurn).setNumberOfMovements(3);
+                players.get(actualTurn).setHasThrowDice(false);
                 break;
             case 2:
                 if (Player.getNumberOfPlayers() == 2) {
@@ -120,8 +125,8 @@ public class GameMaster implements Serializable {
                     actualTurn++;
 
                 }
-                throwDice = false;
-                numberOfMovements = 3;
+                players.get(actualTurn).setHasThrowDice(false);
+                players.get(actualTurn).setNumberOfMovements(3);
                 break;
             case 3:
                 if (Player.getNumberOfPlayers() == 3) {
@@ -129,12 +134,12 @@ public class GameMaster implements Serializable {
                 } else {
                     actualTurn++;
                 }
-                throwDice = false;
-                numberOfMovements = 3;
+                players.get(actualTurn).setHasThrowDice(false);
+                players.get(actualTurn).setNumberOfMovements(3);
                 break;
             case 4:
-                actualTurn = 1;
-                numberOfMovements = 3;
+                players.get(actualTurn).setHasThrowDice(false);
+                players.get(actualTurn).setNumberOfMovements(3);
                 throwDice = false;
                 break;
 

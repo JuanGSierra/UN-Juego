@@ -15,20 +15,16 @@ import UI.*;
 public class MapManager {
 
     private Movement movement;
-    private GraphicsUI map;
+    private GraphicsUI graphicsUI;
 
     public Tile changeTile(Tile tile) {
         return new WaterTile(tile.getPosition(), true);
     }
 
     public MapManager(GraphicsUI map) {
-        this.map = map;
-        movement = new Movement();
+        this.graphicsUI = map;
+        movement = new Movement(graphicsUI.getGameMaster());
 
-    }
-
-    public void addVillagers(Villager villager, int x, int y) {
-        movement.moveVillage(villager, x, y);
     }
 
 }

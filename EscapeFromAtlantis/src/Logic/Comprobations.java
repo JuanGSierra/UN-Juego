@@ -5,21 +5,43 @@
  */
 package Logic;
 
+import Data.Player;
+
 /**
  *
  * @author Juan
  */
 public class Comprobations {
 
+    private GameMaster gameMaster;
+
+    public Comprobations(GameMaster gameMaster) {
+
+        this.gameMaster = gameMaster;
+
+    }
+
     /**
-     * Retorna true si el movimiento es permitido segun las reglas o false si no
-     * es posible
+     * Retorna true si el jugador tiene movimientos disponibles
      *
      * @return
      */
-    public static boolean closeEnough() {
+    public static boolean canMove(Player player) {
+        if (player.getNumberOfMovements() > 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 
-        return false;
+    /**
+     * Metodo que define si es permitido mover el villager o bote al destino
+     *
+     * @return
+     */
+
+    public static boolean isPermitted() {
+
     }
 
 }

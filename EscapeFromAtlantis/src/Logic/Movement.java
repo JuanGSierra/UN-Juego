@@ -7,6 +7,7 @@ package Logic;
 
 import Data.*;
 import UI.*;
+import javax.swing.JLabel;
 
 /**
  *
@@ -17,6 +18,11 @@ public class Movement {
     private String direction;
     private int numberOfTiles;
     private GraphicsUI consola;
+    private GameMaster gameMaster;
+
+    public Movement(GameMaster gameMaster) {
+        this.gameMaster = gameMaster;
+    }
 
     public String getDirection() {
         return direction;
@@ -34,28 +40,6 @@ public class Movement {
         this.numberOfTiles = numberOfTiles;
     }
 
-    public static void moveVillage(Villager village, int posX, int posY) {
-        int x = 0;
-        int y = 0;
-        if (x > 1 || y > 1 || ((x == 0 && y == 0))) {
-            System.out.println("Ingrese una opción valida!!"
-                    + " pierde turno");
-
-        } else {
-
-        }
-    }
-
-    public void moveVillagers(Villager villager, int x, int y) {
-
-    }
-
-    /**
-     * Determina el final del juego
-     *
-     * @param villager - revisa que el cosito este es una casilla de salvación
-     * @return retorna un entero, que sale del loop del juego
-     */
     public void moveSeaSerpent() {
 
     }
@@ -65,6 +49,16 @@ public class Movement {
     }
 
     public void moveWhale() {
+
+    }
+
+    public void moverVillager(JLabel destino, JLabel villager) {
+
+        if (Comprobations.canMove(gameMaster.returnPlayerInTurn())){
+
+        } else {
+
+        }
 
     }
 }

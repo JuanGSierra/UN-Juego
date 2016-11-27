@@ -20,11 +20,16 @@ public class Player implements Serializable {
     private Villager[] villagers;
     private int id = 0;
     private int score;
+    private int numberOfMovements;
+    private boolean hasThrowDice;
 
     public Player(String name, ArrayList<JLabel> jlabels) {
 
         this.name = name;
         this.score = 0;
+        numberOfMovements = 3;
+        hasThrowDice = false;
+
         villagers = new Villager[10];
         villagers[0] = new Villager(1, id, jlabels.get(0));
         villagers[1] = new Villager(1, id, jlabels.get(1));
@@ -39,6 +44,24 @@ public class Player implements Serializable {
         numberOfPlayers++;
         id = numberOfPlayers;
 
+    }
+
+    public boolean isHasThrowDice() {
+        return hasThrowDice;
+    }
+
+    public void setHasThrowDice(boolean hasThrowDice) {
+        this.hasThrowDice = hasThrowDice;
+    }
+    
+    
+
+    public int getNumberOfMovements() {
+        return numberOfMovements;
+    }
+
+    public void setNumberOfMovements(int numberOfMovements) {
+        this.numberOfMovements = numberOfMovements;
     }
 
     public int getScore() {
