@@ -6,6 +6,7 @@
 package UI;
 
 import Logic.GameMaster;
+import Logic.SafeVillagers;
 import java.awt.Desktop;
 import java.io.File;
 import java.io.FileInputStream;
@@ -15,6 +16,7 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import Data.*;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -25,6 +27,7 @@ public class Menu extends javax.swing.JFrame {
     private GraphicsUI pantallaDeJuego;
     private GameMaster gameMaster;
     private NuevaPartida nuevaPartida;
+    private SafeVillagers sVillager;
 
     /**
      * Creates new form Menu
@@ -34,6 +37,7 @@ public class Menu extends javax.swing.JFrame {
         this.pantallaDeJuego = pantallaDeJuego;
         this.gameMaster = pantallaDeJuego.getGameMaster();
         this.nuevaPartida = new NuevaPartida(this);
+        sVillager = new SafeVillagers();
     }
 
     public GameMaster getGameMaster() {
@@ -49,7 +53,8 @@ public class Menu extends javax.swing.JFrame {
     public GraphicsUI getPantallaDeJuego() {
         return pantallaDeJuego;
     }
-
+    
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -90,6 +95,11 @@ public class Menu extends javax.swing.JFrame {
         });
 
         jButton6.setText("Mejores puntajes");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
 
         jButton1.setText("Mostrar reglas");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -232,6 +242,12 @@ public class Menu extends javax.swing.JFrame {
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         System.exit(0);
     }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        // TODO add your handling code here:
+        String a=sVillager.readScorePlayers(gameMaster.getPlayers());
+        JOptionPane.showMessageDialog(null, a);
+    }//GEN-LAST:event_jButton6ActionPerformed
 
     /**
      * @param args the command line arguments
