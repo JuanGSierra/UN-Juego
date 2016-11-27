@@ -17,10 +17,11 @@ public class Player implements Serializable {
     private String name;
     private Villager[] villagers;
     private int id=0;
-
+    private int score;
     public Player() {
         
         this.name = name;
+        this.score = 0;
         villagers = new Villager[10];
         villagers[0] = new Villager(1,id);
         villagers[1] = new Villager(1,id);
@@ -35,6 +36,14 @@ public class Player implements Serializable {
         numberOfPlayers++;
         id = numberOfPlayers;
         
+    }
+
+    public int getScore() {
+        return score;
+    }
+
+    public void setScore(int score) {
+        this.score = score;
     }
 
     public String getName() {

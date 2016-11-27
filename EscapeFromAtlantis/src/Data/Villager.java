@@ -40,4 +40,12 @@ public class Villager  {
         this.inWater = inWater;
     }
 
+    public int getIdPlayer() {
+        return idPlayer;
+    }
+
+    public void setIdPlayer(int idPlayer) {
+        this.idPlayer = idPlayer;
+    }
+
 }
