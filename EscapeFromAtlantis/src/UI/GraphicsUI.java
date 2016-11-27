@@ -38,6 +38,7 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
     String separador = System.getProperty("file.separator");
     private GameMaster gameMaster;
     private Menu menu;
+    private VentanaDados dado;
 
     private int inicioDelJuego;
     // atributo que me dira si tengo que quitar tiles o no
@@ -2528,6 +2529,9 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
+        dado = new VentanaDados();
+        dado.setVisible(true);
+        
     }//GEN-LAST:event_jButton2ActionPerformed
 
     // Metodos de los villagers, cuando se seleccionan positionOfVillager cambia
