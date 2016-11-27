@@ -41,4 +41,12 @@ public class Villager extends JLabel {
         this.inWater = inWater;
     }
 
+    public int getIdPlayer() {
+        return idPlayer;
+    }
+
+    public void setIdPlayer(int idPlayer) {
+        this.idPlayer = idPlayer;
+    }
+
 }

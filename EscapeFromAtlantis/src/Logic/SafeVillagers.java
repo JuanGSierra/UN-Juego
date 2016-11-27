@@ -4,9 +4,11 @@
  * and open the template in the editor.
  */
 package Logic;
+import Data.Player;
 import Data.Villager;
 import java.io.Serializable;
 import java.util.ArrayList;
+
 /**
  *
  * @author Ivan Delgado
@@ -23,6 +25,15 @@ public class SafeVillagers implements Serializable{
         Villagers.add(V);
     }
     
+    public void totalScore (ArrayList<Player> players, ArrayList<Villager> villagers){
+        for(Player p : players){
+            for(Villager v : villagers){
+                if (p.getId()== v.getIdPlayer()){
+                    p.setScore(p.getScore()+v.getValue());
+                }
+            }
+        }  
+    }
    
     
 }
