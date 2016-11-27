@@ -228,6 +228,16 @@ public class GameMaster implements Serializable {
         this.casillas = casillas;
     }
     
+    public void setcasilla(int i, int j,JLabel label ,Tile tile){
+        casillas[i][j]= new Casilla(label,tile);
+    }
     
+    public JLabel getLabelCasilla(int i, int j){
+        return casillas[i][j].getLabel();
+    }
+    
+    public Tile getTileCasilla(int i, int j){
+        return casillas[i][j].getTile();
+    }
 
 }
