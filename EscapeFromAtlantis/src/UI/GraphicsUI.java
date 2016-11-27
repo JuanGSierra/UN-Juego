@@ -70,6 +70,8 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
         initComponentsSand();
         //initComponentsVillagers();
         JOptionPane.showMessageDialog(this, "Que empiece el juego!");
+        asociarLabelsEnMatriz();
+        colocarNombreJugadores();
         turnoActual = "";
         inicioDelJuego = 0;
 
@@ -80,8 +82,7 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
         menu.setVisible(true);
         this.setVisible(false);
         changeTile = false;
-        asociarLabelsEnMatriz();
-        colocarNombreJugadores();
+        
 
     }
 
@@ -2627,7 +2628,7 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        dado = new VentanaDados();
+        dado = new VentanaDados(this);
         dado.setVisible(true);
 
     }//GEN-LAST:event_jButton2ActionPerformed
@@ -3337,9 +3338,9 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
             jLabel227.setText(gameMaster.getPlayers().get(2).getName());
             jLabel229.setText(gameMaster.getPlayers().get(3).getName());
         } catch (NullPointerException e) {
-
+            System.out.println(e);
         }catch (IndexOutOfBoundsException e){
-            
+            System.out.println(e);
         }
     }
 }
