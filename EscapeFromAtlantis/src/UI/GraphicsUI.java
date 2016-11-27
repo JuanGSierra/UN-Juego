@@ -64,7 +64,7 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
      */
     public GraphicsUI() {
         initComponents();
-        
+
         initComponentsForest();
         initComponentsMountain();
         initComponentsSand();
@@ -81,6 +81,7 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
         this.setVisible(false);
         changeTile = false;
         asociarLabelsEnMatriz();
+        colocarNombreJugadores();
 
     }
 
@@ -88,7 +89,6 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
         return labels;
     }
 
-    
     /**
      * Pone los datos del jugador del turno actual
      */
@@ -3328,5 +3328,18 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
         labels[12][16] = jLabel59;
         labels[12][18] = jLabel51;
 
+    }
+
+    private void colocarNombreJugadores() {
+        try {
+            jLabel223.setText(gameMaster.getPlayers().get(0).getName());
+            jLabel225.setText(gameMaster.getPlayers().get(1).getName());
+            jLabel227.setText(gameMaster.getPlayers().get(2).getName());
+            jLabel229.setText(gameMaster.getPlayers().get(3).getName());
+        } catch (NullPointerException e) {
+
+        }catch (IndexOutOfBoundsException e){
+            
+        }
     }
 }

@@ -207,8 +207,10 @@ public class Board implements Serializable {
         board[8][12] = new MountainTile(96, 8, 12, true, "mover serpiente");
         board[8][14] = new MountainTile(97, 8, 14, true, "");
     }
+    
+    
 
-    private static void imprimirTableroPrueba(Board tablero) {
+    public void imprimirTableroPrueba(Board tablero) {
         int s = 0;
         for (int i = 0; i < tablero.board.length; i++) {
             for (int j = 0; j < tablero.board[0].length; j++) {
@@ -229,6 +231,21 @@ public class Board implements Serializable {
                 System.out.print("]" + "\t");
             }
             System.out.println("");
+            for (int j = 0; j < tablero.board[0].length; j++) {
+                System.out.print("[");
+                for (int k = 0; k < 3; k++) {
+                    if(tablero.board[i][j].getAldeanosActuales()==0){
+                        System.out.print("   ");
+                    }else if(tablero.board[i][j].getAldeanosActuales()==1){
+                        System.out.print("A  ");
+                    }else if(tablero.board[i][j].getAldeanosActuales()==2){
+                        System.out.print("AA ");
+                    }else if(tablero.board[i][j].getAldeanosActuales()==3){
+                        System.out.print("AAA");
+                    }
+                }
+                System.out.print("]" + "\t");
+            }
         }
     }
 
