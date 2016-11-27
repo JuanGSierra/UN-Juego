@@ -33,6 +33,7 @@ public class GameMaster implements Serializable {
     private boolean throwDice; // atributo que determina si toca tirar el dado o no
     private boolean volcano;
     private int posicionVillagerInicial;
+    private int newValue; // atributo para metodo de inicializacion de villagers
 
     //Constructor GameMaster
     public GameMaster(GraphicsUI consola) {
@@ -43,6 +44,7 @@ public class GameMaster implements Serializable {
         volcano = false;
         players = new ArrayList<>();
         posicionVillagerInicial = 0;
+        newValue = 1;
 
         this.consola = consola;//
         mapManager = new MapManager(consola);
@@ -146,42 +148,46 @@ public class GameMaster implements Serializable {
 
     public void setFirstPositionVillagers(JLabel jLabel) {
 
-        switch (actualTurn) {
-            case 1:
-                
-                players.get(actualTurn-1).getVillagers()[posicionVillagerInicial].
-                        getJlabel().setBounds(jLabel.getBounds());
-                posicionVillagerInicial++;
-                if (posicionVillagerInicial > 9) {
-                    posicionVillagerInicial = 0;
-                    nextTurn();
-                }
-                break;
+        switch (Player.getNumberOfPlayers()) {
             case 2:
-                
-                players.get(actualTurn-1).getVillagers()[posicionVillagerInicial].
-                        getJlabel().setBounds(jLabel.getBounds());
-                posicionVillagerInicial++;
-                if (posicionVillagerInicial > 9) {
-                    posicionVillagerInicial = 0;
+                if (newValue == 1) {
+                    players.get(actualTurn - 1).getVillagers()[posicionVillagerInicial].
+                            getJlabel().setBounds(jLabel.getBounds());
+                    newValue++;
+                    nextTurn();
+                } else {
+                    players.get(actualTurn - 1).getVillagers()[posicionVillagerInicial].
+                            getJlabel().setBounds(jLabel.getBounds());
+                    posicionVillagerInicial++;
+                    newValue = 1;
                     nextTurn();
                 }
                 break;
             case 3:
-                players.get(actualTurn-1).getVillagers()[posicionVillagerInicial].
-                        getJlabel().setBounds(jLabel.getBounds());
-                posicionVillagerInicial++;
-                if (posicionVillagerInicial > 9) {
-                    posicionVillagerInicial = 0;
+                if (newValue < 3) {
+                    players.get(actualTurn - 1).getVillagers()[posicionVillagerInicial].
+                            getJlabel().setBounds(jLabel.getBounds());
+                    newValue++;
+                    nextTurn();
+                } else {
+                    players.get(actualTurn - 1).getVillagers()[posicionVillagerInicial].
+                            getJlabel().setBounds(jLabel.getBounds());
+                    posicionVillagerInicial++;
+                    newValue = 1;
                     nextTurn();
                 }
                 break;
             case 4:
-                players.get(actualTurn-1).getVillagers()[posicionVillagerInicial].
-                        getJlabel().setBounds(jLabel.getBounds());
-                posicionVillagerInicial++;
-                if (posicionVillagerInicial > 9) {
-                    posicionVillagerInicial = 0;
+                if (newValue < 4) {
+                    players.get(actualTurn - 1).getVillagers()[posicionVillagerInicial].
+                            getJlabel().setBounds(jLabel.getBounds());
+                    newValue++;
+                    nextTurn();
+                } else {
+                    players.get(actualTurn - 1).getVillagers()[posicionVillagerInicial].
+                            getJlabel().setBounds(jLabel.getBounds());
+                    posicionVillagerInicial++;
+                    newValue = 1;
                     nextTurn();
                 }
                 break;
