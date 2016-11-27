@@ -61,6 +61,10 @@ public class GameMaster implements Serializable {
         players.add(a);
     }
 
+    public GraphicsUI getConsola() {
+        return consola;
+    }
+
     public Player returnPlayerInTurn() {
 
         return players.get(actualTurn);
