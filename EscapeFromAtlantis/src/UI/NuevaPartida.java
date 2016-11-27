@@ -418,6 +418,8 @@ public class NuevaPartida extends javax.swing.JFrame {
             menu.setPlayer(jTextField2.getText());
             this.setVisible(false);
             menu.getPantallaDeJuego().setVisible(true);
+            menu.getPantallaDeJuego().getGameMaster().play();
+
         } catch (Exception e) {
             JOptionPane.showMessageDialog(this, "Ingrese nombres validos para los"
                     + " jugadores");

@@ -58,6 +58,8 @@ public class GameMaster implements Serializable {
         for (int i = 0; i < players.size(); i++) {
             if (players.get(i).getId() == actualTurn) {
                 indexOfPlayer = i;
+                consola.setTurnoActual("(" + players.get(i).getId() + ")."
+                        + players.get(i).getName());
                 break;
             }
 
