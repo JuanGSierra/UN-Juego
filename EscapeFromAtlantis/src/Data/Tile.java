@@ -11,7 +11,7 @@ import java.io.Serializable;
  *
  * @author macas
  */
-public abstract class Tile implements Serializable{
+public abstract class Tile implements Serializable {
 
     private boolean inBoard;
     private final int MAXPLAYERQUANTITY = 3;
@@ -40,22 +40,22 @@ public abstract class Tile implements Serializable{
         this.position = position;
     }
 
-    public Tile(int position, boolean inBoard, String effect) {
+    public Tile(int position, int x, int y, boolean inBoard, String effect) {
         this.position = position;
         this.inBoard = inBoard;
         this.effect = effect;
-        aldeanos= new Villager[3];
+        aldeanos = new Villager[3];
     }
 
     public void removeTile() {
         this.inBoard = false;
     }
-    
-    public void agregarAldeano(Villager v){
-        if(aldeanosActuales==(MAXPLAYERQUANTITY)){
+
+    public void agregarAldeano(Villager v) {
+        if (aldeanosActuales == (MAXPLAYERQUANTITY)) {
             throw new ArrayIndexOutOfBoundsException();
         }
-        aldeanos[aldeanosActuales]= v;
+        aldeanos[aldeanosActuales] = v;
         aldeanosActuales++;
     }
 

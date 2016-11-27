@@ -11,7 +11,7 @@ import java.io.Serializable;
  *
  * @author johans
  */
-public class FinishTile extends Tile implements Serializable{
+public class FinishTile extends Tile implements Serializable {
 
     private String inside;
 
@@ -22,17 +22,14 @@ public class FinishTile extends Tile implements Serializable{
     public void setInside(String inside) {
         this.inside = inside;
     }
-    
-    public FinishTile(int position) {
-        super(position, true, "Player saved token");
+
+    public FinishTile(int position, int x, int y) {
+        super(position, x, y, true, "Player saved token");
         inside = "-";
     }
-    
-    public void printFinishTile(FinishTile x){
+
+    public void printFinishTile(FinishTile x) {
         System.out.print(x.inside);
     }
-    
-    
-    
 
 }

@@ -11,7 +11,7 @@ import java.io.Serializable;
  *
  * @author macas
  */
-public class MountainTile extends Tile implements Serializable{
+public class MountainTile extends Tile implements Serializable {
 
     private String inside;
 
@@ -22,14 +22,14 @@ public class MountainTile extends Tile implements Serializable{
     public void setInside(String inside) {
         this.inside = inside;
     }
-    
-    public MountainTile(int position, boolean inBoard, String effect) {
-        super(position, true, effect);
+
+    public MountainTile(int position, int x, int y, boolean inBoard, String effect) {
+        super(position, x, y, true, effect);
         inside = "^";
     }
-    
-    public void printMountainTile(MountainTile x){
+
+    public void printMountainTile(MountainTile x) {
         System.out.print(x.inside);
     }
-    
+
 }

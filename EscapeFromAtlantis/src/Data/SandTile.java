@@ -11,7 +11,7 @@ import java.io.Serializable;
  *
  * @author macas
  */
-public class SandTile extends Tile implements Serializable{
+public class SandTile extends Tile implements Serializable {
 
     private String inside;
 
@@ -22,13 +22,13 @@ public class SandTile extends Tile implements Serializable{
     public void setInside(String inside) {
         this.inside = inside;
     }
-    
-    public SandTile(int position, boolean inBoard, String effect) {
-        super(position, true, effect);
+
+    public SandTile(int position, int x, int y, boolean inBoard, String effect) {
+        super(position, x, y, true, effect);
         inside = "=";
     }
-    
-    public void printSandTile(SandTile x){
+
+    public void printSandTile(SandTile x) {
         System.out.print(x.inside);
     }
 

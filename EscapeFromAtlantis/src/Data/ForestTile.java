@@ -11,8 +11,8 @@ import java.io.Serializable;
  *
  * @author macas
  */
-public class ForestTile extends Tile implements Serializable{
-   
+public class ForestTile extends Tile implements Serializable {
+
     private String inside;
 
     public String getInside() {
@@ -23,12 +23,12 @@ public class ForestTile extends Tile implements Serializable{
         this.inside = inside;
     }
 
-    public ForestTile(int position, boolean inBoard, String effect) {
-        super(position, true, effect);
+    public ForestTile(int position, int x, int y, boolean inBoard, String effect) {
+        super(position, x, y, true, effect);
         inside = "T";
     }
-    
-    public void printForestTile(ForestTile x){
+
+    public void printForestTile(ForestTile x) {
         System.out.print(x.inside);
     }
 

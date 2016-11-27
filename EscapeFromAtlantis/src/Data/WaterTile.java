@@ -11,8 +11,8 @@ import java.io.Serializable;
  *
  * @author macas
  */
-public class WaterTile extends Tile implements Serializable{
-    
+public class WaterTile extends Tile implements Serializable {
+
     private String inside;
 
     public String getInside() {
@@ -22,13 +22,13 @@ public class WaterTile extends Tile implements Serializable{
     public void setInside(String inside) {
         this.inside = inside;
     }
-    
-    public WaterTile(int position, boolean inBoard) {
-        super(position, true, "NULL");
+
+    public WaterTile(int position, int x, int y, boolean inBoard) {
+        super(position, x, y, true, "NULL");
         inside = "~";
     }
 
-    public void printWaterTile(WaterTile x){
+    public void printWaterTile(WaterTile x) {
         System.out.print(x.inside);
     }
 
