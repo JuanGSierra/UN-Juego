@@ -1138,9 +1138,11 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
         jLabel219 = new javax.swing.JLabel();
         jLabel220 = new javax.swing.JLabel();
         jLabel215 = new javax.swing.JLabel();
+        jLabel200 = new javax.swing.JLabel();
         jLabel216 = new javax.swing.JLabel();
         jLabel217 = new javax.swing.JLabel();
         jLabel218 = new javax.swing.JLabel();
+        jLabel182 = new javax.swing.JLabel();
         jLabel213 = new javax.swing.JLabel();
         jLabel214 = new javax.swing.JLabel();
         jLabel212 = new javax.swing.JLabel();
@@ -1154,13 +1156,14 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
         jLabel206 = new javax.swing.JLabel();
         jLabel203 = new javax.swing.JLabel();
         jLabel202 = new javax.swing.JLabel();
+        jLabel187 = new javax.swing.JLabel();
         jLabel196 = new javax.swing.JLabel();
         jLabel197 = new javax.swing.JLabel();
         jLabel198 = new javax.swing.JLabel();
         jLabel199 = new javax.swing.JLabel();
-        jLabel200 = new javax.swing.JLabel();
         jLabel195 = new javax.swing.JLabel();
         jLabel193 = new javax.swing.JLabel();
+        jLabel201 = new javax.swing.JLabel();
         jLabel194 = new javax.swing.JLabel();
         jLabel189 = new javax.swing.JLabel();
         jLabel190 = new javax.swing.JLabel();
@@ -1171,12 +1174,14 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
         jLabel185 = new javax.swing.JLabel();
         jLabel184 = new javax.swing.JLabel();
         jLabel183 = new javax.swing.JLabel();
-        jLabel182 = new javax.swing.JLabel();
         jLabel181 = new javax.swing.JLabel();
         jLabel150 = new javax.swing.JLabel();
         jLabel152 = new javax.swing.JLabel();
         jLabel177 = new javax.swing.JLabel();
         jLabel149 = new javax.swing.JLabel();
+        jLabel178 = new javax.swing.JLabel();
+        jLabel179 = new javax.swing.JLabel();
+        jLabel180 = new javax.swing.JLabel();
         jLabel159 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
@@ -1225,7 +1230,6 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
         jLabel48 = new javax.swing.JLabel();
         jLabel49 = new javax.swing.JLabel();
         jLabel50 = new javax.swing.JLabel();
-        jLabel51 = new javax.swing.JLabel();
         jLabel52 = new javax.swing.JLabel();
         jLabel53 = new javax.swing.JLabel();
         jLabel54 = new javax.swing.JLabel();
@@ -1289,6 +1293,7 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
         jLabel112 = new javax.swing.JLabel();
         jLabel113 = new javax.swing.JLabel();
         jLabel114 = new javax.swing.JLabel();
+        jLabel51 = new javax.swing.JLabel();
         jLabel115 = new javax.swing.JLabel();
         jLabel116 = new javax.swing.JLabel();
         jLabel118 = new javax.swing.JLabel();
@@ -1344,14 +1349,9 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
         jLabel171 = new javax.swing.JLabel();
         jLabel172 = new javax.swing.JLabel();
         jLabel173 = new javax.swing.JLabel();
-        jLabel187 = new javax.swing.JLabel();
         jLabel174 = new javax.swing.JLabel();
         jLabel175 = new javax.swing.JLabel();
         jLabel176 = new javax.swing.JLabel();
-        jLabel178 = new javax.swing.JLabel();
-        jLabel179 = new javax.swing.JLabel();
-        jLabel180 = new javax.swing.JLabel();
-        jLabel201 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
@@ -1414,6 +1414,17 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
         });
         jPanel2.add(jLabel215, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 290, 10, 20));
 
+        jLabel200.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel200.setForeground(new java.awt.Color(240, 240, 240));
+        jLabel200.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/green villager.png"))); // NOI18N
+        jLabel200.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel200.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel200MouseClicked(evt);
+            }
+        });
+        jPanel2.add(jLabel200, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 180, 10, 20));
+
         jLabel216.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel216.setForeground(new java.awt.Color(240, 240, 240));
         jLabel216.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/yellow villager.png"))); // NOI18N
@@ -1446,6 +1457,17 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
             }
         });
         jPanel2.add(jLabel218, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 270, 10, 20));
+
+        jLabel182.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel182.setForeground(new java.awt.Color(240, 240, 240));
+        jLabel182.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/blue villager.png"))); // NOI18N
+        jLabel182.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel182.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel182MouseClicked(evt);
+            }
+        });
+        jPanel2.add(jLabel182, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 190, 10, 20));
 
         jLabel213.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel213.setForeground(new java.awt.Color(240, 240, 240));
@@ -1590,6 +1612,17 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
         });
         jPanel2.add(jLabel202, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 180, 10, 20));
 
+        jLabel187.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel187.setForeground(new java.awt.Color(240, 240, 240));
+        jLabel187.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/blue villager.png"))); // NOI18N
+        jLabel187.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel187.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel187MouseClicked(evt);
+            }
+        });
+        jPanel2.add(jLabel187, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 190, 10, 20));
+
         jLabel196.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel196.setForeground(new java.awt.Color(240, 240, 240));
         jLabel196.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/red villager.png"))); // NOI18N
@@ -1634,17 +1667,6 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
         });
         jPanel2.add(jLabel199, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 300, 10, 20));
 
-        jLabel200.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel200.setForeground(new java.awt.Color(240, 240, 240));
-        jLabel200.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/green villager.png"))); // NOI18N
-        jLabel200.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jLabel200.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel200MouseClicked(evt);
-            }
-        });
-        jPanel2.add(jLabel200, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 180, 10, 20));
-
         jLabel195.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel195.setForeground(new java.awt.Color(240, 240, 240));
         jLabel195.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/red villager.png"))); // NOI18N
@@ -1666,6 +1688,17 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
             }
         });
         jPanel2.add(jLabel193, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 280, 10, 20));
+
+        jLabel201.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel201.setForeground(new java.awt.Color(240, 240, 240));
+        jLabel201.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/red villager.png"))); // NOI18N
+        jLabel201.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel201.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel201MouseClicked(evt);
+            }
+        });
+        jPanel2.add(jLabel201, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 300, 10, 20));
 
         jLabel194.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel194.setForeground(new java.awt.Color(240, 240, 240));
@@ -1777,17 +1810,6 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
         });
         jPanel2.add(jLabel183, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 210, 10, 20));
 
-        jLabel182.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel182.setForeground(new java.awt.Color(240, 240, 240));
-        jLabel182.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/blue villager.png"))); // NOI18N
-        jLabel182.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jLabel182.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel182MouseClicked(evt);
-            }
-        });
-        jPanel2.add(jLabel182, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 190, 10, 20));
-
         jLabel181.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel181.setForeground(new java.awt.Color(240, 240, 240));
         jLabel181.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/blue villager.png"))); // NOI18N
@@ -1814,6 +1836,18 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
         jLabel149.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Ship.png"))); // NOI18N
         jLabel149.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jPanel2.add(jLabel149, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 110, -1, -1));
+
+        jLabel178.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Ship.png"))); // NOI18N
+        jLabel178.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jPanel2.add(jLabel178, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 140, 30, -1));
+
+        jLabel179.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Ship.png"))); // NOI18N
+        jLabel179.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jPanel2.add(jLabel179, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 140, 30, -1));
+
+        jLabel180.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Ship.png"))); // NOI18N
+        jLabel180.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jPanel2.add(jLabel180, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 110, 30, -1));
 
         jLabel159.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Ship.png"))); // NOI18N
         jLabel159.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -1997,9 +2031,6 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
 
         jLabel50.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Finishtile.png"))); // NOI18N
         jPanel2.add(jLabel50, new org.netbeans.lib.awtextra.AbsoluteConstraints(268, 531, 50, -1));
-
-        jLabel51.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Water tile.png"))); // NOI18N
-        jPanel2.add(jLabel51, new org.netbeans.lib.awtextra.AbsoluteConstraints(651, 530, 50, -1));
 
         jLabel52.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Finishtile.png"))); // NOI18N
         jPanel2.add(jLabel52, new org.netbeans.lib.awtextra.AbsoluteConstraints(771, 489, 50, -1));
@@ -2202,6 +2233,9 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
         jLabel114.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Water tile.png"))); // NOI18N
         jPanel2.add(jLabel114, new org.netbeans.lib.awtextra.AbsoluteConstraints(315, 365, 50, -1));
 
+        jLabel51.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Water tile.png"))); // NOI18N
+        jPanel2.add(jLabel51, new org.netbeans.lib.awtextra.AbsoluteConstraints(651, 530, 50, -1));
+
         jLabel115.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Water tile.png"))); // NOI18N
         jPanel2.add(jLabel115, new org.netbeans.lib.awtextra.AbsoluteConstraints(698, 362, 50, -1));
 
@@ -2383,17 +2417,6 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
         jLabel173.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jPanel2.add(jLabel173, new org.netbeans.lib.awtextra.AbsoluteConstraints(457, 280, 50, -1));
 
-        jLabel187.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel187.setForeground(new java.awt.Color(240, 240, 240));
-        jLabel187.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/blue villager.png"))); // NOI18N
-        jLabel187.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jLabel187.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel187MouseClicked(evt);
-            }
-        });
-        jPanel2.add(jLabel187, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 190, 10, 20));
-
         jLabel174.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Water tile.png"))); // NOI18N
         jPanel2.add(jLabel174, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 490, 50, -1));
 
@@ -2402,29 +2425,6 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
 
         jLabel176.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Water tile.png"))); // NOI18N
         jPanel2.add(jLabel176, new org.netbeans.lib.awtextra.AbsoluteConstraints(484, 487, 50, -1));
-
-        jLabel178.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Ship.png"))); // NOI18N
-        jLabel178.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jPanel2.add(jLabel178, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 140, 30, -1));
-
-        jLabel179.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Ship.png"))); // NOI18N
-        jLabel179.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jPanel2.add(jLabel179, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 140, 30, -1));
-
-        jLabel180.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Ship.png"))); // NOI18N
-        jLabel180.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jPanel2.add(jLabel180, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 110, 30, -1));
-
-        jLabel201.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel201.setForeground(new java.awt.Color(240, 240, 240));
-        jLabel201.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/red villager.png"))); // NOI18N
-        jLabel201.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jLabel201.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel201MouseClicked(evt);
-            }
-        });
-        jPanel2.add(jLabel201, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 300, 10, 20));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/fondo con bordes.png"))); // NOI18N
         jLabel1.setLabelFor(jPanel2);
