@@ -25,7 +25,7 @@ public class SafeVillagers implements Serializable{
         Villagers.add(V);
     }
     
-    public void total (ArrayList<Player> players, ArrayList<Villager> villagers){
+    public void totalScore (ArrayList<Player> players, ArrayList<Villager> villagers){
         for(Player p : players){
             for(Villager v : villagers){
                 if (p.getId()== v.getIdPlayer()){
