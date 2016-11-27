@@ -3113,129 +3113,129 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
         
         
         
-        labels[3][17]=jLabel44; // arena
+        labels[3][17]=jLabel34; // arena
         
-        labels[4][6]=jLabel44;
-        labels[4][18]=jLabel44;
+        labels[4][6]=jLabel79;
+        labels[4][18]=jLabel85;
         
-        labels[5][5]=jLabel44;
-        labels[5][19]=jLabel44;
+        labels[5][5]=jLabel80;
+        labels[5][19]=jLabel86;
         
-        labels[6][4]=jLabel44;
-        labels[6][6]=jLabel44;
-        labels[6][8]=jLabel44;
-        labels[6][16]=jLabel44;
-        labels[6][18]=jLabel44;
-        labels[6][20]=jLabel44;
+        labels[6][4]=jLabel81;
+        labels[6][6]=jLabel78;
+        labels[6][8]=jLabel16;
+        labels[6][16]=jLabel23;
+        labels[6][18]=jLabel84;
+        labels[6][20]=jLabel88;
         
-        labels[7][5]=jLabel44;
-        labels[7][19]=jLabel44;
+        labels[7][5]=jLabel82;
+        labels[7][19]=jLabel89;
         
-        labels[8][6]=jLabel44;
-        labels[8][18]=jLabel44;
+        labels[8][6]=jLabel83;
+        labels[8][18]=jLabel25;
         
-        labels[9][7]=jLabel44;
-        
-        
+        labels[9][7]=jLabel87;
         
         
-        labels[0][6]=jLabel44;// agua
-        labels[0][8]=jLabel44;
-        labels[0][10]=jLabel44;
-        labels[0][12]=jLabel44;
-        labels[0][14]=jLabel44;
-        labels[0][16]=jLabel44;
-        labels[0][18]=jLabel44;
         
-        labels[1][3]=jLabel44;
-        labels[1][5]=jLabel44;
-        labels[1][7]=jLabel44;
-        labels[1][9]=jLabel44;
-        labels[1][11]=jLabel44;
-        labels[1][13]=jLabel44;
-        labels[1][15]=jLabel44;
-        labels[1][17]=jLabel44;
-        labels[1][19]=jLabel44;
-        labels[1][21]=jLabel44;
         
-        labels[2][2]=jLabel44;
-        labels[2][4]=jLabel44;
-        labels[][6]=jLabel44;
-        labels[0][8]=jLabel44;
-        labels[0][10]=jLabel44;
-        labels[0][12]=jLabel44;
-        labels[0][14]=jLabel44;
-        labels[0][16]=jLabel44;
-        labels[0][18]=jLabel44;
-        labels[0][20]=jLabel44;
-        labels[0][22]=jLabel44;
+        labels[0][6]=jLabel121;// agua
+        labels[0][8]=jLabel122;
+        labels[0][10]=jLabel123;
+        labels[0][12]=jLabel124;
+        labels[0][14]=jLabel125;
+        labels[0][16]=jLabel126;
+        labels[0][18]=jLabel127;
         
-        labels[0][2]=jLabel44;
-        labels[0][2]=jLabel44;
-        labels[0][2]=jLabel44;
-        labels[0][2]=jLabel44;
-        labels[0][2]=jLabel44;
+        labels[1][3]=jLabel70;
+        labels[1][5]=jLabel62;
+        labels[1][7]=jLabel63;
+        labels[1][9]=jLabel64;
+        labels[1][11]=jLabel65;
+        labels[1][13]=jLabel66;
+        labels[1][15]=jLabel67;
+        labels[1][17]=jLabel68;
+        labels[1][19]=jLabel69;
+        labels[1][21]=jLabel54;
         
-        labels[0][2]=jLabel44;
-        labels[0][2]=jLabel44;
-        labels[0][2]=jLabel44;
-        labels[0][2]=jLabel44;
+        labels[2][2]=jLabel71;
+        labels[2][4]=jLabel72;
+        labels[2][6]=jLabel73;
+        labels[2][8]=jLabel74;
+        labels[2][10]=jLabel75;
+        labels[2][12]=jLabel76;
+        labels[2][14]=jLabel77;
+        labels[2][16]=jLabel90;
+        labels[2][18]=jLabel91;
+        labels[2][20]=jLabel92;
+        labels[2][22]=jLabel93;
         
-        labels[0][2]=jLabel44;
-        labels[0][2]=jLabel44;
-        labels[0][2]=jLabel44;
-        labels[0][2]=jLabel44;
+        labels[3][3]=jLabel94;
+        labels[3][5]=jLabel95;
+        labels[3][7]=jLabel96;
+        labels[3][19]=jLabel97;
+        labels[3][21]=jLabel98;
         
-        labels[0][2]=jLabel44;
-        labels[0][2]=jLabel44;
-        labels[0][2]=jLabel44;
+        labels[4][2]=jLabel99;
+        labels[4][4]=jLabel100;
+        labels[4][20]=jLabel101;
+        labels[4][22]=jLabel102;
         
-        labels[0][2]=jLabel44;
-        labels[0][2]=jLabel44;
-        labels[0][2]=jLabel44;
-        labels[0][2]=jLabel44;
+        labels[5][1]=jLabel106;
+        labels[5][3]=jLabel104;
+        labels[5][21]=jLabel105;
+        labels[5][23]=jLabel61;
         
-        labels[0][2]=jLabel44;
-        labels[0][2]=jLabel44;
-        labels[0][2]=jLabel44;
-        labels[0][2]=jLabel44;
+        labels[6][2]=jLabel108;
+        labels[6][12]=jLabel158;
+        labels[6][22]=jLabel103;
         
-        labels[0][2]=jLabel44;
-        labels[0][2]=jLabel44;
-        labels[0][2]=jLabel44;
-        labels[0][2]=jLabel44;
-        labels[0][2]=jLabel44;
+        labels[7][1]=jLabel112;
+        labels[7][3]=jLabel110;
+        labels[7][21]=jLabel111;
+        labels[7][23]=jLabel107;
         
-        labels[0][2]=jLabel44;
-        labels[0][2]=jLabel44;
-        labels[0][2]=jLabel44;
-        labels[0][2]=jLabel44;
-        labels[0][2]=jLabel44;
-        labels[0][2]=jLabel44;
-        labels[0][2]=jLabel44;
-        labels[0][2]=jLabel44;
-        labels[0][2]=jLabel44;
-        labels[0][2]=jLabel44;
-        labels[0][2]=jLabel44;
+        labels[8][2]=jLabel113;
+        labels[8][4]=jLabel114;
+        labels[8][20]=jLabel115;
+        labels[8][22]=jLabel116;
         
-        labels[0][2]=jLabel44;
-        labels[0][2]=jLabel44;
-        labels[0][2]=jLabel44;
-        labels[0][2]=jLabel44;
-        labels[0][2]=jLabel44;
-        labels[0][2]=jLabel44;
-        labels[0][2]=jLabel44;
-        labels[0][2]=jLabel44;
-        labels[0][2]=jLabel44;
-        labels[0][2]=jLabel44;
+        labels[9][3]=jLabel135;
+        labels[9][5]=jLabel118;
+        labels[9][17]=jLabel119;
+        labels[9][19]=jLabel120;
+        labels[9][21]=jLabel109;
         
-        labels[0][2]=jLabel44;
-        labels[0][2]=jLabel44;
-        labels[0][2]=jLabel44;
-        labels[0][2]=jLabel44;
-        labels[0][2]=jLabel44;
-        labels[0][2]=jLabel44;
-        labels[0][2]=jLabel44;
+        labels[10][2]=jLabel136;
+        labels[10][4]=jLabel138;
+        labels[10][6]=jLabel139;
+        labels[10][8]=jLabel140;
+        labels[10][10]=jLabel141;
+        labels[10][12]=jLabel142;
+        labels[10][14]=jLabel143;
+        labels[10][16]=jLabel144;
+        labels[10][18]=jLabel145;
+        labels[10][20]=jLabel146;
+        labels[10][22]=jLabel147;
+        
+        labels[11][3]=jLabel148;
+        labels[11][5]=jLabel149;
+        labels[11][7]=jLabel150;
+        labels[11][9]=jLabel151;
+        labels[11][11]=jLabel152;
+        labels[11][13]=jLabel153;
+        labels[11][15]=jLabel154;
+        labels[11][17]=jLabel155;
+        labels[11][19]=jLabel156;
+        labels[11][21]=jLabel157;
+        
+        labels[12][6]=jLabel60;
+        labels[12][8]=jLabel55;
+        labels[12][10]=jLabel56;
+        labels[12][12]=jLabel57;
+        labels[12][14]=jLabel58;
+        labels[12][16]=jLabel59;
+        labels[12][18]=jLabel51;
         
     }
 }
