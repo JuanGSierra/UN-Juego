@@ -30,6 +30,7 @@ public class GameMaster implements Serializable {
     private int indexOfPlayer;
     private boolean throwDice; // atributo que determina si toca tirar el dado o no
     private boolean volcano;
+    
 
     //Constructor GameMaster
     public GameMaster(GraphicsUI consola) {
@@ -38,9 +39,8 @@ public class GameMaster implements Serializable {
         actualTurn = 1;
         throwDice = false;
         volcano = false;
-
         players = new ArrayList<>();
-
+        
         this.consola = consola;//
         mapManager = new MapManager(consola);
 
@@ -48,6 +48,10 @@ public class GameMaster implements Serializable {
 
     public void initializePlayer(String name) {
         players.add(new Player(name));
+    }
+
+    public ArrayList<Player> getPlayers() {
+        return players;
     }
 
     /**
