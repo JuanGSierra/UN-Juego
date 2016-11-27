@@ -20,6 +20,10 @@ public class Board implements Serializable {
     static final int MOUNTAINTILEQUANTITY = 16;
 
     private Tile[][] board;
+
+    public Tile[][] getBoard() {
+        return board;
+    }
     
     public Board(){
         board = new Tile[13][25];

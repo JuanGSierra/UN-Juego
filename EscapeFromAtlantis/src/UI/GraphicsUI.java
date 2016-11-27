@@ -82,6 +82,11 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
 
     }
 
+    public JLabel[][] getLabels() {
+        return labels;
+    }
+
+    
     /**
      * Pone los datos del jugador del turno actual
      */

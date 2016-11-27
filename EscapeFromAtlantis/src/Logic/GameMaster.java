@@ -20,10 +20,12 @@ public class GameMaster implements Serializable {
 
     // Atributos
     private GraphicsUI consola;
+    private Board mapa;
     private MapManager mapManager;
     private ArrayList<Player> players;
     private Movement movement;
     private Comprobations comprobations;
+    private Casilla casillas[][];
 
     private static final int MAX_PLAYERS = 4;
     private static final int MIN_PLAYERS = 2;
@@ -42,8 +44,11 @@ public class GameMaster implements Serializable {
         throwDice = false;
         volcano = false;
         players = new ArrayList<>();
+        mapa = new Board();
         posicionVillagerInicial = 0;
         newValue = 1;
+        casillas = new Casilla[13][25];
+        llenarcasillas();
 
         this.consola = consola;//
         mapManager = new MapManager(consola);
@@ -202,6 +207,16 @@ public class GameMaster implements Serializable {
 
             JOptionPane.showMessageDialog(consola, "Que empiece el juego!");
 
+        }
+    }
+
+    private void llenarcasillas() {
+        JLabel labelmat[][] = consola.getLabels();
+        Tile tilemat[][] = mapa.getBoard();
+        for (int i = 0; i < casillas.length; i++) {
+            for (int j = 0; j < casillas[0].length; j++) {
+                casillas[i][j] = new Casilla(labelmat[i][j], tilemat[i][j]);
+            }
         }
     }
 
