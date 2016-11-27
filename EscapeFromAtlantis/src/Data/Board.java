@@ -208,10 +208,7 @@ public class Board implements Serializable {
         board[8][14]= new MountainTile(97, true, "");
     }
     
-    public static void main(String[] args){
-        Board tableroPrueba = new Board();
-        imprimirTableroPrueba(tableroPrueba);
-    }
+    
     
     private static void imprimirTableroPrueba(Board tablero) {
         int s = 0;
