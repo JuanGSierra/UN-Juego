@@ -227,25 +227,25 @@ public class GameMaster implements Serializable {
     public void setCasillas(Casilla[][] casillas) {
         this.casillas = casillas;
     }
-    
-    public void setcasilla(int i, int j,JLabel label ,Tile tile){
-        casillas[i][j]= new Casilla(label,tile);
+
+    public void setcasilla(int i, int j, JLabel label, Tile tile) {
+        casillas[i][j] = new Casilla(label, tile);
     }
-    
-    public JLabel getLabelCasilla(int i, int j){
+
+    public JLabel getLabelCasilla(int i, int j) {
         return casillas[i][j].getLabel();
     }
-    
-    public Tile getTileCasilla(int i, int j){
+
+    public Tile getTileCasilla(int i, int j) {
         return casillas[i][j].getTile();
     }
-    
-    public void changeCasillaToWater(int i, int j){
+
+    public void changeCasillaToWater(int i, int j) {
         JLabel labeltemp = casillas[i][j].getLabel();
         Tile tiletemp = casillas[i][j].getTile();
         labeltemp.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Water Tile.png")));
         casillas[i][j].setLabel(labeltemp);
-        casillas[i][j].setTile(new WaterTile(tiletemp.getPosition(), true));
+        casillas[i][j].setTile(new WaterTile(tiletemp.getPosition(), i, j, true));
     }
 
 }

@@ -18,7 +18,7 @@ public class MapManager {
     private GraphicsUI graphicsUI;
 
     public Tile changeTile(Tile tile) {
-        return new WaterTile(tile.getPosition(), true);
+        return new WaterTile(tile.getPosition(), tile.getX(), tile.getY(), true);
     }
 
     public MapManager(GraphicsUI map) {
