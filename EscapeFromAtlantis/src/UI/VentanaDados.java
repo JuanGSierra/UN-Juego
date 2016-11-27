@@ -6,6 +6,7 @@
 package UI;
 
 import Data.*;
+import Logic.GameMaster;
 import javax.swing.ImageIcon;
 
 /**
@@ -16,16 +17,17 @@ public class VentanaDados extends javax.swing.JFrame {
 
     private AnimalsDice dado;
     private boolean flag;
+    private GameMaster gamemaster;
 
     /**
      * Creates new form VentanaDados
      */
-    public VentanaDados() {
+    public VentanaDados(GraphicsUI graph) {
         initComponents();
         ImageIcon gifdado = new ImageIcon("/Imagenes/dados.gif");
         gifdado.setImageObserver(jLabel1);
         jLabel1.setIcon(gifdado);
-        
+        this.gamemaster = graph.getGameMaster();
         flag = true;
         dado = new AnimalsDice();
     }

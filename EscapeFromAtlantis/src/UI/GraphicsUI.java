@@ -64,12 +64,14 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
      */
     public GraphicsUI() {
         initComponents();
-        
+
         initComponentsForest();
         initComponentsMountain();
         initComponentsSand();
         //initComponentsVillagers();
         JOptionPane.showMessageDialog(this, "Que empiece el juego!");
+        asociarLabelsEnMatriz();
+        colocarNombreJugadores();
         turnoActual = "";
         inicioDelJuego = 0;
 
@@ -80,7 +82,7 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
         menu.setVisible(true);
         this.setVisible(false);
         changeTile = false;
-        asociarLabelsEnMatriz();
+        
 
     }
 
@@ -88,7 +90,6 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
         return labels;
     }
 
-    
     /**
      * Pone los datos del jugador del turno actual
      */
@@ -2627,7 +2628,7 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        dado = new VentanaDados();
+        dado = new VentanaDados(this);
         dado.setVisible(true);
 
     }//GEN-LAST:event_jButton2ActionPerformed
@@ -3328,5 +3329,18 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
         labels[12][16] = jLabel59;
         labels[12][18] = jLabel51;
 
+    }
+
+    private void colocarNombreJugadores() {
+        try {
+            jLabel223.setText(gameMaster.getPlayers().get(0).getName());
+            jLabel225.setText(gameMaster.getPlayers().get(1).getName());
+            jLabel227.setText(gameMaster.getPlayers().get(2).getName());
+            jLabel229.setText(gameMaster.getPlayers().get(3).getName());
+        } catch (NullPointerException e) {
+            System.out.println(e);
+        }catch (IndexOutOfBoundsException e){
+            System.out.println(e);
+        }
     }
 }

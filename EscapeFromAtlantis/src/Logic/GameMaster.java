@@ -56,6 +56,10 @@ public class GameMaster implements Serializable {
         movement = new Movement(this);
 
     }
+    
+    public void addPlayer(Player a){
+        players.add(a);
+    }
 
     public Player returnPlayerInTurn() {
 

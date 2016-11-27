@@ -5,6 +5,8 @@
  */
 package UI;
 
+import Data.Player;
+import Logic.GameMaster;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import javax.swing.plaf.nimbus.NimbusLookAndFeel;
@@ -16,12 +18,14 @@ import javax.swing.plaf.nimbus.NimbusLookAndFeel;
 public class NuevaPartida extends javax.swing.JFrame {
 
     private Menu menu;
+    private GameMaster gamemaster;
 
     /**
      * Creates new form NuevaPartida
      */
     public NuevaPartida(Menu menu) {
         initComponents();
+        this.gamemaster= menu.getGameMaster();
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
@@ -431,7 +435,9 @@ public class NuevaPartida extends javax.swing.JFrame {
 
         try {
             menu.setPlayer(jTextField1.getText(), menu.getPantallaDeJuego().getArray1());
+            this.gamemaster.addPlayer(new Player(jTextField1.getText(), menu.getPantallaDeJuego().getArray1()));
             menu.setPlayer(jTextField2.getText(), menu.getPantallaDeJuego().getArray2());
+            this.gamemaster.addPlayer(new Player(jTextField2.getText(), menu.getPantallaDeJuego().getArray2()));
             this.setVisible(false);
             menu.getPantallaDeJuego().setVisible(true);
             menu.getPantallaDeJuego().getGameMaster().inicioDelJuego();
@@ -452,8 +458,11 @@ public class NuevaPartida extends javax.swing.JFrame {
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         try {
             menu.setPlayer(jTextField3.getText(), menu.getPantallaDeJuego().getArray1());
+            this.gamemaster.addPlayer(new Player(jTextField3.getText(), menu.getPantallaDeJuego().getArray1()));
             menu.setPlayer(jTextField4.getText(), menu.getPantallaDeJuego().getArray2());
+            this.gamemaster.addPlayer(new Player(jTextField4.getText(), menu.getPantallaDeJuego().getArray2()));
             menu.setPlayer(jTextField5.getText(), menu.getPantallaDeJuego().getArray3());
+            this.gamemaster.addPlayer(new Player(jTextField5.getText(), menu.getPantallaDeJuego().getArray3()));
             this.setVisible(false);
             menu.getPantallaDeJuego().setVisible(true);
             menu.getPantallaDeJuego().getGameMaster().inicioDelJuego();
@@ -478,9 +487,13 @@ public class NuevaPartida extends javax.swing.JFrame {
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         try {
             menu.setPlayer(jTextField6.getText(), menu.getPantallaDeJuego().getArray1());
+            this.gamemaster.addPlayer(new Player(jTextField6.getText(), menu.getPantallaDeJuego().getArray1()));
             menu.setPlayer(jTextField7.getText(), menu.getPantallaDeJuego().getArray2());
+            this.gamemaster.addPlayer(new Player(jTextField7.getText(), menu.getPantallaDeJuego().getArray2()));
             menu.setPlayer(jTextField8.getText(), menu.getPantallaDeJuego().getArray3());
+            this.gamemaster.addPlayer(new Player(jTextField7.getText(), menu.getPantallaDeJuego().getArray3()));
             menu.setPlayer(jTextField9.getText(), menu.getPantallaDeJuego().getArray4());
+            this.gamemaster.addPlayer(new Player(jTextField7.getText(), menu.getPantallaDeJuego().getArray4()));
             this.setVisible(false);
             menu.getPantallaDeJuego().setVisible(true);
             menu.getPantallaDeJuego().getGameMaster().inicioDelJuego();

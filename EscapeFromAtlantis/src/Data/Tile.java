@@ -26,6 +26,12 @@ public abstract class Tile implements Serializable {
         return x;
     }
 
+    public static int getAldeanosActuales() {
+        return aldeanosActuales;
+    }
+    
+    
+
     public void setX(int x) {
         this.x = x;
     }
