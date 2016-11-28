@@ -432,8 +432,5 @@ public class GameMaster implements Serializable {
         return tile;
     }
 
-    public VillagerCenters getVillagerCenters() {
-        
-    }
 
 }
