@@ -61,6 +61,8 @@ public class Movement {
 
                 case 1:
                     if (gameMaster.getComprobations().validateNextMovementV(v, t, destino, villager) > 2) {
+                        gameMaster.getTileCasilla(v.getX(), v.getY()).eliminarVillager(v);
+                        gameMaster.getTileCasilla(v.getNextX(), v.getNextY()).agregarVillager(v);
                         gameMaster.getVillagerCenters().changeVillagerLabelTo(v.getJlabel(), t.getX(), t.getY());
                     } else {
                         JOptionPane.showMessageDialog(gameMaster.getGraphicsUI(), "NO tiene movimientos suficientes");
@@ -69,6 +71,8 @@ public class Movement {
                     break;
                 case 2:
                     if (gameMaster.getComprobations().validateNextMovementV(v, t, destino, villager) > 4) {
+                        gameMaster.getTileCasilla(v.getX(), v.getY()).eliminarVillager(v);
+                        gameMaster.getTileCasilla(v.getNextX(), v.getNextY()).agregarVillager(v);
                         gameMaster.getVillagerCenters().changeVillagerLabelTo(v.getJlabel(), t.getX(), t.getY());
 
                     } else {
@@ -77,6 +81,8 @@ public class Movement {
                     break;
                 case 3:
                     if (gameMaster.getComprobations().validateNextMovementV(v, t, destino, villager) > 6) {
+                        gameMaster.getTileCasilla(v.getX(), v.getY()).eliminarVillager(v);
+                        gameMaster.getTileCasilla(v.getNextX(), v.getNextY()).agregarVillager(v);
                         gameMaster.getVillagerCenters().changeVillagerLabelTo(v.getJlabel(), t.getX(), t.getY());
 
                     } else {
