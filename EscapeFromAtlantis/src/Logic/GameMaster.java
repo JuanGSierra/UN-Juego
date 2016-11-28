@@ -368,7 +368,7 @@ public class GameMaster implements Serializable {
             }
         }
 
-        endGame();
+        
     }
 
 }
