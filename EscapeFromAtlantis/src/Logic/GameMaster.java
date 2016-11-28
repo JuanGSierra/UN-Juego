@@ -34,6 +34,7 @@ public class GameMaster implements Serializable {
 
     private AnimalsDice animalsDice;
     private ArrayList<Boat> boats;
+    private VillagerCenters villagerCenters;
 
     private static final int MAX_PLAYERS = 4;
     private static final int MIN_PLAYERS = 2;
@@ -66,6 +67,8 @@ public class GameMaster implements Serializable {
         board = new Board();
 
         boats = new ArrayList();
+        
+        villagerCenters = new VillagerCenters(this);
 
         stateOfTurn = 0;
         actualTurn = 1;
@@ -109,6 +112,10 @@ public class GameMaster implements Serializable {
 
     public VentanaDados getVentanaDados() {
         return ventanaDados;
+    }
+
+    public VillagerCenters getVillagerCenters() {
+        return villagerCenters;
     }
 
     /**

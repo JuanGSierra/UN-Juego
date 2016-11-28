@@ -19,7 +19,7 @@ public abstract class Tile implements Serializable {
     private String effect;
     private int position;
     private ArrayList<Villager> villager;
-    static int aldeanosActuales;
+    private int aldeanosActuales;
     private int x;
     private int y;
 
@@ -27,13 +27,15 @@ public abstract class Tile implements Serializable {
         return x;
     }
 
-    public static int getAldeanosActuales() {
+    public int getAldeanosActuales() {
         return aldeanosActuales;
     }
 
     public void setX(int x) {
         this.x = x;
     }
+    
+    
 
     public int getY() {
         return y;
