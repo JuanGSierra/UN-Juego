@@ -24,13 +24,13 @@ public class Comprobations {
     }
     
     //validacion posicion de proxima Tile para Animal
-    public boolean ValidateNextMovementA (Animal a, Tile t){
+    public boolean ValidateNextMovementA (Animal a, Tile t, JLabel animal, JLabel tile ){
         //validacion tile Izquierda
         if((a.getNextX()==t.getX()-2)&&(a.getNextY()==t.getY())){
             return true;
         }
         //validacion tile Derecha
-        if((a.getNextX()==t.getX()+2)&&(a.getNextY()==t.getY())){
+        if((a.getNextX()==t.getX()+2)&&(a.getNextY()==t.getY())){            
             return true;
         }
         //validacion tile Superior Izquierda
@@ -54,7 +54,7 @@ public class Comprobations {
     
     
     //validacion posicion de proxima Tile para Villager
-    public boolean ValidateNextMovementV (Villager v, Tile t){
+    public static boolean ValidateNextMovementV (Villager v, Tile t, JLabel villager, JLabel tile){
         //validacion tile Izquierda
         if((v.getNextX()==t.getX()-2)&&(v.getNextY()==t.getY())){
             return true;

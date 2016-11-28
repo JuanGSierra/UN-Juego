@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package UI;
-
+import Data.Villager;
 import Data.Animal;
 import Data.Boat;
 import Data.ForestTile;
@@ -104,11 +104,11 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
     }
 
     // mal
-    public void moveTo(JLabel jLabel) {
+    public void moveTo(JLabel jLabel, Villager v, Tile t) {
 
         if (positionOfVillager != null) {
 
-            gameMaster.getMovimiento().moverVillager(jLabel, positionOfVillager);
+            gameMaster.getMovimiento().moverVillager(jLabel, positionOfVillager, v, t);
 
         } else {
             JOptionPane.showMessageDialog(this, "Escoge un Aldeano que mover "
@@ -2219,7 +2219,7 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
         jPanel2.add(jLabel113, new org.netbeans.lib.awtextra.AbsoluteConstraints(267, 366, 50, -1));
 
         jLabel114.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Water tile.png"))); // NOI18N
-        jPanel2.add(jLabel114, new org.netbeans.lib.awtextra.AbsoluteConstraints(315, 365, 50, -1));
+        jPanel2.add(jLabel114, new org.netbeans.lib.awtextra.AbsoluteConstraints(315, 365, 50, 50));
 
         jLabel51.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Water tile.png"))); // NOI18N
         jPanel2.add(jLabel51, new org.netbeans.lib.awtextra.AbsoluteConstraints(651, 530, 50, -1));

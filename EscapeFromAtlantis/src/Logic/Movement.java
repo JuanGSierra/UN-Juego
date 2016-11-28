@@ -52,12 +52,12 @@ public class Movement {
 
     }
 
-    public void moverVillager(JLabel destino, JLabel villager) {
+    public void moverVillager(JLabel destino, JLabel villager, Villager v, Tile t) {
 
         if (Comprobations.canMove(gameMaster.returnPlayerInTurn())) {
 
-            Comprobations.isPermitted(destino, villager);
-
+            //Comprobations.isPermitted(destino, villager);
+            Comprobations.ValidateNextMovementV(v, t, destino, villager);
         } else {
 
         }
