@@ -469,7 +469,7 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
             inicioDelJuego++;
 
         } else if (gameMaster.getStateOfTurn() == 1) { // falta condicion de movimiento
-            moveTo(jLabel7);
+            moveTo(jLabel7,gameMaster.getVillagerOfJLabel(positionOfVillager),gameMaster.getTileOfJLabel(jLabel7));
         } else if (gameMaster.getStateOfTurn() == 3) {
             // levantara un tile y se acabara el turno
         }
@@ -484,7 +484,7 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
             gameMaster.setFirstPositionVillagers(jLabel170);
 
         } else { // falta condicion de movimiento
-            moveTo(jLabel170);
+             moveTo(jLabel170, gameMaster.getVillagerOfJLabel(positionOfVillager), gameMaster.getTileOfJLabel(jLabel170));
         }
     }
 
@@ -498,7 +498,7 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
             inicioDelJuego++;
 
         } else { // falta condicion de movimiento
-            moveTo(jLabel171);
+             moveTo(jLabel171, gameMaster.getVillagerOfJLabel(positionOfVillager), gameMaster.getTileOfJLabel(jLabel171));
         }
     }
 
@@ -512,7 +512,7 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
             inicioDelJuego++;
 
         } else { // falta condicion de movimiento
-            moveTo(jLabel168);
+             moveTo(jLabel168, gameMaster.getVillagerOfJLabel(positionOfVillager), gameMaster.getTileOfJLabel(jLabel168));
         }
     }
 
@@ -526,7 +526,7 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
             inicioDelJuego++;
 
         } else { // falta condicion de movimiento
-            moveTo(jLabel163);
+            moveTo(jLabel163, gameMaster.getVillagerOfJLabel(positionOfVillager), gameMaster.getTileOfJLabel(jLabel163));
         }
     }
 
@@ -540,7 +540,7 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
             inicioDelJuego++;
 
         } else { // falta condicion de movimiento
-            moveTo(jLabel172);
+            moveTo(jLabel172, gameMaster.getVillagerOfJLabel(positionOfVillager), gameMaster.getTileOfJLabel(jLabel172));
         }
     }
 
@@ -554,7 +554,7 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
             inicioDelJuego++;
 
         } else { // falta condicion de movimiento
-            moveTo(jLabel173);
+            moveTo(jLabel173, gameMaster.getVillagerOfJLabel(positionOfVillager), gameMaster.getTileOfJLabel(jLabel173));
         }
     }
 
@@ -568,7 +568,7 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
             inicioDelJuego++;
 
         } else { // falta condicion de movimiento
-            moveTo(jLabel162);
+            moveTo(jLabel162, gameMaster.getVillagerOfJLabel(positionOfVillager), gameMaster.getTileOfJLabel(jLabel162));
         }
     }
 
@@ -582,7 +582,7 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
             inicioDelJuego++;
 
         } else { // falta condicion de movimiento
-            moveTo(jLabel164);
+            moveTo(jLabel164, gameMaster.getVillagerOfJLabel(positionOfVillager), gameMaster.getTileOfJLabel(jLabel164));
         }
     }
 
@@ -596,7 +596,7 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
             inicioDelJuego++;
 
         } else { // falta condicion de movimiento
-            moveTo(jLabel160);
+            moveTo(jLabel160, gameMaster.getVillagerOfJLabel(positionOfVillager), gameMaster.getTileOfJLabel(jLabel160));
         }
     }
 
@@ -610,7 +610,7 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
             inicioDelJuego++;
 
         } else { // falta condicion de movimiento
-            moveTo(jLabel161);
+            moveTo(jLabel161, gameMaster.getVillagerOfJLabel(positionOfVillager), gameMaster.getTileOfJLabel(jLabel161));
         }
     }
 
@@ -624,7 +624,7 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
             inicioDelJuego++;
 
         } else { // falta condicion de movimiento
-            moveTo(jLabel167);
+            moveTo(jLabel167, gameMaster.getVillagerOfJLabel(positionOfVillager), gameMaster.getTileOfJLabel(jLabel167));
         }
     }
 
@@ -638,7 +638,7 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
             inicioDelJuego++;
 
         } else { // falta condicion de movimiento
-            moveTo(jLabel117);
+            moveTo(jLabel117, gameMaster.getVillagerOfJLabel(positionOfVillager), gameMaster.getTileOfJLabel(jLabel117));
         }
     }
 
@@ -652,7 +652,7 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
             inicioDelJuego++;
 
         } else { // falta condicion de movimiento
-            moveTo(jLabel165);
+            moveTo(jLabel165, gameMaster.getVillagerOfJLabel(positionOfVillager), gameMaster.getTileOfJLabel(jLabel165));
         }
     }
 
@@ -666,7 +666,7 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
             inicioDelJuego++;
 
         } else { // falta condicion de movimiento
-            moveTo(jLabel166);
+            moveTo(jLabel166, gameMaster.getVillagerOfJLabel(positionOfVillager), gameMaster.getTileOfJLabel(jLabel166));
         }
     }
 
@@ -681,7 +681,7 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
             inicioDelJuego++;
 
         } else { // falta condicion de movimiento
-            moveTo(jLabel41);
+            moveTo(jLabel41, gameMaster.getVillagerOfJLabel(positionOfVillager), gameMaster.getTileOfJLabel(jLabel41));
         }
     }
 
@@ -695,7 +695,7 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
             inicioDelJuego++;
 
         } else { // falta condicion de movimiento
-            moveTo(jLabel38);
+            moveTo(jLabel38, gameMaster.getVillagerOfJLabel(positionOfVillager), gameMaster.getTileOfJLabel(jLabel38));
         }
     }
 
@@ -709,7 +709,7 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
             inicioDelJuego++;
 
         } else { // falta condicion de movimiento
-            moveTo(jLabel17);
+            moveTo(jLabel17, gameMaster.getVillagerOfJLabel(positionOfVillager), gameMaster.getTileOfJLabel(jLabel17));
         }
     }
 
@@ -723,7 +723,7 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
             inicioDelJuego++;
 
         } else { // falta condicion de movimiento
-            moveTo(jLabel24);
+            moveTo(jLabel24, gameMaster.getVillagerOfJLabel(positionOfVillager), gameMaster.getTileOfJLabel(jLabel24));
         }
     }
 
@@ -737,7 +737,7 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
             inicioDelJuego++;
 
         } else { // falta condicion de movimiento
-            moveTo(jLabel36);
+            moveTo(jLabel36, gameMaster.getVillagerOfJLabel(positionOfVillager), gameMaster.getTileOfJLabel(jLabel36));
         }
     }
 
@@ -751,7 +751,7 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
             inicioDelJuego++;
 
         } else { // falta condicion de movimiento
-            moveTo(jLabel40);
+            moveTo(jLabel40, gameMaster.getVillagerOfJLabel(positionOfVillager), gameMaster.getTileOfJLabel(jLabel40));
         }
     }
 
@@ -765,7 +765,7 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
             inicioDelJuego++;
 
         } else { // falta condicion de movimiento
-            moveTo(jLabel35);
+            moveTo(jLabel35, gameMaster.getVillagerOfJLabel(positionOfVillager), gameMaster.getTileOfJLabel(jLabel35));
         }
     }
 
@@ -779,7 +779,7 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
             inicioDelJuego++;
 
         } else { // falta condicion de movimiento
-            moveTo(jLabel39);
+            moveTo(jLabel39, gameMaster.getVillagerOfJLabel(positionOfVillager), gameMaster.getTileOfJLabel(jLabel39));
         }
     }
 
@@ -793,7 +793,7 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
             inicioDelJuego++;
 
         } else { // falta condicion de movimiento
-            moveTo(jLabel33);
+            moveTo(jLabel33, gameMaster.getVillagerOfJLabel(positionOfVillager), gameMaster.getTileOfJLabel(jLabel33));
         }
     }
 
@@ -807,7 +807,7 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
             inicioDelJuego++;
 
         } else { // falta condicion de movimiento
-            moveTo(jLabel26);
+            moveTo(jLabel26, gameMaster.getVillagerOfJLabel(positionOfVillager), gameMaster.getTileOfJLabel(jLabel26));
         }
     }
 
@@ -821,7 +821,7 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
             inicioDelJuego++;
 
         } else { // falta condicion de movimiento
-            moveTo(jLabel32);
+            moveTo(jLabel32, gameMaster.getVillagerOfJLabel(positionOfVillager), gameMaster.getTileOfJLabel(jLabel32));
         }
     }
 
@@ -835,7 +835,7 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
             inicioDelJuego++;
 
         } else { // falta condicion de movimiento
-            moveTo(jLabel27);
+            moveTo(jLabel27, gameMaster.getVillagerOfJLabel(positionOfVillager), gameMaster.getTileOfJLabel(jLabel27));
         }
     }
 
@@ -849,7 +849,7 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
             inicioDelJuego++;
 
         } else { // falta condicion de movimiento
-            moveTo(jLabel31);
+            moveTo(jLabel31, gameMaster.getVillagerOfJLabel(positionOfVillager), gameMaster.getTileOfJLabel(jLabel31));
         }
     }
 
@@ -863,7 +863,7 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
             inicioDelJuego++;
 
         } else { // falta condicion de movimiento
-            moveTo(jLabel30);
+            moveTo(jLabel30, gameMaster.getVillagerOfJLabel(positionOfVillager), gameMaster.getTileOfJLabel(jLabel30));
         }
     }
 
@@ -877,7 +877,7 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
             inicioDelJuego++;
 
         } else { // falta condicion de movimiento
-            moveTo(jLabel29);
+            moveTo(jLabel29, gameMaster.getVillagerOfJLabel(positionOfVillager), gameMaster.getTileOfJLabel(jLabel29));
         }
     }
 
@@ -891,7 +891,7 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
             inicioDelJuego++;
 
         } else { // falta condicion de movimiento
-            moveTo(jLabel28);
+            moveTo(jLabel28, gameMaster.getVillagerOfJLabel(positionOfVillager), gameMaster.getTileOfJLabel(jLabel28));
         }
     }
 
@@ -906,7 +906,7 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
             inicioDelJuego++;
 
         } else { // falta condicion de movimiento
-            moveTo(jLabel34);
+            moveTo(jLabel34, gameMaster.getVillagerOfJLabel(positionOfVillager), gameMaster.getTileOfJLabel(jLabel34));
         }
     }
 
@@ -920,7 +920,7 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
             inicioDelJuego++;
 
         } else { // falta condicion de movimiento
-            moveTo(jLabel79);
+            moveTo(jLabel79, gameMaster.getVillagerOfJLabel(positionOfVillager), gameMaster.getTileOfJLabel(jLabel79));
         }
     }
 
@@ -934,7 +934,7 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
             inicioDelJuego++;
 
         } else { // falta condicion de movimiento
-            moveTo(jLabel85);
+            moveTo(jLabel85, gameMaster.getVillagerOfJLabel(positionOfVillager), gameMaster.getTileOfJLabel(jLabel85));
         }
     }
 
@@ -948,7 +948,7 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
             inicioDelJuego++;
 
         } else { // falta condicion de movimiento
-            moveTo(jLabel80);
+            moveTo(jLabel80, gameMaster.getVillagerOfJLabel(positionOfVillager), gameMaster.getTileOfJLabel(jLabel80));
         }
     }
 
@@ -962,7 +962,7 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
             inicioDelJuego++;
 
         } else { // falta condicion de movimiento
-            moveTo(jLabel86);
+            moveTo(jLabel86, gameMaster.getVillagerOfJLabel(positionOfVillager), gameMaster.getTileOfJLabel(jLabel86));
         }
     }
 
@@ -976,7 +976,7 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
             inicioDelJuego++;
 
         } else { // falta condicion de movimiento
-            moveTo(jLabel81);
+            moveTo(jLabel81, gameMaster.getVillagerOfJLabel(positionOfVillager), gameMaster.getTileOfJLabel(jLabel81));
         }
     }
 
@@ -990,7 +990,7 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
             inicioDelJuego++;
 
         } else { // falta condicion de movimiento
-            moveTo(jLabel78);
+            moveTo(jLabel78, gameMaster.getVillagerOfJLabel(positionOfVillager), gameMaster.getTileOfJLabel(jLabel78));
         }
     }
 
@@ -1003,7 +1003,7 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
             inicioDelJuego++;
 
         } else { // falta condicion de movimiento
-            moveTo(jLabel16);
+            moveTo(jLabel16, gameMaster.getVillagerOfJLabel(positionOfVillager), gameMaster.getTileOfJLabel(jLabel16));
         }
     }
 
@@ -1017,7 +1017,7 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
             inicioDelJuego++;
 
         } else { // falta condicion de movimiento
-            moveTo(jLabel23);
+            moveTo(jLabel23, gameMaster.getVillagerOfJLabel(positionOfVillager), gameMaster.getTileOfJLabel(jLabel123));
         }
     }
 
@@ -1031,7 +1031,7 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
             inicioDelJuego++;
 
         } else { // falta condicion de movimiento
-            moveTo(jLabel84);
+            moveTo(jLabel84, gameMaster.getVillagerOfJLabel(positionOfVillager), gameMaster.getTileOfJLabel(jLabel84));
         }
     }
 
@@ -1045,7 +1045,7 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
             inicioDelJuego++;
 
         } else { // falta condicion de movimiento
-            moveTo(jLabel88);
+            moveTo(jLabel88, gameMaster.getVillagerOfJLabel(positionOfVillager), gameMaster.getTileOfJLabel(jLabel88));
         }
     }
 
@@ -1059,7 +1059,7 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
             inicioDelJuego++;
 
         } else { // falta condicion de movimiento
-            moveTo(jLabel82);
+            moveTo(jLabel82, gameMaster.getVillagerOfJLabel(positionOfVillager), gameMaster.getTileOfJLabel(jLabel82));
         }
     }
 
@@ -1073,7 +1073,7 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
             inicioDelJuego++;
 
         } else { // falta condicion de movimiento
-            moveTo(jLabel89);
+            moveTo(jLabel89, gameMaster.getVillagerOfJLabel(positionOfVillager), gameMaster.getTileOfJLabel(jLabel89));
         }
     }
 
@@ -1087,7 +1087,7 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
             inicioDelJuego++;
 
         } else { // falta condicion de movimiento
-            moveTo(jLabel83);
+            moveTo(jLabel83, gameMaster.getVillagerOfJLabel(positionOfVillager), gameMaster.getTileOfJLabel(jLabel83));
         }
     }
 
@@ -1101,7 +1101,7 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
             inicioDelJuego++;
 
         } else { // falta condicion de movimiento
-            moveTo(jLabel25);
+            moveTo(jLabel25, gameMaster.getVillagerOfJLabel(positionOfVillager), gameMaster.getTileOfJLabel(jLabel25));
         }
     }
 
@@ -1115,7 +1115,7 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
             inicioDelJuego++;
 
         } else { // falta condicion de movimiento
-            moveTo(jLabel87);
+            moveTo(jLabel87, gameMaster.getVillagerOfJLabel(positionOfVillager), gameMaster.getTileOfJLabel(jLabel87));
         }
     }
 
