@@ -15,21 +15,17 @@ import javax.swing.ImageIcon;
  */
 public class VentanaDados extends javax.swing.JFrame {
 
-    private AnimalsDice dado;
+    private GameMaster gameMaster;
     private boolean flag;
-    private GameMaster gamemaster;
 
     /**
      * Creates new form VentanaDados
      */
-    public VentanaDados(GraphicsUI graph) {
+    public VentanaDados(GameMaster gameMaster) {
         initComponents();
-        ImageIcon gifdado = new ImageIcon("/Imagenes/dados.gif");
-        gifdado.setImageObserver(jLabel1);
-        jLabel1.setIcon(gifdado);
-        this.gamemaster = graph.getGameMaster();
+        this.gameMaster = gameMaster;
         flag = true;
-        dado = new AnimalsDice();
+
     }
 
     /**
@@ -131,7 +127,7 @@ public class VentanaDados extends javax.swing.JFrame {
         // TODO add your handling code here:
         if (flag) {
             flag = false;
-            String result = dado.throwDice(9);
+            String result = gameMaster.getAnimalsDice().throwDice();
             switch (result) {
                 case "Shark":
                     jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/dadotiburon.png")));
@@ -166,8 +162,6 @@ public class VentanaDados extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
- 
-
     public static Shark returnShark() {
         Shark shark = new Shark(1);
         return shark;

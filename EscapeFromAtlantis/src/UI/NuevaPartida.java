@@ -17,32 +17,14 @@ import javax.swing.plaf.nimbus.NimbusLookAndFeel;
  */
 public class NuevaPartida extends javax.swing.JFrame {
 
-    private Menu menu;
-    private GameMaster gamemaster;
+    private GameMaster gameMaster;
 
     /**
      * Creates new form NuevaPartida
      */
-    public NuevaPartida(Menu menu) {
+    public NuevaPartida(GameMaster gameMaster) {
         initComponents();
-        this.gamemaster= menu.getGameMaster();
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(new NimbusLookAndFeel());
-                    break;
-                }
-            }
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(GraphicsUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-
-        this.menu = menu;
+        this.gameMaster = gameMaster;
 
         jPanel2.setVisible(false);
         jPanel5.setVisible(false);
@@ -422,8 +404,8 @@ public class NuevaPartida extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        this.setVisible(false);
-        menu.setVisible(true);
+        setVisible(false);
+        gameMaster.getMenu().setVisible(true);
     }//GEN-LAST:event_jButton5ActionPerformed
 
     /**
@@ -434,14 +416,14 @@ public class NuevaPartida extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
 
         try {
-            menu.setPlayer(jTextField1.getText(), menu.getPantallaDeJuego().getArray1());
-            this.gamemaster.addPlayer(new Player(jTextField1.getText(), menu.getPantallaDeJuego().getArray1()));
-            menu.setPlayer(jTextField2.getText(), menu.getPantallaDeJuego().getArray2());
-            this.gamemaster.addPlayer(new Player(jTextField2.getText(), menu.getPantallaDeJuego().getArray2()));
+            gameMaster.initializePlayer(jTextField1.getText(), gameMaster.getGraphicsUI().getArray1());
+
+            gameMaster.initializePlayer(jTextField2.getText(), gameMaster.getGraphicsUI().getArray2());
+
             this.setVisible(false);
-            menu.getPantallaDeJuego().setVisible(true);
-            menu.getPantallaDeJuego().getGameMaster().inicioDelJuego();
-            JOptionPane.showMessageDialog(menu.getPantallaDeJuego(),
+            gameMaster.getGraphicsUI().setVisible(true);
+            gameMaster.inicioDelJuego();
+            JOptionPane.showMessageDialog(gameMaster.getGraphicsUI(),
                     "Coloque sus aldeanos en las baldosas de la isla");
         } catch (Exception e) {
             JOptionPane.showMessageDialog(this, "Ingrese nombres validos para los"
@@ -457,16 +439,14 @@ public class NuevaPartida extends javax.swing.JFrame {
      */
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         try {
-            menu.setPlayer(jTextField3.getText(), menu.getPantallaDeJuego().getArray1());
-            this.gamemaster.addPlayer(new Player(jTextField3.getText(), menu.getPantallaDeJuego().getArray1()));
-            menu.setPlayer(jTextField4.getText(), menu.getPantallaDeJuego().getArray2());
-            this.gamemaster.addPlayer(new Player(jTextField4.getText(), menu.getPantallaDeJuego().getArray2()));
-            menu.setPlayer(jTextField5.getText(), menu.getPantallaDeJuego().getArray3());
-            this.gamemaster.addPlayer(new Player(jTextField5.getText(), menu.getPantallaDeJuego().getArray3()));
-            this.setVisible(false);
-            menu.getPantallaDeJuego().setVisible(true);
-            menu.getPantallaDeJuego().getGameMaster().inicioDelJuego();
-            JOptionPane.showMessageDialog(menu.getPantallaDeJuego(),
+            gameMaster.initializePlayer(jTextField3.getText(), gameMaster.getGraphicsUI().getArray1());
+            gameMaster.initializePlayer(jTextField4.getText(), gameMaster.getGraphicsUI().getArray2());
+            gameMaster.initializePlayer(jTextField5.getText(), gameMaster.getGraphicsUI().getArray3());
+
+            setVisible(false);
+            gameMaster.getGraphicsUI().setVisible(true);
+            gameMaster.inicioDelJuego();
+            JOptionPane.showMessageDialog(gameMaster.getGraphicsUI(),
                     "Coloque sus aldeanos en las baldosas de la isla");
         } catch (Exception e) {
             JOptionPane.showMessageDialog(this, "Ingrese nombres validos para los"
@@ -486,18 +466,16 @@ public class NuevaPartida extends javax.swing.JFrame {
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         try {
-            menu.setPlayer(jTextField6.getText(), menu.getPantallaDeJuego().getArray1());
-            this.gamemaster.addPlayer(new Player(jTextField6.getText(), menu.getPantallaDeJuego().getArray1()));
-            menu.setPlayer(jTextField7.getText(), menu.getPantallaDeJuego().getArray2());
-            this.gamemaster.addPlayer(new Player(jTextField7.getText(), menu.getPantallaDeJuego().getArray2()));
-            menu.setPlayer(jTextField8.getText(), menu.getPantallaDeJuego().getArray3());
-            this.gamemaster.addPlayer(new Player(jTextField7.getText(), menu.getPantallaDeJuego().getArray3()));
-            menu.setPlayer(jTextField9.getText(), menu.getPantallaDeJuego().getArray4());
-            this.gamemaster.addPlayer(new Player(jTextField7.getText(), menu.getPantallaDeJuego().getArray4()));
-            this.setVisible(false);
-            menu.getPantallaDeJuego().setVisible(true);
-            menu.getPantallaDeJuego().getGameMaster().inicioDelJuego();
-            JOptionPane.showMessageDialog(menu.getPantallaDeJuego(),
+            gameMaster.initializePlayer(jTextField6.getText(), gameMaster.getGraphicsUI().getArray1());
+            gameMaster.initializePlayer(jTextField7.getText(), gameMaster.getGraphicsUI().getArray2());
+            gameMaster.initializePlayer(jTextField8.getText(), gameMaster.getGraphicsUI().getArray3());
+            gameMaster.initializePlayer(jTextField9.getText(), gameMaster.getGraphicsUI().getArray4());
+            
+            setVisible(false);
+            gameMaster.getGraphicsUI().setVisible(true);
+            gameMaster.inicioDelJuego();
+            
+            JOptionPane.showMessageDialog(gameMaster.getGraphicsUI(),
                     "Coloque sus aldeanos en las baldosas de la isla");
         } catch (Exception e) {
             JOptionPane.showMessageDialog(this, "Ingrese nombres validos para los"

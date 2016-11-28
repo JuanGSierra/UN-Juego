@@ -27,36 +27,16 @@ import javax.swing.plaf.nimbus.NimbusLookAndFeel;
  */
 public class Menu extends javax.swing.JFrame {
 
-    private GraphicsUI pantallaDeJuego;
     private GameMaster gameMaster;
-    private NuevaPartida nuevaPartida;
-    private SafeVillagers sVillager;
 
     /**
      * Creates new form Menu
      */
-    public Menu(GraphicsUI pantallaDeJuego) {
+    public Menu(GameMaster gameMaster) {
+
         initComponents();
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(new NimbusLookAndFeel());
-                    break;
-                }
-            }
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(GraphicsUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        this.pantallaDeJuego = pantallaDeJuego;
-        this.gameMaster = pantallaDeJuego.getGameMaster();
-        this.nuevaPartida = new NuevaPartida(this);
-        sVillager = new SafeVillagers();
-        
+        this.gameMaster = gameMaster;
+
     }
 
     public GameMaster getGameMaster() {
@@ -65,10 +45,6 @@ public class Menu extends javax.swing.JFrame {
 
     public void setPlayer(String name, ArrayList<JLabel> jlabel) {
         gameMaster.initializePlayer(name, jlabel);
-    }
-
-    public GraphicsUI getPantallaDeJuego() {
-        return pantallaDeJuego;
     }
 
     /**
@@ -211,10 +187,12 @@ public class Menu extends javax.swing.JFrame {
             FileInputStream FIS = new FileInputStream("src/saves/partidaGuardada.unsfa");
             ObjectInputStream OIS = new ObjectInputStream(FIS);
             gameMaster = (GameMaster) OIS.readObject();
+
             FIS.close();
             OIS.close();
-            this.setVisible(false);
-            this.pantallaDeJuego.setVisible(true);
+
+            setVisible(false);
+            gameMaster.getGraphicsUI().setVisible(true);
         } catch (FileNotFoundException ex) {
             System.err.print(ex);
         } catch (IOException ex) {
@@ -229,7 +207,9 @@ public class Menu extends javax.swing.JFrame {
             // TODO add your handling code here:
             FileOutputStream FOS = new FileOutputStream("src/saves/partidaGuardada.unsfa");
             ObjectOutputStream OOS = new ObjectOutputStream(FOS);
+
             OOS.writeObject(gameMaster);
+
             OOS.close();
             FOS.close();
 
@@ -251,8 +231,10 @@ public class Menu extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        nuevaPartida.setVisible(true);
-        this.setVisible(false);
+
+        setVisible(false);
+        gameMaster.getNuevaPartida().setVisible(true);
+
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
@@ -261,8 +243,8 @@ public class Menu extends javax.swing.JFrame {
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         // TODO add your handling code here:
-        String a = sVillager.readScorePlayers(gameMaster.getPlayers());
-        JOptionPane.showMessageDialog(null, a);
+        gameMaster.getMejorPuntuacion();
+
     }//GEN-LAST:event_jButton6ActionPerformed
 
     /**

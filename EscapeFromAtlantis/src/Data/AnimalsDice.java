@@ -12,7 +12,7 @@ import java.util.Random;
  *
  * @author macas
  */
-public class AnimalsDice implements Serializable{
+public class AnimalsDice implements Serializable {
 
     private String name;
     private String face1;
@@ -21,8 +21,12 @@ public class AnimalsDice implements Serializable{
     private String face4;
     private String face5;
     private String face6;
+    private Random random;
 
     public AnimalsDice() {
+
+        random = new Random();
+
         face1 = "Shark";
         face2 = "SeaSerpent";
         face3 = "Whale";
@@ -32,12 +36,11 @@ public class AnimalsDice implements Serializable{
 
     }
 
-    public String throwDice(int n) {
-        Random r = new Random();
-        for (int i = 0; i < ((n*100 )- 30)/40; i++) {
-            int x = r.nextInt();
-        }
-        switch (r.nextInt(5)) {
+    public String throwDice() {
+
+        int x = random.nextInt();
+
+        switch (random.nextInt(5)) {
             case 0:
                 System.out.println(1);
                 return face1;

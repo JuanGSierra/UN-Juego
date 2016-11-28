@@ -17,7 +17,7 @@ public class Movement {
 
     private String direction;
     private int numberOfTiles;
-    private GraphicsUI consola;
+    
     private GameMaster gameMaster;
 
     public Movement(GameMaster gameMaster) {

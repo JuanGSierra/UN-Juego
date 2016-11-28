@@ -19,13 +19,19 @@ import javax.swing.JOptionPane;
 public class GameMaster implements Serializable {
 
     // Atributos
-    private GraphicsUI consola;
-    private Board mapa;
-    private MapManager mapManager;
+    private GraphicsUI graphicsUI;
     private ArrayList<Player> players;
+    private Casilla casillas[][]; // Mapa
+    private Board board;
+
     private Movement movement;
     private Comprobations comprobations;
-    private Casilla casillas[][];
+
+    private Menu menu;
+    private NuevaPartida nuevaPartida;
+    private VentanaDados ventanaDados;
+
+    private AnimalsDice animalsDice;
 
     private static final int MAX_PLAYERS = 4;
     private static final int MIN_PLAYERS = 2;
@@ -38,31 +44,64 @@ public class GameMaster implements Serializable {
     private int newValue; // atributo para metodo de inicializacion de villagers
 
     //Constructor GameMaster
-    public GameMaster(GraphicsUI consola) {
+    public GameMaster() {
 
+        animalsDice = new AnimalsDice();
+        System.out.println("1");
+
+        graphicsUI = new GraphicsUI(this);
+        System.out.println("1");
+        menu = new Menu(this);
+        System.out.println("1");
+        nuevaPartida = new NuevaPartida(this);
+        System.out.println("1");
+        comprobations = new Comprobations(this);
+        System.out.println("1");
+        movement = new Movement(this);
+        System.out.println("1");
+        ventanaDados = new VentanaDados(this);
+        System.out.println("1");
+
+        board = new Board();
+        System.out.println("1");
         actualTurn = 1;
         throwDice = false;
         volcano = false;
         players = new ArrayList<>();
-        mapa = new Board();
+
         posicionVillagerInicial = 0;
         newValue = 1;
 
-        this.consola = consola;//
-        mapManager = new MapManager(consola);
         casillas = new Casilla[13][25];
         llenarcasillas();
-        comprobations = new Comprobations(this);
-        movement = new Movement(this);
 
     }
-    
-    public void addPlayer(Player a){
+
+    public AnimalsDice getAnimalsDice() {
+        return animalsDice;
+    }
+
+    public VentanaDados getVentanaDados() {
+        return ventanaDados;
+    }
+
+    /**
+     *
+     */
+    public void run() {
+        menu.setVisible(true);
+    }
+
+    public void addPlayer(Player a) {
         players.add(a);
     }
 
-    public GraphicsUI getConsola() {
-        return consola;
+    public NuevaPartida getNuevaPartida() {
+        return nuevaPartida;
+    }
+
+    public GraphicsUI getGraphicsUI() {
+        return graphicsUI;
     }
 
     public Player returnPlayerInTurn() {
@@ -86,9 +125,9 @@ public class GameMaster implements Serializable {
         for (int i = 0; i < players.size(); i++) {
             if (players.get(i).getId() == actualTurn) {
                 indexOfPlayer = i;
-                consola.setTurnoActual("(" + players.get(i).getId() + ")."
+                graphicsUI.setTurnoActual("(" + players.get(i).getId() + ")."
                         + players.get(i).getName());
-                consola.datosDelTurno();
+
                 break;
             }
 
@@ -212,16 +251,17 @@ public class GameMaster implements Serializable {
                 break;
         }
 
-        if (consola.getInicioDelJuego() >= (getPlayers().size() * 10)) {
+        if (graphicsUI.getInicioDelJuego() >= (getPlayers().size() * 10)) {
 
-            JOptionPane.showMessageDialog(consola, "Que empiece el juego!");
+            JOptionPane.showMessageDialog(graphicsUI, "Que empiece el juego!");
 
         }
     }
 
     private void llenarcasillas() {
-        JLabel labelmat[][] = consola.getLabels();
-        Tile tilemat[][] = mapa.getBoard();
+        JLabel labelmat[][] = graphicsUI.getLabels();
+        Tile tilemat[][] = board.getBoard();
+
         for (int i = 0; i < casillas.length; i++) {
             for (int j = 0; j < casillas[0].length; j++) {
                 casillas[i][j] = new Casilla(labelmat[i][j], tilemat[i][j]);
@@ -255,6 +295,19 @@ public class GameMaster implements Serializable {
         labeltemp.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Water Tile.png")));
         casillas[i][j].setLabel(labeltemp);
         casillas[i][j].setTile(new WaterTile(tiletemp.getPosition(), i, j, true));
+    }
+
+    public Movement getMovimiento() {
+        return movement;
+    }
+
+    public Menu getMenu() {
+        return menu;
+    }
+
+    public void getMejorPuntuacion() {
+        // jajajajajajaj ivan
+        // que salga en un JOption Pane las mejores puntuaciones dependiendo de la puntuacion de los jugadores
     }
 
 }

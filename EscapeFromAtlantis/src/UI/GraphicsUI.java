@@ -39,13 +39,9 @@ import javax.swing.plaf.nimbus.NimbusLookAndFeel;
 public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
 
     private JLabel labels[][] = new JLabel[13][25];
-    String separador = System.getProperty("file.separator");
     private GameMaster gameMaster;
-    private Menu menu;
-    private VentanaDados dado;
-    private Movement movimiento;
-
     private int inicioDelJuego;
+
     // atributo que me dira si tengo que quitar tiles o no
     private boolean changeTile;
 
@@ -62,27 +58,20 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
     /**
      * Creates new form GraphicsUI
      */
-    public GraphicsUI() {
-        initComponents();
+    public GraphicsUI(GameMaster gameMaster) {
 
+        initComponents();
         initComponentsForest();
         initComponentsMountain();
         initComponentsSand();
-        //initComponentsVillagers();
-        JOptionPane.showMessageDialog(this, "Que empiece el juego!");
+
         asociarLabelsEnMatriz();
-        colocarNombreJugadores();
+        //colocarNombreJugadores();
+
+        this.gameMaster = gameMaster;
         turnoActual = "";
         inicioDelJuego = 0;
-
-        this.gameMaster = new GameMaster(this);
-        menu = new Menu(this);
-        movimiento = new Movement(gameMaster);
-
-        menu.setVisible(true);
-        this.setVisible(false);
         changeTile = false;
-        
 
     }
 
@@ -93,16 +82,13 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
     /**
      * Pone los datos del jugador del turno actual
      */
-    public void datosDelTurno() {
-        jLabel221.setText(turnoActual);
-    }
-
     public String getTurnoActual() {
         return turnoActual;
     }
 
     public void setTurnoActual(String turnoActual) {
         this.turnoActual = turnoActual;
+        jLabel221.setText(turnoActual);
     }
 
     public GameMaster getGameMaster() {
@@ -117,11 +103,12 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
         System.out.println(something);
     }
 
+    // mal
     public void moveTo(JLabel jLabel) {
 
         if (positionOfVillager != null) {
 
-            movimiento.moverVillager(jLabel, positionOfVillager);
+            gameMaster.getMovimiento().moverVillager(jLabel, positionOfVillager);
 
         } else {
             JOptionPane.showMessageDialog(this, "Escoge un Aldeano que mover "
@@ -2618,8 +2605,8 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
-        this.setVisible(false);
-        menu.setVisible(true);
+        setVisible(false);
+        gameMaster.getMenu().setVisible(true);
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -2628,8 +2615,7 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        dado = new VentanaDados(this);
-        dado.setVisible(true);
+        gameMaster.getVentanaDados().setVisible(true);
 
     }//GEN-LAST:event_jButton2ActionPerformed
 
@@ -2799,8 +2785,6 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
     /**
      * @param args the command line arguments
      */
-    
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
@@ -3320,7 +3304,7 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
             jLabel229.setText(gameMaster.getPlayers().get(3).getName());
         } catch (NullPointerException e) {
             System.out.println(e);
-        }catch (IndexOutOfBoundsException e){
+        } catch (IndexOutOfBoundsException e) {
             System.out.println(e);
         }
     }

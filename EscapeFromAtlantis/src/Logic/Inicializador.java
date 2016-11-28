@@ -12,10 +12,11 @@ import UI.GraphicsUI;
  * @author johanr98 jsromerod@unal.edu.co
  */
 public class Inicializador {
-    
-    static GameMaster gm;
-    
-    public static void main(String[] argv){
-        gm= new GameMaster(new GraphicsUI());
+
+    // Inicializa el juego
+    public static void main(String args[]) {
+        GameMaster gameMaster = new GameMaster();
+        gameMaster.run();
     }
+
 }
