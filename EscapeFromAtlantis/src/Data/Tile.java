@@ -6,6 +6,7 @@
 package Data;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 
 /**
  *
@@ -17,7 +18,7 @@ public abstract class Tile implements Serializable {
     private final int MAXPLAYERQUANTITY = 3;
     private String effect;
     private int position;
-    private Villager[] aldeanos;
+    private ArrayList<Villager> villager;
     static int aldeanosActuales;
     private int x;
     private int y;
@@ -29,8 +30,6 @@ public abstract class Tile implements Serializable {
     public static int getAldeanosActuales() {
         return aldeanosActuales;
     }
-    
-    
 
     public void setX(int x) {
         this.x = x;
@@ -68,19 +67,29 @@ public abstract class Tile implements Serializable {
         this.position = position;
         this.inBoard = inBoard;
         this.effect = effect;
-        aldeanos = new Villager[3];
+        villager = new ArrayList();
     }
 
     public void removeTile() {
         this.inBoard = false;
     }
 
-    public void agregarAldeano(Villager v) {
+    public void agregarVillager(Villager v) {
         if (aldeanosActuales == (MAXPLAYERQUANTITY)) {
             throw new ArrayIndexOutOfBoundsException();
         }
-        aldeanos[aldeanosActuales] = v;
+        villager.add(v);
         aldeanosActuales++;
+    }
+
+    public void eliminarVillager(Villager v) {
+
+        if (villager.remove(v)) {
+            aldeanosActuales--;
+        } else {
+            
+        }
+
     }
 
 }

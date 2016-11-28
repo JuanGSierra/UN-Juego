@@ -6,17 +6,32 @@
 package Data;
 
 import java.io.Serializable;
+import javax.swing.JLabel;
 
 /**
  *
  * @author macas
  */
-public class Boat implements Serializable{
+public class Boat implements Serializable {
 
     private final int MAXPLAYERQUANTITY = 3;
     private int quantity;
     private boolean full;
     private String mayorTeam;
+    private JLabel jLabel;
+
+    public Boat(JLabel jLabel) {
+        this.jLabel = jLabel;
+        quantity = 0;
+    }
+
+    public JLabel getjLabel() {
+        return jLabel;
+    }
+
+    public void setjLabel(JLabel jLabel) {
+        this.jLabel = jLabel;
+    }
 
     public int getQuantity() {
         return quantity;
@@ -37,7 +52,7 @@ public class Boat implements Serializable{
     public String getMayorTeam() {
         return mayorTeam;
     }
-    
+
     public void setMayorTeam(String mayorTeam) {
         this.mayorTeam = mayorTeam;
     }

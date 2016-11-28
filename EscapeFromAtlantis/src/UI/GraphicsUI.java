@@ -447,6 +447,7 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
             jLabel169.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Water tile.png")));
             changeTile = false;
         } else if (inicioDelJuego < (gameMaster.getPlayers().size() * 10)) {
+
             gameMaster.setFirstPositionVillagers(jLabel169);
 
             inicioDelJuego++;
@@ -998,7 +999,6 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
             changeTile = false;
         } else if (inicioDelJuego < (gameMaster.getPlayers().size() * 10)) {
             gameMaster.setFirstPositionVillagers(jLabel16);
-
             inicioDelJuego++;
 
         } else { // falta condicion de movimiento
@@ -3111,6 +3111,20 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
         jlabel.add(jLabel220);
 
         return jlabel;
+    }
+
+    public ArrayList<JLabel> getArrayOfBoats() {
+        ArrayList<JLabel> array = new ArrayList();
+        array.add(jLabel180);
+        array.add(jLabel159);
+        array.add(jLabel149);
+        array.add(jLabel179);
+        array.add(jLabel178);
+        array.add(jLabel177);
+        array.add(jLabel152);
+        array.add(jLabel150);
+        
+        return array;
     }
 
     private void asociarLabelsEnMatriz() {
