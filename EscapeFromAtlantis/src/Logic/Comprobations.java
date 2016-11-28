@@ -26,6 +26,7 @@ public class Comprobations {
     //validacion posicion de proxima Tile para Animal
     public boolean ValidateNextMovementA(Animal a, Tile t, JLabel animal, JLabel tile) {
         //validacion tile Izquierda
+        /**
         if ((a.getNextX() == t.getX() - 2) && (a.getNextY() == t.getY())) {
             return true;
         }
@@ -49,6 +50,8 @@ public class Comprobations {
         if ((a.getNextX() == t.getX() + 1) && (a.getNextY() == t.getY() + 1)) {
             return true;
         }
+        
+        */
         return false;
     }
 
