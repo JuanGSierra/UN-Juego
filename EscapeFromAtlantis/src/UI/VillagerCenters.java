@@ -5,6 +5,7 @@
  */
 package UI;
 
+import Data.Villager;
 import Logic.GameMaster;
 import javax.swing.JLabel;
 
@@ -181,16 +182,19 @@ public class VillagerCenters {
 
     }
 
-    public void changeVillagerLabelTo(JLabel label, int x, int y) {
+    public void changeVillagerLabelTo(Villager vill, int x, int y) {
         switch (gameMaster.getCasillas()[x][y].getTile().getAldeanosActuales()) {
             case 0:
-                label.setBounds(centermat[x][y].getX() - 5, centermat[x][y].getY() - 5, centermat[x][y].getX() + 5, centermat[x][y].getY() + 5);
+                vill.getJlabel().setBounds(centermat[x][y].getX() - 5, centermat[x][y].getY() - 5, centermat[x][y].getX() + 5, centermat[x][y].getY() + 5);
+                System.out.println("asd");
                 break;
             case 1:
-                label.setBounds(centermat[x][y].getX() - 17, centermat[x][y].getY() - 5, centermat[x][y].getX() - 7, centermat[x][y].getY() + 5);
+                vill.getJlabel().setBounds(centermat[x][y].getX() - 17, centermat[x][y].getY() - 5, centermat[x][y].getX() - 7, centermat[x][y].getY() + 5);
+                System.out.println("asd");
                 break;
             case 2:
-                label.setBounds(centermat[x][y].getX() + 7, centermat[x][y].getY() - 5, centermat[x][y].getX() + 17, centermat[x][y].getY() + 5);
+                vill.getJlabel().setBounds(centermat[x][y].getX() + 7, centermat[x][y].getY() - 5, centermat[x][y].getX() + 17, centermat[x][y].getY() + 5);
+                System.out.println("asd");
                 break;
 
         }

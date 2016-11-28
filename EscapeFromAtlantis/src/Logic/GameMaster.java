@@ -67,7 +67,7 @@ public class GameMaster implements Serializable {
         board = new Board();
 
         boats = new ArrayList();
-        
+
         villagerCenters = new VillagerCenters(this);
 
         stateOfTurn = 0;
@@ -108,8 +108,6 @@ public class GameMaster implements Serializable {
     public void setComprobations(Comprobations comprobations) {
         this.comprobations = comprobations;
     }
-    
-    
 
     public int getStateOfTurn() {
         return stateOfTurn;
@@ -226,10 +224,10 @@ public class GameMaster implements Serializable {
 
         switch (actualTurn) {
             case 1:
-
+                actualTurn++;
                 players.get(actualTurn - 1).setNumberOfMovements(3);
                 players.get(actualTurn - 1).setHasThrowDice(false);
-                actualTurn++;
+                
                 break;
             case 2:
                 if (Player.getNumberOfPlayers() == 2) {
@@ -253,6 +251,7 @@ public class GameMaster implements Serializable {
                 players.get(actualTurn - 1).setNumberOfMovements(3);
                 break;
             case 4:
+                actualTurn = 1;
                 players.get(actualTurn - 1).setHasThrowDice(false);
                 players.get(actualTurn - 1).setNumberOfMovements(3);
                 throwDice = false;
@@ -272,22 +271,7 @@ public class GameMaster implements Serializable {
 
     public void setFirstPositionVillagers(JLabel jlabel) {
 
-        players.get(actualTurn - 1).getVillagers()[posicionVillagerInicial].
-                getJlabel().setBounds(jlabel.getBounds());
-
-        for (int i = 0; i < 13; i++) {
-            for (int j = 0; j < 25; j++) {
-                if (casillas[i][j].getLabel() != null) {
-                    if (casillas[i][j].getLabel().equals(players.get(actualTurn - 1).
-                            getVillagers()[posicionVillagerInicial].getJlabel())) {
-                        casillas[i][j].getTile().agregarVillager(players.get(actualTurn - 1).
-                                getVillagers()[posicionVillagerInicial]);
-                    }
-
-                }
-
-            }
-        }
+        movement.moverVillager(jlabel, players.get(actualTurn - 1).getVillagers()[posicionVillagerInicial].getJlabel(), players.get(actualTurn - 1).getVillagers()[posicionVillagerInicial], this.getTileOfJLabel(jlabel));
 
         switch (Player.getNumberOfPlayers()) {
             case 2:
@@ -330,9 +314,9 @@ public class GameMaster implements Serializable {
         System.out.println(graphicsUI.getInicioDelJuego());
 
         if (graphicsUI.getInicioDelJuego() == (Player.getNumberOfPlayers() * 10) - 1) {
-
+            movement.segundoTurno();
             JOptionPane.showMessageDialog(graphicsUI, "Que empiece el juego!");
-            JOptionPane.showMessageDialog(graphicsUI, "Mueve tus aldeanos jugador: " + players.get(actualTurn).getName());
+            JOptionPane.showMessageDialog(graphicsUI, "Mueve tus aldeanos jugador: " + players.get(actualTurn - 1).getName());
             stateOfTurn = 1;
 
         }
@@ -431,6 +415,5 @@ public class GameMaster implements Serializable {
         }
         return tile;
     }
-
 
 }

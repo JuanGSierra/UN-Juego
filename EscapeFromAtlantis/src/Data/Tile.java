@@ -70,6 +70,7 @@ public abstract class Tile implements Serializable {
         this.inBoard = inBoard;
         this.effect = effect;
         villager = new ArrayList();
+        aldeanosActuales = 0;
     }
 
     public void removeTile() {
