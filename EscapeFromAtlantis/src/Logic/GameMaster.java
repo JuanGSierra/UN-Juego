@@ -85,6 +85,32 @@ public class GameMaster implements Serializable {
 
     }
 
+    public Board getBoard() {
+        return board;
+    }
+
+    public void setBoard(Board board) {
+        this.board = board;
+    }
+
+    public Movement getMovement() {
+        return movement;
+    }
+
+    public void setMovement(Movement movement) {
+        this.movement = movement;
+    }
+
+    public Comprobations getComprobations() {
+        return comprobations;
+    }
+
+    public void setComprobations(Comprobations comprobations) {
+        this.comprobations = comprobations;
+    }
+    
+    
+
     public int getStateOfTurn() {
         return stateOfTurn;
     }
@@ -387,6 +413,27 @@ public class GameMaster implements Serializable {
         }
         return villager;
 
+    }
+
+    public Tile getTileOfJLabel(JLabel jLabel) {
+
+        Tile tile = new WaterTile(0, 0, 0, false);
+
+        for (int i = 0; i < 10; i++) {
+            for (int j = 0; j < 10; j++) {
+                if (casillas[i][j].getLabel() != null) {
+                    if (casillas[i][j].getLabel().equals(jLabel)) {
+                        tile = casillas[i][j].getTile();
+                    }
+                }
+
+            }
+        }
+        return tile;
+    }
+
+    public VillagerCenters getVillagerCenters() {
+        
     }
 
 }

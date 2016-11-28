@@ -8,6 +8,7 @@ package Logic;
 import Data.*;
 import UI.*;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -17,7 +18,7 @@ public class Movement {
 
     private String direction;
     private int numberOfTiles;
-    
+
     private GameMaster gameMaster;
 
     public Movement(GameMaster gameMaster) {
@@ -54,12 +55,14 @@ public class Movement {
 
     public void moverVillager(JLabel destino, JLabel villager, Villager v, Tile t) {
 
-        if (Comprobations.canMove(gameMaster.returnPlayerInTurn())) {
+        if (gameMaster.getComprobations().canMove(gameMaster.returnPlayerInTurn())) {
 
-            //Comprobations.isPermitted(destino, villager);
-            Comprobations.ValidateNextMovementV(v, t, destino, villager);
+            if (gameMaster.getComprobations().validateNextMovementV(v, t, destino, villager)) {
+                gameMaster.getVillagerCenters().changeVillagerLabelTo(v.getJlabel(), t.getX(), t.getY());
+
+            }
         } else {
-
+            JOptionPane.showMessageDialog(gameMaster.getGraphicsUI(), "No se pudo mover el aldeano, verifique las reglas del juego");
         }
 
     }

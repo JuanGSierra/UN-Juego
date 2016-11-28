@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package UI;
+
 import Data.Villager;
 import Data.Animal;
 import Data.Boat;
@@ -453,7 +454,7 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
             inicioDelJuego++;
 
         } else { // falta condicion de movimiento
-            moveTo(jLabel169);
+            moveTo(jLabel169, gameMaster.getVillagerOfJLabel(positionOfVillager), gameMaster.getTileOfJLabel(jLabel169));
         }
 
     }

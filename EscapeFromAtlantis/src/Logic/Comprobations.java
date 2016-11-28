@@ -22,86 +22,76 @@ public class Comprobations {
         this.gameMaster = gameMaster;
 
     }
-    
+
     //validacion posicion de proxima Tile para Animal
-    public boolean ValidateNextMovementA (Animal a, Tile t, JLabel animal, JLabel tile ){
+    public boolean ValidateNextMovementA(Animal a, Tile t, JLabel animal, JLabel tile) {
         //validacion tile Izquierda
-        if((a.getNextX()==t.getX()-2)&&(a.getNextY()==t.getY())){
+        if ((a.getNextX() == t.getX() - 2) && (a.getNextY() == t.getY())) {
             return true;
         }
         //validacion tile Derecha
-        if((a.getNextX()==t.getX()+2)&&(a.getNextY()==t.getY())){            
+        if ((a.getNextX() == t.getX() + 2) && (a.getNextY() == t.getY())) {
             return true;
         }
         //validacion tile Superior Izquierda
-        if((a.getNextX()==t.getX()-1)&&(a.getNextY()==t.getY()-1)){
+        if ((a.getNextX() == t.getX() - 1) && (a.getNextY() == t.getY() - 1)) {
             return true;
         }
         //validacion tile Superior Derecha
-        if((a.getNextX()==t.getX()+1)&&(a.getNextY()==t.getY()-1)){
+        if ((a.getNextX() == t.getX() + 1) && (a.getNextY() == t.getY() - 1)) {
             return true;
         }
         //validacion tile Inferior Izquierda
-        if((a.getNextX()==t.getX()-1)&&(a.getNextY()==t.getY()+1)){
+        if ((a.getNextX() == t.getX() - 1) && (a.getNextY() == t.getY() + 1)) {
             return true;
         }
         //validacion tile Inferior Derecha
-        if((a.getNextX()==t.getX()+1)&&(a.getNextY()==t.getY()+1)){
+        if ((a.getNextX() == t.getX() + 1) && (a.getNextY() == t.getY() + 1)) {
             return true;
-        } 
-       return false; 
+        }
+        return false;
     }
-    
-    
+
     //validacion posicion de proxima Tile para Villager
-    public static boolean ValidateNextMovementV (Villager v, Tile t, JLabel villager, JLabel tile){
+    public boolean validateNextMovementV(Villager v, Tile t, JLabel villager, JLabel tile) {
         //validacion tile Izquierda
-        if((v.getNextX()==t.getX()-2)&&(v.getNextY()==t.getY())){
+        if ((v.getNextX() == t.getX() - 2) && (v.getNextY() == t.getY())) {
             return true;
         }
         //validacion tile Derecha
-        if((v.getNextX()==t.getX()+2)&&(v.getNextY()==t.getY())){
+        if ((v.getNextX() == t.getX() + 2) && (v.getNextY() == t.getY())) {
             return true;
         }
         //validacion tile Superior Izquierda
-        if((v.getNextX()==t.getX()-1)&&(v.getNextY()==t.getY()-1)){
+        if ((v.getNextX() == t.getX() - 1) && (v.getNextY() == t.getY() - 1)) {
             return true;
         }
         //validacion tile Superior Derecha
-        if((v.getNextX()==t.getX()+1)&&(v.getNextY()==t.getY()-1)){
+        if ((v.getNextX() == t.getX() + 1) && (v.getNextY() == t.getY() - 1)) {
             return true;
         }
         //validacion tile Inferior Izquierda
-        if((v.getNextX()==t.getX()-1)&&(v.getNextY()==t.getY()+1)){
+        if ((v.getNextX() == t.getX() - 1) && (v.getNextY() == t.getY() + 1)) {
             return true;
         }
         //validacion tile Inferior Derecha
-        if((v.getNextX()==t.getX()+1)&&(v.getNextY()==t.getY()+1)){
+        if ((v.getNextX() == t.getX() + 1) && (v.getNextY() == t.getY() + 1)) {
             return true;
-        } 
-       return false; 
+        }
+        return false;
     }
+
     /**
      * Retorna true si el jugador tiene movimientos disponibles
      *
      * @return
      */
-    public static boolean canMove(Player player) {
+    public boolean canMove(Player player) {
         if (player.getNumberOfMovements() > 0) {
             return true;
         } else {
             return false;
         }
-    }
-
-    /**
-     * Metodo que define si es permitido mover el villager o bote al destino
-     *
-     * @return
-     */
-
-    public static boolean isPermitted(JLabel destino, JLabel villager) {
-        return true;
     }
 
 }
