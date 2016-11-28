@@ -24,8 +24,7 @@ public class Comprobations {
     }
 
     //validacion posicion de proxima Tile para Animal
-<<<<<<< HEAD
-//    public boolean ValidateNextMovementA(Animal a, Tile t, JLabel animal, JLabel tile) {
+    public boolean ValidateNextMovementA(Animal a, Tile t, JLabel animal, JLabel tile) {
 //        //validacion tile Izquierda
 //        if ((a.getNextX() == t.getX() - 2) && (a.getNextY() == t.getY())) {
 //            return true;
@@ -50,65 +49,12 @@ public class Comprobations {
 //        if ((a.getNextX() == t.getX() + 1) && (a.getNextY() == t.getY() + 1)) {
 //            return true;
 //        }
-//        return false;
-//    }
-
-    //validacion posicion de proxima Tile para Villager
-    public boolean validateNextMovementV(Villager v, Tile t, JLabel villager, JLabel tile) {
-        //validacion tile Izquierda
-        if ((v.getNextX() == v.getX() - 2) && (v.getNextY() == v.getY())) {
-            return true;
-        }
-        //validacion tile Derecha
-        if ((v.getNextX() == v.getX() + 2) && (v.getNextY() == v.getY())) {
-            return true;
-        }
-        //validacion tile Superior Izquierda
-        if ((v.getNextX() == v.getX() - 1) && (v.getNextY() == v.getY() - 1)) {
-            return true;
-        }
-        //validacion tile Superior Derecha
-        if ((v.getNextX() == v.getX() + 1) && (v.getNextY() == v.getY() - 1)) {
-            return true;
-        }
-        //validacion tile Inferior Izquierda
-        if ((v.getNextX() == v.getX() - 1) && (v.getNextY() == v.getY() + 1)) {
-            return true;
-        }
-        //validacion tile Inferior Derecha
-        if ((v.getNextX() == v.getX() + 1) && (v.getNextY() == v.getY() + 1)) {
-            return true;
-=======
-    public boolean ValidateNextMovementA(Animal a, Tile t, JLabel animal, JLabel tile) {
-        //validacion tile Izquierda
-        /**
-        if ((a.getNextX() == t.getX() - 2) && (a.getNextY() == t.getY())) {
-            return true;
-        }
-        //validacion tile Derecha
-        if ((a.getNextX() == t.getX() + 2) && (a.getNextY() == t.getY())) {
-            return true;
-        }
-        //validacion tile Superior Izquierda
-        if ((a.getNextX() == t.getX() - 1) && (a.getNextY() == t.getY() - 1)) {
-            return true;
-        }
-        //validacion tile Superior Derecha
-        if ((a.getNextX() == t.getX() + 1) && (a.getNextY() == t.getY() - 1)) {
-            return true;
-        }
-        //validacion tile Inferior Izquierda
-        if ((a.getNextX() == t.getX() - 1) && (a.getNextY() == t.getY() + 1)) {
-            return true;
-        }
-        //validacion tile Inferior Derecha
-        if ((a.getNextX() == t.getX() + 1) && (a.getNextY() == t.getY() + 1)) {
-            return true;
-        }
-        
-        */
         return false;
     }
+
+ 
+
+   
 
     //validacion posicion de proxima Tile para Villager
     public int validateNextMovementV(Villager v, Tile t, JLabel villager, JLabel tile) {
@@ -134,7 +80,7 @@ public class Comprobations {
                 }
 
             }
->>>>>>> origin/master
+
         }
 
         totalMovement += Math.abs(xVillager - xDestino);

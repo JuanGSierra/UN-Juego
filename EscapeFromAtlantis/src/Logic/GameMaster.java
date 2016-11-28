@@ -416,14 +416,5 @@ public class GameMaster implements Serializable {
         return tile;
     }
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-//    public VillagerCenters getVillagerCenters() {
-//        
-//    }
-=======
->>>>>>> origin/master
 
->>>>>>> origin/master
 }
