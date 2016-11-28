@@ -42,16 +42,16 @@ public class Movement {
         this.numberOfTiles = numberOfTiles;
     }
 
-    public void moveSeaSerpent() {
-
+    public void moveSeaSerpent(JLabel animal, Tile destino) {
+        //todo
     }
 
-    public void moveShark() {
-
+    public void moveShark(JLabel animal, Tile destino) {
+        //todo
     }
 
-    public void moveWhale() {
-
+    public void moveWhale(JLabel animal, Tile destino) {
+        //todo
     }
 
     public void segundoTurno() {
@@ -130,5 +130,9 @@ public class Movement {
 
         }
 
+    }
+
+    void moverBarco1(JLabel label) {
+        
     }
 }

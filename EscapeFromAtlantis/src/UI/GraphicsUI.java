@@ -737,10 +737,12 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
 
             inicioDelJuego++;
 
-        } else { // falta condicion de movimiento
+        } else{ // falta condicion de movimiento
             moveTo(jLabel36, gameMaster.getVillagerOfJLabel(positionOfVillager), gameMaster.getTileOfJLabel(jLabel36));
         }
     }
+    
+    
 
     private void mouseClick40(MouseEvent me) {
         if (changeTile) {
@@ -1117,6 +1119,516 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
 
         } else { // falta condicion de movimiento
             moveTo(jLabel87, gameMaster.getVillagerOfJLabel(positionOfVillager), gameMaster.getTileOfJLabel(jLabel87));
+        }
+    }
+    
+    private void mouseClick300(MouseEvent me){
+        if(gameMaster.isFirstMovementBarcos()){
+            gameMaster.setFirstPositionShips(jLabel121);
+        }
+    }
+    
+    private void mouseClick301(MouseEvent me){
+        if(gameMaster.isFirstMovementBarcos()){
+            gameMaster.setFirstPositionShips(jLabel122);
+        }
+    }
+    
+    private void mouseClick302(MouseEvent me){
+        if(gameMaster.isFirstMovementBarcos()){
+            gameMaster.setFirstPositionShips(jLabel123);
+        }
+    }
+    
+    private void mouseClick303(MouseEvent me){
+        if(gameMaster.isFirstMovementBarcos()){
+            gameMaster.setFirstPositionShips(jLabel124);
+        }
+    }
+    
+    private void mouseClick304(MouseEvent me){
+        if(gameMaster.isFirstMovementBarcos()){
+            gameMaster.setFirstPositionShips(jLabel125);
+        }
+    }
+    
+    private void mouseClick305(MouseEvent me){
+        if(gameMaster.isFirstMovementBarcos()){
+            gameMaster.setFirstPositionShips(jLabel126);
+        }
+    }
+    
+    private void mouseClick306(MouseEvent me){
+        if(gameMaster.isFirstMovementBarcos()){
+            gameMaster.setFirstPositionShips(jLabel127);
+        }
+    }
+    
+    private void mouseClick307(MouseEvent me){
+        if(gameMaster.isFirstMovementBarcos()){
+            gameMaster.setFirstPositionShips(jLabel70);
+        }
+    }
+    
+    private void mouseClick308(MouseEvent me){
+        if(gameMaster.isFirstMovementBarcos()){
+            gameMaster.setFirstPositionShips(jLabel62);
+        }
+    }
+    
+    private void mouseClick309(MouseEvent me){
+        if(gameMaster.isFirstMovementBarcos()){
+            gameMaster.setFirstPositionShips(jLabel63);
+        }
+    }
+    
+    private void mouseClick310(MouseEvent me){
+        if(gameMaster.isFirstMovementBarcos()){
+            gameMaster.setFirstPositionShips(jLabel64);
+        }
+    }
+    
+    private void mouseClick311(MouseEvent me){
+        if(gameMaster.isFirstMovementBarcos()){
+            gameMaster.setFirstPositionShips(jLabel65);
+        }
+    }
+    
+    private void mouseClick312(MouseEvent me){
+        if(gameMaster.isFirstMovementBarcos()){
+            gameMaster.setFirstPositionShips(jLabel66);
+        }
+    }
+    
+    private void mouseClick313(MouseEvent me){
+        if(gameMaster.isFirstMovementBarcos()){
+            gameMaster.setFirstPositionShips(jLabel67);
+        }
+    }
+    
+    private void mouseClick314(MouseEvent me){
+        if(gameMaster.isFirstMovementBarcos()){
+            gameMaster.setFirstPositionShips(jLabel68);
+        }
+    }
+    
+    private void mouseClick315(MouseEvent me){
+        if(gameMaster.isFirstMovementBarcos()){
+            gameMaster.setFirstPositionShips(jLabel69);
+        }
+    }
+    
+    private void mouseClick316(MouseEvent me){
+        if(gameMaster.isFirstMovementBarcos()){
+            gameMaster.setFirstPositionShips(jLabel54);
+        }
+    }
+    
+    private void mouseClick317(MouseEvent me){
+        if(gameMaster.isFirstMovementBarcos()){
+            gameMaster.setFirstPositionShips(jLabel71);
+        }
+    }
+    
+    private void mouseClick318(MouseEvent me){
+        if(gameMaster.isFirstMovementBarcos()){
+            gameMaster.setFirstPositionShips(jLabel72);
+        }
+    }
+    
+    private void mouseClick319(MouseEvent me){
+        if(gameMaster.isFirstMovementBarcos()){
+            gameMaster.setFirstPositionShips(jLabel73);
+        }
+    }
+    
+    private void mouseClick320(MouseEvent me){
+        if(gameMaster.isFirstMovementBarcos()){
+            gameMaster.setFirstPositionShips(jLabel74);
+        }
+    }
+    
+    private void mouseClick321(MouseEvent me){
+        if(gameMaster.isFirstMovementBarcos()){
+            gameMaster.setFirstPositionShips(jLabel75);
+        }
+    }
+    
+    private void mouseClick322(MouseEvent me){
+        if(gameMaster.isFirstMovementBarcos()){
+            gameMaster.setFirstPositionShips(jLabel76);
+        }
+    }
+    
+    private void mouseClick323(MouseEvent me){
+        if(gameMaster.isFirstMovementBarcos()){
+            gameMaster.setFirstPositionShips(jLabel77);
+        }
+    }
+    
+    private void mouseClick324(MouseEvent me){
+        if(gameMaster.isFirstMovementBarcos()){
+            gameMaster.setFirstPositionShips(jLabel90);
+        }
+    }
+    
+    private void mouseClick325(MouseEvent me){
+        if(gameMaster.isFirstMovementBarcos()){
+            gameMaster.setFirstPositionShips(jLabel91);
+        }
+    }
+    
+    private void mouseClick326(MouseEvent me){
+        if(gameMaster.isFirstMovementBarcos()){
+            gameMaster.setFirstPositionShips(jLabel92);
+        }
+    }
+    
+    private void mouseClick327(MouseEvent me){
+        if(gameMaster.isFirstMovementBarcos()){
+            gameMaster.setFirstPositionShips(jLabel93);
+        }
+    }
+    
+    private void mouseClick328(MouseEvent me){
+        if(gameMaster.isFirstMovementBarcos()){
+            gameMaster.setFirstPositionShips(jLabel94);
+        }
+    }
+    
+    private void mouseClick329(MouseEvent me){
+        if(gameMaster.isFirstMovementBarcos()){
+            gameMaster.setFirstPositionShips(jLabel95);
+        }
+    }
+    
+    private void mouseClick330(MouseEvent me){
+        if(gameMaster.isFirstMovementBarcos()){
+            gameMaster.setFirstPositionShips(jLabel96);
+        }
+    }
+    
+    private void mouseClick331(MouseEvent me){
+        if(gameMaster.isFirstMovementBarcos()){
+            gameMaster.setFirstPositionShips(jLabel97);
+        }
+    }
+    
+    private void mouseClick332(MouseEvent me){
+        if(gameMaster.isFirstMovementBarcos()){
+            gameMaster.setFirstPositionShips(jLabel98);
+        }
+    }
+    
+    private void mouseClick333(MouseEvent me){
+        if(gameMaster.isFirstMovementBarcos()){
+            gameMaster.setFirstPositionShips(jLabel99);
+        }
+    }
+    
+    private void mouseClick334(MouseEvent me){
+        if(gameMaster.isFirstMovementBarcos()){
+            gameMaster.setFirstPositionShips(jLabel100);
+        }
+    }
+    
+    private void mouseClick335(MouseEvent me){
+        if(gameMaster.isFirstMovementBarcos()){
+            gameMaster.setFirstPositionShips(jLabel101);
+        }
+    }
+    
+    private void mouseClick336(MouseEvent me){
+        if(gameMaster.isFirstMovementBarcos()){
+            gameMaster.setFirstPositionShips(jLabel102);
+        }
+    }
+    
+    private void mouseClick337(MouseEvent me){
+        if(gameMaster.isFirstMovementBarcos()){
+            gameMaster.setFirstPositionShips(jLabel106);
+        }
+    }
+    
+    private void mouseClick338(MouseEvent me){
+        if(gameMaster.isFirstMovementBarcos()){
+            gameMaster.setFirstPositionShips(jLabel104);
+        }
+    }
+    
+    private void mouseClick339(MouseEvent me){
+        if(gameMaster.isFirstMovementBarcos()){
+            gameMaster.setFirstPositionShips(jLabel105);
+        }
+    }
+    
+    private void mouseClick340(MouseEvent me){
+        if(gameMaster.isFirstMovementBarcos()){
+            gameMaster.setFirstPositionShips(jLabel61);
+        }
+    }
+    
+    private void mouseClick341(MouseEvent me){
+        if(gameMaster.isFirstMovementBarcos()){
+            gameMaster.setFirstPositionShips(jLabel108);
+        }
+    }
+    
+    private void mouseClick342(MouseEvent me){
+        if(gameMaster.isFirstMovementBarcos()){
+            gameMaster.setFirstPositionShips(jLabel158);
+        }
+    }
+    
+    private void mouseClick343(MouseEvent me){
+        if(gameMaster.isFirstMovementBarcos()){
+            gameMaster.setFirstPositionShips(jLabel103);
+        }
+    }
+    
+    private void mouseClick344(MouseEvent me){
+        if(gameMaster.isFirstMovementBarcos()){
+            gameMaster.setFirstPositionShips(jLabel112);
+        }
+    }
+    
+    private void mouseClick345(MouseEvent me){
+        if(gameMaster.isFirstMovementBarcos()){
+            gameMaster.setFirstPositionShips(jLabel110);
+        }
+    }
+    
+    private void mouseClick346(MouseEvent me){
+        if(gameMaster.isFirstMovementBarcos()){
+            gameMaster.setFirstPositionShips(jLabel111);
+        }
+    }
+    
+    private void mouseClick347(MouseEvent me){
+        if(gameMaster.isFirstMovementBarcos()){
+            gameMaster.setFirstPositionShips(jLabel107);
+        }
+    }
+    
+    private void mouseClick348(MouseEvent me){
+        if(gameMaster.isFirstMovementBarcos()){
+            gameMaster.setFirstPositionShips(jLabel113);
+        }
+    }
+    
+    private void mouseClick349(MouseEvent me){
+        if(gameMaster.isFirstMovementBarcos()){
+            gameMaster.setFirstPositionShips(jLabel114);
+        }
+    }
+    
+    private void mouseClick350(MouseEvent me){
+        if(gameMaster.isFirstMovementBarcos()){
+            gameMaster.setFirstPositionShips(jLabel115);
+        }
+    }
+    
+    private void mouseClick351(MouseEvent me){
+        if(gameMaster.isFirstMovementBarcos()){
+            gameMaster.setFirstPositionShips(jLabel116);
+        }
+    }
+    
+    private void mouseClick352(MouseEvent me){
+        if(gameMaster.isFirstMovementBarcos()){
+            gameMaster.setFirstPositionShips(jLabel135);
+        }
+    }
+    
+    private void mouseClick353(MouseEvent me){
+        if(gameMaster.isFirstMovementBarcos()){
+            gameMaster.setFirstPositionShips(jLabel118);
+        }
+    }
+    
+    private void mouseClick354(MouseEvent me){
+        if(gameMaster.isFirstMovementBarcos()){
+            gameMaster.setFirstPositionShips(jLabel119);
+        }
+    }
+    
+    private void mouseClick355(MouseEvent me){
+        if(gameMaster.isFirstMovementBarcos()){
+            gameMaster.setFirstPositionShips(jLabel120);
+        }
+    }
+    
+    private void mouseClick356(MouseEvent me){
+        if(gameMaster.isFirstMovementBarcos()){
+            gameMaster.setFirstPositionShips(jLabel109);
+        }
+    }
+    
+    private void mouseClick357(MouseEvent me){
+        if(gameMaster.isFirstMovementBarcos()){
+            gameMaster.setFirstPositionShips(jLabel136);
+        }
+    }
+    
+    private void mouseClick379(MouseEvent me){
+        if(gameMaster.isFirstMovementBarcos()){
+            gameMaster.setFirstPositionShips(jLabel138);
+        }
+    }
+    
+    private void mouseClick358(MouseEvent me){
+        if(gameMaster.isFirstMovementBarcos()){
+            gameMaster.setFirstPositionShips(jLabel139);
+        }
+    }
+    
+    private void mouseClick359(MouseEvent me){
+        if(gameMaster.isFirstMovementBarcos()){
+            gameMaster.setFirstPositionShips(jLabel140);
+        }
+    }
+    
+    private void mouseClick360(MouseEvent me){
+        if(gameMaster.isFirstMovementBarcos()){
+            gameMaster.setFirstPositionShips(jLabel141);
+        }
+    }
+    
+    private void mouseClick361(MouseEvent me){
+        if(gameMaster.isFirstMovementBarcos()){
+            gameMaster.setFirstPositionShips(jLabel142);
+        }
+    }
+    
+    private void mouseClick362(MouseEvent me){
+        if(gameMaster.isFirstMovementBarcos()){
+            gameMaster.setFirstPositionShips(jLabel143);
+        }
+    }
+    
+    private void mouseClick363(MouseEvent me){
+        if(gameMaster.isFirstMovementBarcos()){
+            gameMaster.setFirstPositionShips(jLabel144);
+        }
+    }
+    
+    private void mouseClick364(MouseEvent me){
+        if(gameMaster.isFirstMovementBarcos()){
+            gameMaster.setFirstPositionShips(jLabel145);
+        }
+    }
+    
+    private void mouseClick365(MouseEvent me){
+        if(gameMaster.isFirstMovementBarcos()){
+            gameMaster.setFirstPositionShips(jLabel146);
+        }
+    }
+    
+    private void mouseClick366(MouseEvent me){
+        if(gameMaster.isFirstMovementBarcos()){
+            gameMaster.setFirstPositionShips(jLabel147);
+        }
+    }
+    
+    private void mouseClick367(MouseEvent me){
+        if(gameMaster.isFirstMovementBarcos()){
+            gameMaster.setFirstPositionShips(jLabel148);
+        }
+    }
+    
+    private void mouseClick368(MouseEvent me){
+        if(gameMaster.isFirstMovementBarcos()){
+            gameMaster.setFirstPositionShips(jLabel149);
+        }
+    }
+    
+    private void mouseClick369(MouseEvent me){
+        if(gameMaster.isFirstMovementBarcos()){
+            gameMaster.setFirstPositionShips(jLabel150);
+        }
+    }
+    
+    private void mouseClick380(MouseEvent me){
+        if(gameMaster.isFirstMovementBarcos()){
+            gameMaster.setFirstPositionShips(jLabel151);
+        }
+    }
+    
+    private void mouseClick381(MouseEvent me){
+        if(gameMaster.isFirstMovementBarcos()){
+            gameMaster.setFirstPositionShips(jLabel152);
+        }
+    }
+    
+    private void mouseClick382(MouseEvent me){
+        if(gameMaster.isFirstMovementBarcos()){
+            gameMaster.setFirstPositionShips(jLabel153);
+        }
+    }
+    
+    private void mouseClick383(MouseEvent me){
+        if(gameMaster.isFirstMovementBarcos()){
+            gameMaster.setFirstPositionShips(jLabel154);
+        }
+    }
+    
+    private void mouseClick384(MouseEvent me){
+        if(gameMaster.isFirstMovementBarcos()){
+            gameMaster.setFirstPositionShips(jLabel155);
+        }
+    }
+    
+    private void mouseClick385(MouseEvent me){
+        if(gameMaster.isFirstMovementBarcos()){
+            gameMaster.setFirstPositionShips(jLabel156);
+        }
+    }
+    
+    private void mouseClick370(MouseEvent me){
+        if(gameMaster.isFirstMovementBarcos()){
+            gameMaster.setFirstPositionShips(jLabel157);
+        }
+    }
+    
+    private void mouseClick371(MouseEvent me){
+        if(gameMaster.isFirstMovementBarcos()){
+            gameMaster.setFirstPositionShips(jLabel60);
+        }
+    }
+    
+    private void mouseClick372(MouseEvent me){
+        if(gameMaster.isFirstMovementBarcos()){
+            gameMaster.setFirstPositionShips(jLabel55);
+        }
+    }
+    
+    private void mouseClick373(MouseEvent me){
+        if(gameMaster.isFirstMovementBarcos()){
+            gameMaster.setFirstPositionShips(jLabel56);
+        }
+    }
+    
+    private void mouseClick374(MouseEvent me){
+        if(gameMaster.isFirstMovementBarcos()){
+            gameMaster.setFirstPositionShips(jLabel57);
+        }
+    }
+    
+    private void mouseClick375(MouseEvent me){
+        if(gameMaster.isFirstMovementBarcos()){
+            gameMaster.setFirstPositionShips(jLabel58);
+        }
+    }
+    
+    private void mouseClick376(MouseEvent me){
+        if(gameMaster.isFirstMovementBarcos()){
+            gameMaster.setFirstPositionShips(jLabel59);
+        }
+    }
+    
+    private void mouseClick377(MouseEvent me){
+        if(gameMaster.isFirstMovementBarcos()){
+            gameMaster.setFirstPositionShips(jLabel51);
         }
     }
 
@@ -2029,6 +2541,11 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
         jPanel2.add(jLabel53, new org.netbeans.lib.awtextra.AbsoluteConstraints(795, 448, 50, -1));
 
         jLabel54.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Water tile.png"))); // NOI18N
+        jLabel54.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel54MouseClicked(evt);
+            }
+        });
         jPanel2.add(jLabel54, new org.netbeans.lib.awtextra.AbsoluteConstraints(719, 72, 50, -1));
 
         jLabel55.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Water tile.png"))); // NOI18N
@@ -2784,6 +3301,10 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
         positionOfVillager = jLabel220;
     }//GEN-LAST:event_jLabel220MouseClicked
 
+    private void jLabel54MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel54MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel54MouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -3323,5 +3844,23 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
         } catch (IndexOutOfBoundsException e) {
             System.out.println(e);
         }
+    }
+
+    public void nombresJugadores2() {
+        jLabel223.setText(gameMaster.getPlayers().get(0).getName());
+        jLabel225.setText(gameMaster.getPlayers().get(1).getName());
+    }
+
+    public void nombresJugadores3() {
+        jLabel223.setText(gameMaster.getPlayers().get(0).getName());
+        jLabel225.setText(gameMaster.getPlayers().get(1).getName());
+        jLabel227.setText(gameMaster.getPlayers().get(2).getName());
+    }
+
+    public void nombresJugadores4() {
+        jLabel223.setText(gameMaster.getPlayers().get(0).getName());
+        jLabel225.setText(gameMaster.getPlayers().get(1).getName());
+        jLabel227.setText(gameMaster.getPlayers().get(2).getName());
+        jLabel229.setText(gameMaster.getPlayers().get(3).getName());
     }
 }

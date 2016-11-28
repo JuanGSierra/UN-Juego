@@ -3,11 +3,18 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/joseb/Documents/GitHub/intento%203%20escape%20from%20atlantis/UN-Juego/EscapeFromAtlantis/src/Logic/GameMaster.java</file>
-            <file>file:/C:/Users/joseb/Documents/GitHub/intento%203%20escape%20from%20atlantis/UN-Juego/EscapeFromAtlantis/src/Data/Player.java</file>
-            <file>file:/C:/Users/joseb/Documents/GitHub/intento%203%20escape%20from%20atlantis/UN-Juego/EscapeFromAtlantis/src/Data/Casilla.java</file>
-            <file>file:/C:/Users/joseb/Documents/GitHub/intento%203%20escape%20from%20atlantis/UN-Juego/EscapeFromAtlantis/src/Logic/Movement.java</file>
-            <file>file:/C:/Users/joseb/Documents/GitHub/intento%203%20escape%20from%20atlantis/UN-Juego/EscapeFromAtlantis/src/Data/Board.java</file>
+            <file>file:/C:/Users/johans/Documents/GitHub/intento%203%20juego%20atlantis/UN-Juego/EscapeFromAtlantis/src/Data/Player.java</file>
+            <file>file:/C:/Users/johans/Documents/GitHub/intento%203%20juego%20atlantis/UN-Juego/EscapeFromAtlantis/src/UI/GraphicsUI.java</file>
+            <file>file:/C:/Users/johans/Documents/GitHub/intento%203%20juego%20atlantis/UN-Juego/EscapeFromAtlantis/src/Logic/Effect.java</file>
+            <file>file:/C:/Users/johans/Documents/GitHub/intento%203%20juego%20atlantis/UN-Juego/EscapeFromAtlantis/src/Logic/GameMaster.java</file>
+            <file>file:/C:/Users/johans/Documents/GitHub/intento%203%20juego%20atlantis/UN-Juego/EscapeFromAtlantis/src/UI/Menu.java</file>
+            <file>file:/C:/Users/johans/Documents/GitHub/intento%203%20juego%20atlantis/UN-Juego/EscapeFromAtlantis/src/UI/NuevaPartida.java</file>
+            <file>file:/C:/Users/johans/Documents/GitHub/intento%203%20juego%20atlantis/UN-Juego/EscapeFromAtlantis/src/Logic/SafeVillagers.java</file>
+            <file>file:/C:/Users/johans/Documents/GitHub/intento%203%20juego%20atlantis/UN-Juego/EscapeFromAtlantis/src/Logic/Inicializador.java</file>
+            <file>file:/C:/Users/johans/Documents/GitHub/intento%203%20juego%20atlantis/UN-Juego/EscapeFromAtlantis/src/UI/VillagerCenters.java</file>
+            <file>file:/C:/Users/johans/Documents/GitHub/intento%203%20juego%20atlantis/UN-Juego/EscapeFromAtlantis/src/Logic/Movement.java</file>
+            <file>file:/C:/Users/johans/Documents/GitHub/intento%203%20juego%20atlantis/UN-Juego/EscapeFromAtlantis/src/Data/Tile.java</file>
+            <file>file:/C:/Users/johans/Documents/GitHub/intento%203%20juego%20atlantis/UN-Juego/EscapeFromAtlantis/src/UI/EffectDisplay.java</file>
         </group>
     </open-files>
 </project-private>

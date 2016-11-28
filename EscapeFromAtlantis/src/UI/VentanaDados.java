@@ -150,11 +150,11 @@ public class VentanaDados extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
         if (jLabel4.getText().equalsIgnoreCase("Tiburon")) {
-            returnShark();
+            gameMaster.setResultadoDado(returnShark());
         } else if (jLabel4.getText().equalsIgnoreCase("Ballena")) {
-            returnWhale();
+            gameMaster.setResultadoDado(returnWhale());
         } else if (jLabel4.getText().equalsIgnoreCase("Serpiente Marina")) {
-            returnSeaSerpent();
+            gameMaster.setResultadoDado(returnSeaSerpent());
         }
         this.setVisible(false);
     }//GEN-LAST:event_jButton2ActionPerformed

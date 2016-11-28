@@ -423,6 +423,7 @@ public class NuevaPartida extends javax.swing.JFrame {
             this.setVisible(false);
             gameMaster.getGraphicsUI().setVisible(true);
             gameMaster.inicioDelJuego();
+            gameMaster.actualizarNombres2();
             JOptionPane.showMessageDialog(gameMaster.getGraphicsUI(),
                     "Coloque sus aldeanos en las baldosas de la isla");
         } catch (Exception e) {
@@ -446,6 +447,7 @@ public class NuevaPartida extends javax.swing.JFrame {
             setVisible(false);
             gameMaster.getGraphicsUI().setVisible(true);
             gameMaster.inicioDelJuego();
+            gameMaster.actualizarNombres3();
             JOptionPane.showMessageDialog(gameMaster.getGraphicsUI(),
                     "Coloque sus aldeanos en las baldosas de la isla");
         } catch (Exception e) {
@@ -474,7 +476,7 @@ public class NuevaPartida extends javax.swing.JFrame {
             setVisible(false);
             gameMaster.getGraphicsUI().setVisible(true);
             gameMaster.inicioDelJuego();
-            
+            gameMaster.actualizarNombres4();
             JOptionPane.showMessageDialog(gameMaster.getGraphicsUI(),
                     "Coloque sus aldeanos en las baldosas de la isla");
         } catch (Exception e) {

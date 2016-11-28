@@ -46,6 +46,11 @@ public class GameMaster implements Serializable {
     private int posicionVillagerInicial;
     private int newValue; // atributo para metodo de inicializacion de villagers
     private int stateOfTurn;
+    
+    private Animal resultadoDado;
+    private Effect efectos;
+    private SafeVillagers safevill;
+   private boolean firstMovementBarcos = false;
 
     //Constructor GameMaster
     public GameMaster() {
@@ -67,8 +72,10 @@ public class GameMaster implements Serializable {
         movement = new Movement(this);
 
         ventanaDados = new VentanaDados(this);
-
         
+        efectos = new Effect(this);
+
+        safevill = new SafeVillagers(this);
 
         boats = new ArrayList();
 
@@ -141,6 +148,10 @@ public class GameMaster implements Serializable {
     public VentanaDados getVentanaDados() {
         return ventanaDados;
     }
+    
+    public void setResultadoDado(Animal animal){
+        
+    }
 
     public VillagerCenters getVillagerCenters() {
         return villagerCenters;
@@ -197,27 +208,24 @@ public class GameMaster implements Serializable {
     }
 
     public void endGame() {
-
+        safevill.totalScore();
+        JOptionPane.showMessageDialog(graphicsUI,
+                    "Se ha acabado el juego \n"+
+                    "El ganador es : "+determinarNombreGanador());
+        System.exit(0);
     }
 
-    public void eliminateWhale() {
-
-    }
-
-    public void eliminateShark() {
-
-    }
 
     public void moveSeaSerpent() {
-        movement.moveSeaSerpent();
+        //movement.moveSeaSerpent();
     }
 
     public void moveShark() {
-        movement.moveShark();
+        //movement.moveShark();
     }
 
     public void moveWhale() {
-        movement.moveWhale();
+        //movement.moveWhale();
     }
 
     /**
@@ -315,18 +323,71 @@ public class GameMaster implements Serializable {
                 break;
         }
         
+        firstMovementBarcos = true;
         
+        
+    }
 
+    public boolean isFirstMovementBarcos() {
+        return firstMovementBarcos;
+    }
+    
+    
+    // HAy que modificar este metodo para que mueva los barcos 
+    public void setFirstPositionShips(JLabel label) {
+
+        movement.moverBarco1(label);
+        switch (Player.getNumberOfPlayers()) {
+            case 2:
+                if (newValue == 1) {
+
+                    newValue++;
+                    nextTurn();
+                } else {
+
+                    posicionVillagerInicial++;
+                    newValue = 1;
+                    nextTurn();
+                }
+                break;
+            case 3:
+                if (newValue < 3) {
+
+                    newValue++;
+                    nextTurn();
+                } else {
+
+                    posicionVillagerInicial++;
+                    newValue = 1;
+                    nextTurn();
+                }
+                break;
+            case 4:
+                if (newValue < 4) {
+
+                    newValue++;
+                    nextTurn();
+                } else {
+
+                    posicionVillagerInicial++;
+                    newValue = 1;
+                    nextTurn();
+                }
+                break;
+        }
         if (graphicsUI.getInicioDelJuego() == (Player.getNumberOfPlayers() * 10) -1) {
             for (Player player : players) {
                 player.reinitializeMovements();
             }
             JOptionPane.showMessageDialog(graphicsUI, "Que empiece el juego!");
             movement.segundoTurno();
+            
             JOptionPane.showMessageDialog(graphicsUI, "Mueve tus aldeanos jugador: " + players.get(actualTurn - 1).getName());
             stateOfTurn = 1;
 
         }
+        
+        
     }
 
     private void llenarCasillas() {
@@ -376,6 +437,15 @@ public class GameMaster implements Serializable {
         casillas[i][j].setLabel(labeltemp);
         casillas[i][j].setTile(new WaterTile(tiletemp.getPosition(), i, j, true));
     }
+    
+    public void removeTile(JLabel label){
+        Tile tiletemp = getTileOfJLabel(label);
+        changeCasillaToWater(tiletemp.getX(), tiletemp.getY());
+        if(!(tiletemp.getEffect().equals(""))){
+            efectos.accionarEfecto(tiletemp);
+        }
+    }
+    
 
     public Movement getMovimiento() {
         return movement;
@@ -386,8 +456,8 @@ public class GameMaster implements Serializable {
     }
 
     public void getMejorPuntuacion() {
-        // jajajajajajaj ivan
-        // que salga en un JOption Pane las mejores puntuaciones dependiendo de la puntuacion de los jugadores
+        String r = safevill.readScorePlayers();
+        JOptionPane.showMessageDialog(menu, r);
     }
 
     public Villager getVillagerOfJLabel(JLabel jLabel) {
@@ -422,6 +492,30 @@ public class GameMaster implements Serializable {
             }
         }
         return tile;
+    }
+
+    public void actualizarNombres2() {
+        graphicsUI.nombresJugadores2();
+    }
+
+    public void actualizarNombres3() {
+        graphicsUI.nombresJugadores3();
+    }
+
+    public void actualizarNombres4() {
+        graphicsUI.nombresJugadores4();
+    }
+
+    private String determinarNombreGanador() {
+        int mayor = 0;
+        Player ganador=null;
+        for (Player player : players) {
+            if(player.getScore()>=mayor){
+                mayor=player.getScore();
+                ganador = player;
+            }
+        }
+        return ganador.getName() + "  puntaje : "+ mayor;
     }
 
 

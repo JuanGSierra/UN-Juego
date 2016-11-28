@@ -14,30 +14,16 @@ import Data.*;
  */
 public class Effect {
 
-    private GraphicsUI graficadora;
     private GameMaster master;
 
-    public Effect(GraphicsUI graficadora, GameMaster master) {
-        this.graficadora = graficadora;
+    public Effect(GameMaster master) {
         this.master = master;
     }
 
     public void accionarEfecto(Tile tile) {
         switch (tile.getEffect()) {// String1.equals(String2)
             case "volcan":
-                graficadora.endScreen();
-                break;
-            case "agua":
-
-                break;
-            case "poner ballena":
-                graficadora.drawWhale();
-                break;
-            case "poner tiburon":
-                graficadora.drawShark();
-                break;
-            case "poner barco":
-                graficadora.drawBoat();
+                master.endGame();
                 break;
             case "mover serpiente":
                 master.moveSeaSerpent();
@@ -48,13 +34,6 @@ public class Effect {
             case "mover ballena":
                 master.moveWhale();
                 break;
-            case "eliminar ballena":
-                master.eliminateWhale();
-                break;
-            case "eliminar tiburon":
-                master.eliminateShark();
-                break;
-
         }
 
     }

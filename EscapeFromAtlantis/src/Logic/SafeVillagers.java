@@ -17,18 +17,21 @@ import java.util.ArrayList;
 public class SafeVillagers implements Serializable {
 
     private final ArrayList<Villager> Villagers;
+    private GameMaster gameMaster;
 
-    public SafeVillagers() {
+    public SafeVillagers(GameMaster gameMaster) {
         Villagers = new ArrayList<>();
+        this.gameMaster=gameMaster;
     }
 
     public void addSafeVillager(Villager V) {
         Villagers.add(V);
     }
 
-    public void totalScore(ArrayList<Player> players, ArrayList<Villager> villagers) {
-        for (Player p : players) {
-            for (Villager v : villagers) {
+    public void totalScore() {
+        
+        for (Player p : gameMaster.getPlayers()) {
+            for (Villager v : Villagers) {
                 if (p.getId() == v.getIdPlayer()) {
                     p.setScore(p.getScore() + v.getValue());
                 }
@@ -36,9 +39,9 @@ public class SafeVillagers implements Serializable {
         }
     }
     
-    public String readScorePlayers (ArrayList<Player> players){
+    public String readScorePlayers (){
         String a="";
-        for (Player p : players) {
+        for (Player p : gameMaster.getPlayers()) {
             a=a+p.getName()+" "+p.getScore()+"\n";
         }
         return a;
