@@ -5,7 +5,8 @@
  */
 package Logic;
 
-import Data.Player;
+import Data.*;
+
 import javax.swing.JLabel;
 
 /**
@@ -21,7 +22,43 @@ public class Comprobations {
         this.gameMaster = gameMaster;
 
     }
-
+    
+    
+    
+    //validacion posicion de proxima Tile para Animal
+    public boolean ValidateNextPositionA (Animal a, Tile t){
+        
+        
+        return true;
+    }
+    //validacion posicion de proxima Tile para Villager
+    public boolean ValidateNextMovementV (Villager v, Tile t){
+        //validacion tile Izquierda
+        if((v.getNextX()==t.getX()-2)&&(v.getNextY()==t.getY())){
+            return true;
+        }
+        //validacion tile Derecha
+        if((v.getNextX()==t.getX()+2)&&(v.getNextY()==t.getY())){
+            return true;
+        }
+        //validacion tile Superior Izquierda
+        if((v.getNextX()==t.getX()-1)&&(v.getNextY()==t.getY()-1)){
+            return true;
+        }
+        //validacion tile Superior Derecha
+        if((v.getNextX()==t.getX()+1)&&(v.getNextY()==t.getY()-1)){
+            return true;
+        }
+        //validacion tile Inferior Izquierda
+        if((v.getNextX()==t.getX()-1)&&(v.getNextY()==t.getY()+1)){
+            return true;
+        }
+        //validacion tile Inferior Derecha
+        if((v.getNextX()==t.getX()+1)&&(v.getNextY()==t.getY()+1)){
+            return true;
+        } 
+       return false; 
+    }
     /**
      * Retorna true si el jugador tiene movimientos disponibles
      *
