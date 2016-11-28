@@ -465,11 +465,12 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
 
         } else if (inicioDelJuego < (gameMaster.getPlayers().size() * 10)) {
             gameMaster.setFirstPositionVillagers(jLabel7);
-
             inicioDelJuego++;
 
-        } else { // falta condicion de movimiento
+        } else if (gameMaster.getStateOfTurn() == 1) { // falta condicion de movimiento
             moveTo(jLabel7);
+        } else if (gameMaster.getStateOfTurn() == 3) {
+            // levantara un tile y se acabara el turno
         }
     }
 
@@ -478,9 +479,8 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
             jLabel170.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Water tile.png")));
             changeTile = false;
         } else if (inicioDelJuego < (gameMaster.getPlayers().size() * 10)) {
-            gameMaster.setFirstPositionVillagers(jLabel170);
-
             inicioDelJuego++;
+            gameMaster.setFirstPositionVillagers(jLabel170);
 
         } else { // falta condicion de movimiento
             moveTo(jLabel170);
@@ -3123,7 +3123,7 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
         array.add(jLabel177);
         array.add(jLabel152);
         array.add(jLabel150);
-        
+
         return array;
     }
 

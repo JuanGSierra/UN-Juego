@@ -44,6 +44,7 @@ public class GameMaster implements Serializable {
     private boolean volcano;
     private int posicionVillagerInicial;
     private int newValue; // atributo para metodo de inicializacion de villagers
+    private int stateOfTurn;
 
     //Constructor GameMaster
     public GameMaster() {
@@ -66,6 +67,7 @@ public class GameMaster implements Serializable {
 
         boats = new ArrayList();
 
+        stateOfTurn = 0;
         actualTurn = 1;
         throwDice = false;
         volcano = false;
@@ -78,6 +80,14 @@ public class GameMaster implements Serializable {
         llenarCasillas();
         agregarBarcos();
 
+    }
+
+    public int getStateOfTurn() {
+        return stateOfTurn;
+    }
+
+    public void setStateOfTurn(int stateOfTurn) {
+        this.stateOfTurn = stateOfTurn;
     }
 
     public void agregarBarcos() {
@@ -217,11 +227,14 @@ public class GameMaster implements Serializable {
 
         }
 
+        stateOfTurn = 1;
+
     }
 
     public void inicioDelJuego() {
 
         defineTurn();
+        stateOfTurn = 1;
     }
 
     public void setFirstPositionVillagers(JLabel jlabel) {
@@ -281,11 +294,13 @@ public class GameMaster implements Serializable {
                 }
                 break;
         }
+        System.out.println(graphicsUI.getInicioDelJuego());
 
-        if (graphicsUI.getInicioDelJuego() >= (getPlayers().size() * 10)) {
+        if (graphicsUI.getInicioDelJuego() == (Player.getNumberOfPlayers() * 10) - 1) {
 
             JOptionPane.showMessageDialog(graphicsUI, "Que empiece el juego!");
-            JOptionPane.showMessageDialog(graphicsUI, "Mueve tus aldeanos " + players.get(actualTurn).getName());
+            JOptionPane.showMessageDialog(graphicsUI, "Mueve tus aldeanos jugador: " + players.get(actualTurn).getName());
+            stateOfTurn = 1;
 
         }
     }
@@ -300,6 +315,14 @@ public class GameMaster implements Serializable {
             }
         }
 
+    }
+
+    public int getActualTurn() {
+        return actualTurn;
+    }
+
+    public void setActualTurn(int actualTurn) {
+        this.actualTurn = actualTurn;
     }
 
     public Casilla[][] getCasillas() {
@@ -357,18 +380,6 @@ public class GameMaster implements Serializable {
         }
         return villager;
 
-    }
-
-    public void infiniteLoop() {
-
-        while (true) {
-
-            if (players.get(actualTurn).getNumberOfMovements() == 0 && players.get(actualTurn).isHasThrowDice()) {
-
-            }
-        }
-
-        
     }
 
 }
