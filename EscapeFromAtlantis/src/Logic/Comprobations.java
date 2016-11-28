@@ -23,14 +23,36 @@ public class Comprobations {
 
     }
     
-    
-    
     //validacion posicion de proxima Tile para Animal
-    public boolean ValidateNextPositionA (Animal a, Tile t){
-        
-        
-        return true;
+    public boolean ValidateNextMovementA (Animal a, Tile t){
+        //validacion tile Izquierda
+        if((a.getNextX()==t.getX()-2)&&(a.getNextY()==t.getY())){
+            return true;
+        }
+        //validacion tile Derecha
+        if((a.getNextX()==t.getX()+2)&&(a.getNextY()==t.getY())){
+            return true;
+        }
+        //validacion tile Superior Izquierda
+        if((a.getNextX()==t.getX()-1)&&(a.getNextY()==t.getY()-1)){
+            return true;
+        }
+        //validacion tile Superior Derecha
+        if((a.getNextX()==t.getX()+1)&&(a.getNextY()==t.getY()-1)){
+            return true;
+        }
+        //validacion tile Inferior Izquierda
+        if((a.getNextX()==t.getX()-1)&&(a.getNextY()==t.getY()+1)){
+            return true;
+        }
+        //validacion tile Inferior Derecha
+        if((a.getNextX()==t.getX()+1)&&(a.getNextY()==t.getY()+1)){
+            return true;
+        } 
+       return false; 
     }
+    
+    
     //validacion posicion de proxima Tile para Villager
     public boolean ValidateNextMovementV (Villager v, Tile t){
         //validacion tile Izquierda
