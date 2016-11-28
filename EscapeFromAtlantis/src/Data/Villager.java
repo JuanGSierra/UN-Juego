@@ -23,6 +23,21 @@ public class Villager {
     private int nextX;
     private int nextY;
 
+    
+    // Posicion del villager dentro del mapa
+    private JLabel jlabel;
+
+    public Villager(int value, int idPlayer, JLabel jlabel) {
+        this.value = value;
+        this.idPlayer = idPlayer;
+        inWater = false;
+        this.jlabel = jlabel;
+        x=0;
+        y=0;
+        nextX=0;
+        nextY=0;
+    }
+    
     public int getX() {
         return x;
     }
@@ -55,15 +70,6 @@ public class Villager {
         this.nextY = nextY;
     }
     
-    // Posicion del villager dentro del mapa
-    private JLabel jlabel;
-
-    public Villager(int value, int idPlayer, JLabel jlabel) {
-        this.value = value;
-        this.idPlayer = idPlayer;
-        inWater = false;
-        this.jlabel = jlabel;
-    }
 
     public JLabel getJlabel() {
         return jlabel;
