@@ -71,6 +71,8 @@ public abstract class Tile implements Serializable {
         this.effect = effect;
         villager = new ArrayList();
         aldeanosActuales = 0;
+        this.x=x;
+        this.y=y;
     }
 
     public void removeTile() {

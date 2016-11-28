@@ -43,7 +43,6 @@ public class Player implements Serializable {
         villagers[9] = new Villager(6, id, jlabels.get(9));
         numberOfPlayers++;
         id = numberOfPlayers;
-
     }
 
     public boolean isHasThrowDice() {
@@ -53,15 +52,29 @@ public class Player implements Serializable {
     public void setHasThrowDice(boolean hasThrowDice) {
         this.hasThrowDice = hasThrowDice;
     }
-    
-    
+
+    public void reinitializeMovements() {
+        this.numberOfMovements = 3;
+    }
 
     public int getNumberOfMovements() {
         return numberOfMovements;
     }
 
     public void setNumberOfMovements(int numberOfMovements) {
-        this.numberOfMovements = numberOfMovements;
+
+        switch (numberOfMovements) {
+            case 1:
+                this.numberOfMovements = this.numberOfMovements - 1;
+                break;
+            case 2:
+                this.numberOfMovements = this.numberOfMovements - 2;
+                break;
+            case 3:
+                this.numberOfMovements = this.numberOfMovements - 3;
+                break;
+        }
+
     }
 
     public int getScore() {

@@ -50,6 +50,10 @@ public class GameMaster implements Serializable {
     //Constructor GameMaster
     public GameMaster() {
 
+        board = new Board();
+        
+        villagerCenters = new VillagerCenters(this);
+        
         animalsDice = new AnimalsDice();
 
         graphicsUI = new GraphicsUI(this);
@@ -64,11 +68,11 @@ public class GameMaster implements Serializable {
 
         ventanaDados = new VentanaDados(this);
 
-        board = new Board();
+        
 
         boats = new ArrayList();
 
-        villagerCenters = new VillagerCenters(this);
+        
 
         stateOfTurn = 0;
         actualTurn = 1;
@@ -163,7 +167,7 @@ public class GameMaster implements Serializable {
 
     public Player returnPlayerInTurn() {
 
-        return players.get(actualTurn);
+        return players.get(actualTurn - 1) ;
     }
 
     public void initializePlayer(String name, ArrayList<JLabel> jlabel) {
@@ -271,8 +275,7 @@ public class GameMaster implements Serializable {
 
     public void setFirstPositionVillagers(JLabel jlabel) {
 
-        movement.moverVillager(jlabel, players.get(actualTurn - 1).getVillagers()[posicionVillagerInicial].getJlabel(), players.get(actualTurn - 1).getVillagers()[posicionVillagerInicial], this.getTileOfJLabel(jlabel));
-
+        movement.moverVillager(players.get(actualTurn - 1).getVillagers()[posicionVillagerInicial], this.getTileOfJLabel(jlabel));
         switch (Player.getNumberOfPlayers()) {
             case 2:
                 if (newValue == 1) {
@@ -311,11 +314,15 @@ public class GameMaster implements Serializable {
                 }
                 break;
         }
-        System.out.println(graphicsUI.getInicioDelJuego());
+        
+        
 
-        if (graphicsUI.getInicioDelJuego() == (Player.getNumberOfPlayers() * 10) - 1) {
-            movement.segundoTurno();
+        if (graphicsUI.getInicioDelJuego() == (Player.getNumberOfPlayers() * 10) -1) {
+            for (Player player : players) {
+                player.reinitializeMovements();
+            }
             JOptionPane.showMessageDialog(graphicsUI, "Que empiece el juego!");
+            movement.segundoTurno();
             JOptionPane.showMessageDialog(graphicsUI, "Mueve tus aldeanos jugador: " + players.get(actualTurn - 1).getName());
             stateOfTurn = 1;
 
@@ -401,13 +408,14 @@ public class GameMaster implements Serializable {
 
     public Tile getTileOfJLabel(JLabel jLabel) {
 
-        Tile tile = new WaterTile(0, 0, 0, false);
+        Tile tile = new WaterTile(0, 1, 1, false);
 
-        for (int i = 0; i < 10; i++) {
-            for (int j = 0; j < 10; j++) {
+        for (int i = 0; i < casillas.length; i++) {
+            for (int j = 0; j < casillas[0].length; j++) {
                 if (casillas[i][j].getLabel() != null) {
                     if (casillas[i][j].getLabel().equals(jLabel)) {
                         tile = casillas[i][j].getTile();
+                        
                     }
                 }
 

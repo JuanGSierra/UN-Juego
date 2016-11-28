@@ -66,10 +66,11 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
         initComponentsMountain();
         initComponentsSand();
 
-        asociarLabelsEnMatriz();
+        
         //colocarNombreJugadores();
 
         this.gameMaster = gameMaster;
+        asociarLabelsEnMatriz();
         turnoActual = "";
         inicioDelJuego = 0;
         changeTile = false;
@@ -105,11 +106,11 @@ public class GraphicsUI extends javax.swing.JFrame implements ActionListener {
     }
 
     // mal
-    public void moveTo(JLabel jLabel, Villager v, Tile t) {
+    public void moveTo(JLabel label,Villager villager, Tile tile) {
 
         if (positionOfVillager != null) {
 
-            gameMaster.getMovimiento().moverVillager(jLabel, positionOfVillager, v, t);
+            gameMaster.getMovimiento().moverVillager( villager, tile);
 
         } else {
             JOptionPane.showMessageDialog(this, "Escoge un Aldeano que mover "

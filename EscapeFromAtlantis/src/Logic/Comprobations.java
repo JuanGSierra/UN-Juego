@@ -57,34 +57,11 @@ public class Comprobations {
    
 
     //validacion posicion de proxima Tile para Villager
-    public int validateNextMovementV(Villager v, Tile t, JLabel villager, JLabel tile) {
-        int xVillager = 0;
-        int yVillager = 0;
-
-        int xDestino = 0;
-        int yDestino = 0;
-
+    public int validateNextMovementV(Villager v, Tile t) {
         int totalMovement = 0;
 
-        for (int i = 0; i < 13; i++) {
-            for (int j = 0; j < 25; j++) {
-
-                if (gameMaster.getCasillas()[i][j].getLabel() != null) {
-                    if (gameMaster.getCasillas()[i][j].getLabel().equals(v.getJlabel())) {
-                        xVillager = i;
-                        yVillager = j;
-                    } else if (t.getX() == i && t.getY() == j) {
-                        xDestino = i;
-                        yDestino = j;
-                    }
-                }
-
-            }
-
-        }
-
-        totalMovement += Math.abs(xVillager - xDestino);
-        totalMovement += Math.abs(yVillager - yDestino);
+        totalMovement += Math.abs(v.getX() - t.getX());
+        totalMovement += Math.abs(v.getY() - t.getY());
 
         return totalMovement;
 
@@ -112,10 +89,12 @@ public class Comprobations {
      *
      * @return
      */
-    public boolean canMove(Player player) {
-        if (player.getNumberOfMovements() > 0) {
+    public boolean canMove() {
+        System.out.println(gameMaster.returnPlayerInTurn().getNumberOfMovements());
+        if (gameMaster.returnPlayerInTurn().getNumberOfMovements() > 0) {
             return true;
         } else {
+            gameMaster.returnPlayerInTurn().getNumberOfMovements();
             return false;
         }
     }

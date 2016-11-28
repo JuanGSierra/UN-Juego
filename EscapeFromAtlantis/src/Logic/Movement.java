@@ -17,12 +17,13 @@ public class Movement {
 
     private String direction;
     private int numberOfTiles;
-    private boolean primerTurno = true;
+    private boolean primerTurno;
 
     private GameMaster gameMaster;
 
     public Movement(GameMaster gameMaster) {
         this.gameMaster = gameMaster;
+        primerTurno = true;
     }
 
     public String getDirection() {
@@ -52,64 +53,81 @@ public class Movement {
     public void moveWhale() {
 
     }
-    
-    public void segundoTurno(){
+
+    public void segundoTurno() {
         this.primerTurno = false;
     }
 
-    public void moverVillager(JLabel destino, JLabel villager, Villager v, Tile t) {
+    public void moverVillager(Villager villager, Tile tile) {
+        System.out.println(gameMaster.returnPlayerInTurn().getNumberOfMovements());
+        if (primerTurno) {
+            gameMaster.returnPlayerInTurn().reinitializeMovements();
+        }
+        if (gameMaster.getComprobations().canMove()) {
 
-        if (gameMaster.getComprobations().canMove(gameMaster.returnPlayerInTurn())) {
-            System.out.println("rty");
             switch (gameMaster.returnPlayerInTurn().getNumberOfMovements()) {
 
                 case 1:
-                    if (!(gameMaster.getComprobations().validateNextMovementV(v, t, destino, villager) > 2)) {
+                    if (gameMaster.getComprobations().validateNextMovementV(villager, tile) <= 2 || primerTurno) {
                         if (!primerTurno) {
-                            gameMaster.getTileCasilla(v.getX(), v.getY()).eliminarVillager(v);
+                            tile.eliminarVillager(villager);
                         }
-                        System.out.println("suc");
-                        gameMaster.getTileOfJLabel(destino).agregarVillager(v);
-                        gameMaster.getVillagerCenters().changeVillagerLabelTo(v, t.getX(), t.getY());
+
+                        gameMaster.getVillagerCenters().changeVillagerLabelTo(villager, tile);
+                        tile.agregarVillager(villager);
+                        villager.setX(tile.getX());
+                        villager.setY(tile.getY());
+
+                        if (!primerTurno) {
+                            System.out.println(gameMaster.returnPlayerInTurn().getName());
+                            gameMaster.returnPlayerInTurn().setNumberOfMovements(1);
+                        }
                     } else {
-                        JOptionPane.showMessageDialog(gameMaster.getGraphicsUI(), "NO tiene movimientos suficientes");
+                        JOptionPane.showMessageDialog(gameMaster.getGraphicsUI(), "NO tiene movimientos suficientes 1");
                     }
 
                     break;
                 case 2:
-                    if (!(gameMaster.getComprobations().validateNextMovementV(v, t, destino, villager) > 4)) {
+                    if (gameMaster.getComprobations().validateNextMovementV(villager, tile) <= 4 || primerTurno) {
                         if (!primerTurno) {
-                            gameMaster.getTileCasilla(v.getX(), v.getY()).eliminarVillager(v);
+                            tile.eliminarVillager(villager);
                         }
-                        System.out.println("suc");
-                        gameMaster.getTileOfJLabel(destino).agregarVillager(v);
-                        gameMaster.getVillagerCenters().changeVillagerLabelTo(v, t.getX(), t.getY());
 
+                        gameMaster.getVillagerCenters().changeVillagerLabelTo(villager, tile);
+                        tile.agregarVillager(villager);
+                        villager.setX(tile.getX());
+                        villager.setY(tile.getY());
+                        if (!primerTurno) {
+                            System.out.println(gameMaster.returnPlayerInTurn().getName());
+                            gameMaster.returnPlayerInTurn().setNumberOfMovements(2);
+                        }
                     } else {
-                        JOptionPane.showMessageDialog(gameMaster.getGraphicsUI(), "NO tiene movimientos suficientes");
+                        JOptionPane.showMessageDialog(gameMaster.getGraphicsUI(), "NO tiene movimientos suficientes 2");
                     }
                     break;
                 case 3:
-                    if (!(gameMaster.getComprobations().validateNextMovementV(v, t, destino, villager) > 6)) {
+                    if (gameMaster.getComprobations().validateNextMovementV(villager, tile) <= 6 || primerTurno) {
                         if (!primerTurno) {
-                            gameMaster.getTileCasilla(v.getX(), v.getY()).eliminarVillager(v);
+                            tile.eliminarVillager(villager);
                         }
-                        System.out.println("suc");
-                        gameMaster.getTileOfJLabel(destino).agregarVillager(v);
-                        gameMaster.getVillagerCenters().changeVillagerLabelTo(v, t.getX(), t.getY());
 
+                        gameMaster.getVillagerCenters().changeVillagerLabelTo(villager, tile);
+                        tile.agregarVillager(villager);
+                        villager.setX(tile.getX());
+                        villager.setY(tile.getY());
+                        if (!primerTurno) {
+                            System.out.println(gameMaster.returnPlayerInTurn().getName());
+                            gameMaster.returnPlayerInTurn().setNumberOfMovements(3);
+                        }
                     } else {
-                        JOptionPane.showMessageDialog(gameMaster.getGraphicsUI(), "NO tiene movimientos suficientes");
+                        JOptionPane.showMessageDialog(gameMaster.getGraphicsUI(), "NO tiene movimientos suficientes 3");
                     }
                     break;
-                default:
-                    System.out.println("xDDDDDD");
-                    break;
+
             }
-            System.out.println("rty2");
         } else {
             JOptionPane.showMessageDialog(gameMaster.getGraphicsUI(), "No se pudo mover el aldeano, verifique las reglas del juego");
-            System.out.println("mavgtrb lisdf");
+
         }
 
     }
