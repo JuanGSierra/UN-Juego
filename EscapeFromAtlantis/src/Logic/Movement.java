@@ -57,10 +57,34 @@ public class Movement {
 
         if (gameMaster.getComprobations().canMove(gameMaster.returnPlayerInTurn())) {
 
-            if (gameMaster.getComprobations().validateNextMovementV(v, t, destino, villager)) {
-                gameMaster.getVillagerCenters().changeVillagerLabelTo(v.getJlabel(), t.getX(), t.getY());
+            switch (gameMaster.returnPlayerInTurn().getNumberOfMovements()) {
 
+                case 1:
+                    if (gameMaster.getComprobations().validateNextMovementV(v, t, destino, villager) > 2) {
+                        gameMaster.getVillagerCenters().changeVillagerLabelTo(v.getJlabel(), t.getX(), t.getY());
+                    } else {
+                        JOptionPane.showMessageDialog(gameMaster.getGraphicsUI(), "NO tiene movimientos suficientes");
+                    }
+
+                    break;
+                case 2:
+                    if (gameMaster.getComprobations().validateNextMovementV(v, t, destino, villager) > 4) {
+                        gameMaster.getVillagerCenters().changeVillagerLabelTo(v.getJlabel(), t.getX(), t.getY());
+
+                    } else {
+                        JOptionPane.showMessageDialog(gameMaster.getGraphicsUI(), "NO tiene movimientos suficientes");
+                    }
+                    break;
+                case 3:
+                    if (gameMaster.getComprobations().validateNextMovementV(v, t, destino, villager) > 6) {
+                        gameMaster.getVillagerCenters().changeVillagerLabelTo(v.getJlabel(), t.getX(), t.getY());
+
+                    } else {
+                        JOptionPane.showMessageDialog(gameMaster.getGraphicsUI(), "NO tiene movimientos suficientes");
+                    }
+                    break;
             }
+
         } else {
             JOptionPane.showMessageDialog(gameMaster.getGraphicsUI(), "No se pudo mover el aldeano, verifique las reglas del juego");
         }
